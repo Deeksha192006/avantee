@@ -44,8 +44,8 @@ export const CircularInfinitySection = () => {
       desc: 'Automated Swiss Rieter spinning frames and Trützschler carding extrusion lines.',
       x: 50,
       y: 190,
-      labelY: 190,
-      labelX: -55,
+      labelY: 228,
+      labelX: 55,
       icon: <FaIndustry />,
     },
     {
@@ -54,8 +54,8 @@ export const CircularInfinitySection = () => {
       desc: 'Purified micro-denier staple fibres prepared for continuous zero-solvent spinning.',
       x: 80,
       y: 300,
-      labelY: 330,
-      labelX: 80,
+      labelY: 345,
+      labelX: 95,
       icon: <FaLeaf />,
     },
     {
@@ -64,7 +64,7 @@ export const CircularInfinitySection = () => {
       desc: 'Mechanical fibre opening technology eliminating chemical water pollution.',
       x: 190,
       y: 335,
-      labelY: 362,
+      labelY: 368,
       icon: <FaRecycle />,
     },
     {
@@ -73,7 +73,7 @@ export const CircularInfinitySection = () => {
       desc: 'Supplying leading international sustainable apparel brands across 45+ countries.',
       x: 300,
       y: 190,
-      labelY: 220,
+      labelY: 225,
       icon: <FaStore />,
     },
     {
@@ -91,8 +91,8 @@ export const CircularInfinitySection = () => {
       desc: 'Empowering global consumers with certified zero-landfill sustainable products.',
       x: 550,
       y: 190,
-      labelY: 190,
-      labelX: 605,
+      labelY: 228,
+      labelX: 545,
       icon: <FaShoppingCart />,
     },
   ];
