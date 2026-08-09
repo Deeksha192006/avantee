@@ -19,14 +19,24 @@ export const HeroSection = () => {
       badge: '80% Natural / 20% Recycled Cotton Blend'
     },
     {
-      url: '/images/avantee_brand_spool.png',
+      url: '/images/avantee_signature_hoodie.svg',
       caption: 'AVANTEE Signature — Recycled Cotton & Viscose',
       badge: '100% Cellulosic GRS Certified Eco Yarn'
     },
     {
-      url: '/images/avantee_hero_bale_spool.png',
-      caption: 'AVANTEE Popular — 60/40 Cotton-Poly Blend',
+      url: '/images/avantee_popular_sweater.svg',
+      caption: 'AVANTEE Popular — 60/40 Cotton-Poly Eco Blend',
       badge: '100% Traceable Circular Eco Yarn'
+    },
+    {
+      url: '/images/tailored_blazer_material.png',
+      caption: 'AVANTEE Suiting — Luxury Emerald Tailored Suit',
+      badge: 'Italian-Grade Luxury Suiting Weave'
+    },
+    {
+      url: '/images/luxury_cloth_emerald.png',
+      caption: 'AVANTEE Circular Fabrics — Wool-Silk Eco Cloth',
+      badge: 'Zero Water Waste Dyeing Tech'
     }
   ];
 
