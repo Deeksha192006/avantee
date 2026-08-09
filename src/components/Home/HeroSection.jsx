@@ -15,28 +15,18 @@ export const HeroSection = () => {
   const heroImages = [
     {
       url: '/images/avantee_hero_bale_spool.png',
-      caption: 'AVANTEE Recycled Cotton Spool, Eco Apparel & Fabric Bale',
-      badge: '100% GRS Certified Circular Textile'
+      caption: 'AVANTEE Vintage — Recycled Cotton Spool & Polo',
+      badge: '80% Natural / 20% Recycled Cotton Blend'
     },
     {
-      url: '/images/tailored_blazer_material.png',
-      caption: 'Bespoke Emerald & Dark Tailored Suit Jackets',
-      badge: 'Luxury Italian-Grade Weave'
+      url: '/images/avantee_brand_spool.png',
+      caption: 'AVANTEE Signature — Recycled Cotton & Viscose',
+      badge: '100% Cellulosic GRS Certified Eco Yarn'
     },
     {
-      url: '/images/folded_cotton_fabrics.png',
-      caption: 'Folded Fine Cotton & Pinstripe Dress Shirts',
-      badge: 'High-Density Breathable Weave'
-    },
-    {
-      url: '/images/luxury_cloth_emerald.png',
-      caption: 'Luxury Emerald & Charcoal Wool-Silk Fabrics',
-      badge: 'Zero Water Dyeing Tech'
-    },
-    {
-      url: '/images/textile_weave_loom.png',
-      caption: 'Automated Precision Weaving Loom Lines',
-      badge: 'OEKO-TEX Standard 100'
+      url: '/images/avantee_hero_bale_spool.png',
+      caption: 'AVANTEE Popular — 60/40 Cotton-Poly Blend',
+      badge: '100% Traceable Circular Eco Yarn'
     }
   ];
 
