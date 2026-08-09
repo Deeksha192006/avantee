@@ -20,6 +20,30 @@ export const ProductsPage = () => {
 
   const fullProducts = [
     {
+      id: 'p-hoodie',
+      category: 'yarns',
+      name: 'AVANTEE Signature Mint Eco Hoodie & Spool',
+      tag: '100% GRS Certified Recycled Cotton & Viscose',
+      denier: 'Count Ne 20s to Ne 30s Fleece Spin',
+      cut: 'Branded Kraft Paper Band Spools',
+      image: '/images/avantee_mint_hoodie_spool.jpg',
+      desc: 'Our flagship GRS-certified mint eco-yarn and fleece hoodie crafted from 80% recycled cotton and 20% cellulosic viscose with zero water dyeing technology.',
+      applications: ['Sustainable Fleece Hoodies', 'Streetwear & Activewear', 'Circular Fashion Brands', 'Knitted Eco Textiles'],
+      specs: { Tenacity: '5.4 - 5.8 g/d', Elongation: '28% - 34%', GRSStatus: '100% Certified', WaterSaved: '4,500 L / kg' }
+    },
+    {
+      id: 'p-ocean',
+      category: 'yarns',
+      name: 'AVANTEE Ocean Recycled PET Sweater & Spool',
+      tag: 'Upcycled Ocean PET Plastics & Recycled Cotton',
+      denier: 'Count Ne 16s to Ne 32s Knit Spin',
+      cut: 'Branded Kraft Paper Band Spools',
+      image: '/images/avantee_ocean_sweater_spool.jpg',
+      desc: 'Premium eco-yarn and luxury V-neck sweater produced by upcycling post-consumer ocean plastic bottles and recycled cotton fibers.',
+      applications: ['Luxury V-Neck Knitwear', 'Sustainable Winterwear', 'Eco Corporate Apparel', 'Woven & Knitted Fabrics'],
+      specs: { BottlesRecycled: '18 Bottles / Garment', TensileStrength: '1420 N', ColorFastness: 'Grade 4.8+', Shrinkage: '< 1.5%' }
+    },
+    {
       id: 'p1',
       category: 'yarns',
       name: 'AVANTEE Recycled Cotton Spool & Eco Apparel',

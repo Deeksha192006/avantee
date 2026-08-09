@@ -21,11 +21,11 @@ export const RecyclingStorytellingSection = () => {
   const storySteps = [
     {
       stepNum: '01',
-      title: t('process.step1', 'Collect Pre-Consumer Textile Waste'),
-      desc: t('process.step1Desc', 'High-quality garment cutting waste is collected from trusted manufacturing partners before it reaches consumers.'),
-      badge: '100% Ethical Sourcing',
+      title: t('process.step1', 'Collect Pre-Consumer Waste & Ocean Plastics'),
+      desc: t('process.step1Desc', 'Post-consumer ocean plastic bottles and high-quality garment cutting waste are collected from ethical sourcing partners.'),
+      badge: '100% Ethical Sourcing & Ocean Upcycling',
       icon: <FaRecycle />,
-      image: '/images/luxury_cloth_emerald.png',
+      image: '/images/avantee_ocean_sweater_spool.jpg',
     },
     {
       stepNum: '02',
@@ -61,11 +61,11 @@ export const RecyclingStorytellingSection = () => {
     },
     {
       stepNum: '06',
-      title: t('process.step6Title', 'Fabric & Tailored Suit Weaving'),
-      desc: t('process.step6Desc', 'The recycled yarn is converted into premium knitted, woven suitings, and dress fabrics suitable for luxury apparel and industrial applications.'),
-      badge: 'Bespoke Suiting Weave',
+      title: t('process.step6Title', 'Fabric & Tailored Eco Apparel'),
+      desc: t('process.step6Desc', 'The recycled yarn is converted into premium organic hoodies, knitted sweaters, and luxury dress fabrics suitable for global apparel brands.'),
+      badge: 'AVANTEE Signature Fleece & Knitwear',
       icon: <FaProjectDiagram />,
-      image: '/images/tailored_blazer_material.png',
+      image: '/images/avantee_mint_hoodie_spool.jpg',
     },
     {
       stepNum: '07',
@@ -75,13 +75,13 @@ export const RecyclingStorytellingSection = () => {
       icon: <FaMicroscope />,
       image: '/images/luxury_cloth_emerald.png',
     },
-  ];  {
+    {
       stepNum: '08',
       title: t('process.step8Title', 'Delivered to Global Customers'),
       desc: t('process.step8Desc', 'Premium recycled fibres, yarns, and fabrics are supplied to leading fashion brands and industrial partners across 45+ countries.'),
       badge: '45+ Global Export Markets',
       icon: <FaGlobeAmericas />,
-      image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800&auto=format&fit=crop',
+      image: '/images/fabric_usage_banner.png',
     },
   ];
 

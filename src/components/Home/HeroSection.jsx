@@ -14,19 +14,19 @@ export const HeroSection = () => {
 
   const heroImages = [
     {
+      url: '/images/avantee_mint_hoodie_spool.jpg',
+      caption: 'AVANTEE Signature — Recycled Mint Eco Hoodie & Spool',
+      badge: '100% GRS Certified Recycled Cotton & Viscose'
+    },
+    {
+      url: '/images/avantee_ocean_sweater_spool.jpg',
+      caption: 'AVANTEE Ocean — Recycled PET Bottle Sweater & Spool',
+      badge: 'Upcycled Ocean Plastics & Recycled Cotton Blend'
+    },
+    {
       url: '/images/avantee_hero_bale_spool.png',
       caption: 'AVANTEE Vintage — Recycled Cotton Spool & Polo',
       badge: '80% Natural / 20% Recycled Cotton Blend'
-    },
-    {
-      url: '/images/avantee_signature_hoodie.svg',
-      caption: 'AVANTEE Signature — Recycled Cotton & Viscose',
-      badge: '100% Cellulosic GRS Certified Eco Yarn'
-    },
-    {
-      url: '/images/avantee_popular_sweater.svg',
-      caption: 'AVANTEE Popular — 60/40 Cotton-Poly Eco Blend',
-      badge: '100% Traceable Circular Eco Yarn'
     },
     {
       url: '/images/tailored_blazer_material.png',

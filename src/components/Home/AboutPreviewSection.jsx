@@ -22,16 +22,16 @@ export const AboutPreviewSection = () => {
           >
             <div className={styles.primaryImgBox}>
               <img
-                src="/images/avantee_hero_bale_spool.png"
-                alt="AVANTEE Recycled Cotton Spool, Eco Polo Shirt & Fabric Bale"
+                src="/images/avantee_mint_hoodie_spool.jpg"
+                alt="AVANTEE Signature Mint Eco Hoodie & Spool"
                 className={styles.primaryImg}
               />
             </div>
 
             <div className={styles.secondaryImgBox}>
               <img
-                src="/images/luxury_cloth_emerald.png"
-                alt="Luxurious Emerald & Charcoal Wool-Silk Suit Fabrics"
+                src="/images/avantee_ocean_sweater_spool.jpg"
+                alt="AVANTEE Ocean Recycled PET Sweater & Spool"
                 className={styles.secondaryImg}
               />
             </div>

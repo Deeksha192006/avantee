@@ -21,60 +21,58 @@ export const ProductsShowcaseSection = () => {
   const [activeGalleryTab, setActiveGalleryTab] = useState('all');
   const [lightboxItem, setLightboxItem] = useState(null);
 
-  // 3 Full-Screen Showcase Products
+  // 4 Full-Screen Showcase Products
   const showcases = [
     {
-      id: 'prod-fibres',
-      category: 'RECYCLED YARNS & APPAREL',
-      title: 'AVANTEE Eco Yarns & Organic Apparel',
+      id: 'prod-hoodie-spool',
+      category: 'RECYCLED MINT HOODIE & YARNS',
+      title: 'AVANTEE Signature Mint Eco Hoodie & Spool',
       description:
-        'Our GRS-certified eco-yarns and organic garments are crafted with zero water dyeing, authentic natural textures, and sustainable performance for global fashion brands.',
+        'Our flagship GRS-certified mint eco-yarn and matching fleece hoodie, spun from 100% recycled cotton & viscose with zero-water dyeing technology for sustainable fashion brands.',
       features: [
-        'AVANTEE Branded Kraft Label Spools',
-        '80% Natural / 20% Recycled Cotton Blend',
-        'GRS Certified Supply Chain',
-        'Zero Water Waste Dyeing',
-        'Consistent Quality & Tenacity',
+        'AVANTEE Signature Eco-Kraft Spool Label',
+        '80% Recycled Cotton / 20% Organic Viscose',
+        'GRS & OEKO-TEX Standard 100 Certified',
+        'Zero Water Waste Dope-Dyeing Tech',
+        'Ultra-Soft Premium Fleece Finish',
       ],
       applications: [
-        'Organic Apparel & Polo Shirts',
-        'Sustainable Weaving & Knitting',
-        'Eco-Friendly Denim',
-        'Home Textiles & Furnishings',
-        'Industrial Eco-Felt',
+        'Sustainable Hoodies & Sweatshirts',
+        'Eco Casualwear & Streetwear',
+        'Circular Apparel Collections',
+        'Home & Leisure Textiles',
       ],
-      ctaPrimaryText: 'Explore Yarns',
+      ctaPrimaryText: 'Explore Eco Hoodies',
       ctaPrimaryLink: '/products',
       ctaSecondaryText: 'Enquire Now',
       ctaSecondaryLink: '/contact',
-      image: '/images/avantee_hero_bale_spool.png',
+      image: '/images/avantee_mint_hoodie_spool.jpg',
       layoutRight: false,
     },
     {
-      id: 'prod-yarns',
-      category: 'RECYCLED FIBRES & FABRICS',
-      title: 'High-Performance Woven Fabrics',
+      id: 'prod-ocean-sweater',
+      category: 'RECYCLED OCEAN PET & YARNS',
+      title: 'AVANTEE Ocean Recycled PET Sweater & Spool',
       description:
-        'Engineered for maximum tensile strength and zero shade variation, our GRS-certified eco-fabrics power luxury suiting and sustainable apparel applications globally.',
+        'Engineered by upcycling recovered post-consumer ocean plastic bottles and recycled cotton into high-tenacity circular yarn and sleek V-neck luxury knitwear.',
       features: [
-        'High Tenacity',
-        'Consistent Quality',
-        'Zero Water Dyeing',
-        'GRS Certified',
-        'OEKO-TEX 100',
+        'Upcycled Post-Consumer Ocean PET Bottles',
+        'High Tensile & Tear Resistance',
+        'Zero Water Waste Dyeing',
+        'Full Traceable Supply Chain',
+        'Luxury Knit V-Neck Finish',
       ],
       applications: [
-        'Knitting Apparel',
-        'Woven Denim',
-        'Home Furnishings',
-        'Tailored Menswear',
-        'Industrial Textiles',
+        'Luxury V-Neck Knitwear',
+        'Sustainable Winterwear',
+        'High-Performance Eco Apparel',
+        'Corporate Sustainable Uniforms',
       ],
-      ctaPrimaryText: 'Explore Fabrics',
+      ctaPrimaryText: 'Explore Ocean Yarns',
       ctaPrimaryLink: '/products',
       ctaSecondaryText: 'Download Spec Sheet',
       ctaSecondaryLink: '/contact',
-      image: '/images/textile_weave_loom.png',
+      image: '/images/avantee_ocean_sweater_spool.jpg',
       layoutRight: true,
     },
     {
@@ -96,7 +94,6 @@ export const ProductsShowcaseSection = () => {
         'Fashion Apparel',
         'Children Wear',
         'Home Textiles',
-        'Accessories',
       ],
       ctaPrimaryText: 'Explore Suitings',
       ctaPrimaryLink: '/products',
@@ -143,6 +140,20 @@ export const ProductsShowcaseSection = () => {
 
   // Gallery items with categories including uploaded fabric photos
   const galleryItems = [
+    {
+      id: 'g0-hoodie',
+      category: 'yarns',
+      catLabel: 'AVANTEE SIGNATURE',
+      title: 'AVANTEE Mint Eco Hoodie & Signature Spool',
+      image: '/images/avantee_mint_hoodie_spool.jpg',
+    },
+    {
+      id: 'g0-ocean',
+      category: 'yarns',
+      catLabel: 'OCEAN RECYCLED',
+      title: 'AVANTEE Ocean Recycled PET Bottle Sweater & Yarn Spool',
+      image: '/images/avantee_ocean_sweater_spool.jpg',
+    },
     {
       id: 'g1',
       category: 'yarns',
