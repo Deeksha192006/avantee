@@ -21,14 +21,14 @@ export const ProductsPage = () => {
   const fullProducts = [
     {
       id: 'p1',
-      category: 'fibres',
-      name: 'Luxurious Emerald & Charcoal Wool-Silk Fabrics',
-      tag: '100% GRS Certified Recycled Material',
-      denier: '260 GSM Wool-Silk Weave',
-      cut: 'Width 58 / 60 Inches',
-      image: '/images/luxury_cloth_emerald.png',
-      desc: 'Engineered from eco-friendly recycled fibers into high-end wool-silk blend suit cloth for bespoke tailoring and luxury outerwear.',
-      applications: ['Bespoke Jackets & Blazers', 'Luxury Tailored Menswear', 'Executive Apparel', 'Eco Fashion Collections'],
+      category: 'yarns',
+      name: 'AVANTEE Recycled Cotton Spool & Eco Apparel',
+      tag: '80% Natural / 20% Recycled Cotton Blend',
+      denier: 'Count Ne 10s to Ne 40s Single/Double',
+      cut: 'Kraft Paper Band Branded Spools',
+      image: '/images/avantee_hero_bale_spool.png',
+      desc: 'Engineered from post-consumer cotton and recycled polyester fibers into high-tenacity eco-yarns with authentic natural textures.',
+      applications: ['Organic Polo Shirts & Apparel', 'Sustainable Denim & Weaving', 'Knitted Eco Textiles', 'Home Furnishings'],
       specs: { Tenacity: '4.8 - 5.5 g/d', Elongation: '25% - 35%', CrimpCount: '12 - 16 crimps/inch', MoistureRegain: '0.4%' }
     },
     {

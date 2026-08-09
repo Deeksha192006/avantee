@@ -22,8 +22,8 @@ export const AboutPreviewSection = () => {
           >
             <div className={styles.primaryImgBox}>
               <img
-                src="/images/tailored_blazer_material.png"
-                alt="Bespoke Emerald Tailored Suit Blazer & Lapel Material"
+                src="/images/avantee_hero_bale_spool.png"
+                alt="AVANTEE Recycled Cotton Spool, Eco Polo Shirt & Fabric Bale"
                 className={styles.primaryImg}
               />
             </div>

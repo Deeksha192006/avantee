@@ -14,9 +14,9 @@ export const HeroSection = () => {
 
   const heroImages = [
     {
-      url: '/images/luxury_cloth_emerald.png',
-      caption: 'Luxury Emerald & Charcoal Wool-Silk Fabrics',
-      badge: '100% GRS Certified Eco Material'
+      url: '/images/avantee_hero_bale_spool.png',
+      caption: 'AVANTEE Recycled Cotton Spool, Eco Apparel & Fabric Bale',
+      badge: '100% GRS Certified Circular Textile'
     },
     {
       url: '/images/tailored_blazer_material.png',
@@ -29,13 +29,13 @@ export const HeroSection = () => {
       badge: 'High-Density Breathable Weave'
     },
     {
-      url: '/images/textile_weave_loom.png',
-      caption: 'Automated Precision Weaving Loom Lines',
+      url: '/images/luxury_cloth_emerald.png',
+      caption: 'Luxury Emerald & Charcoal Wool-Silk Fabrics',
       badge: 'Zero Water Dyeing Tech'
     },
     {
-      url: '/images/eco_material_rolls.png',
-      caption: 'Stacked Eco-Friendly Velvet & Linen Rolls',
+      url: '/images/textile_weave_loom.png',
+      caption: 'Automated Precision Weaving Loom Lines',
       badge: 'OEKO-TEX Standard 100'
     }
   ];
