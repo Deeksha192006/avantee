@@ -1,108 +1,140 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
   <defs>
-    <!-- Sky & Beach Background Gradient -->
-    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#BAE6FD"/>
-      <stop offset="45%" stop-color="#E0F2FE"/>
+    <!-- Photorealistic Sunset Beach Background -->
+    <linearGradient id="beachSky3D" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="35%" stop-color="#BAE6FD"/>
       <stop offset="55%" stop-color="#FDE68A"/>
       <stop offset="100%" stop-color="#F59E0B"/>
     </linearGradient>
 
-    <!-- Sea Water Gradient -->
-    <linearGradient id="seaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Ocean Water Gradient -->
+    <linearGradient id="ocean3D" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0284C7"/>
-      <stop offset="50%" stop-color="#0EA5E9"/>
-      <stop offset="100%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#0369A1"/>
+      <stop offset="100%" stop-color="#075985"/>
     </linearGradient>
 
-    <!-- Sand Ground Gradient -->
-    <linearGradient id="sandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <!-- Golden Sand Dunes Gradient -->
+    <linearGradient id="sand3D" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#FDE68A"/>
-      <stop offset="100%" stop-color="#D97706"/>
+      <stop offset="30%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
     </linearGradient>
 
-    <!-- Kraft Label Gradient -->
-    <linearGradient id="kraftGradPop" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E2C290"/>
-      <stop offset="50%" stop-color="#CFA870"/>
-      <stop offset="100%" stop-color="#B88E52"/>
+    <!-- Real Kraft Paper Gradient -->
+    <linearGradient id="kraftRealPop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EED5B7"/>
+      <stop offset="35%" stop-color="#D7B280"/>
+      <stop offset="70%" stop-color="#C59B63"/>
+      <stop offset="100%" stop-color="#9C733B"/>
     </linearGradient>
 
-    <!-- Black Spool Gradient -->
-    <linearGradient id="blackSpoolGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#09100D"/>
-      <stop offset="30%" stop-color="#18221D"/>
-      <stop offset="70%" stop-color="#24332B"/>
-      <stop offset="100%" stop-color="#09100D"/>
+    <!-- Black Spool 3D Shading -->
+    <linearGradient id="blackSpool3D" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#09090B"/>
+      <stop offset="25%" stop-color="#18181B"/>
+      <stop offset="55%" stop-color="#27272A"/>
+      <stop offset="80%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#09090B"/>
     </linearGradient>
 
-    <filter id="shadowHeavy" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.45"/>
+    <!-- Black Sweater 3D Shading -->
+    <linearGradient id="blackSweater3D" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27272A"/>
+      <stop offset="50%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </linearGradient>
+
+    <pattern id="knitRibbing" width="8" height="8" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#3F3F46" stroke-width="1.5"/>
+    </pattern>
+
+    <filter id="heavyBeachShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="20"/>
+      <feOffset dx="0" dy="22" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
   </defs>
 
   <!-- Sky Background -->
-  <rect x="0" y="0" width="1200" height="420" fill="url(#skyGrad)"/>
+  <rect x="0" y="0" width="1200" height="400" fill="url(#beachSky3D)"/>
 
-  <!-- Sea Water -->
-  <rect x="0" y="380" width="1200" height="90" fill="url(#seaGrad)" opacity="0.85"/>
-  <path d="M 0 430 Q 300 420 600 435 T 1200 430 L 1200 470 L 0 470 Z" fill="#E0F2FE" opacity="0.6"/>
+  <!-- Ocean Water Horizon -->
+  <rect x="0" y="370" width="1200" height="80" fill="url(#ocean3D)"/>
+  <path d="M 0 410 Q 300 395 600 415 T 1200 410 L 1200 450 L 0 450 Z" fill="#E0F2FE" opacity="0.6"/>
 
-  <!-- Sand Ground -->
-  <rect x="0" y="460" width="1200" height="340" fill="url(#sandGrad)"/>
+  <!-- Sand Dunes Ground -->
+  <rect x="0" y="440" width="1200" height="360" fill="url(#sand3D)"/>
 
-  <!-- Mannequin Stand & Black V-Neck Sweater -->
-  <g filter="url(#shadowHeavy)">
+  <!-- Tailored Black Sweater on Mannequin Stand -->
+  <g filter="url(#heavyBeachShadow)">
     <!-- Wooden Mannequin Neck Pole -->
-    <rect x="680" y="110" width="40" height="70" fill="#B45309" rx="6"/>
-    <ellipse cx="700" cy="110" rx="28" ry="12" fill="#D97706"/>
+    <rect x="682" y="110" width="36" height="70" fill="#78350F" rx="4"/>
+    <ellipse cx="700" cy="110" rx="26" ry="10" fill="#B45309"/>
 
     <!-- Black V-Neck Sweater Body -->
-    <path d="M 540 180 
-             C 580 170, 820 170, 860 180 
-             L 940 340 L 870 360 L 840 280 
-             L 830 650 L 570 650 L 560 280 
-             L 530 360 L 460 340 Z" fill="#18181B"/>
+    <path d="M 535 180 
+             C 575 168, 825 168, 865 180 
+             L 945 340 L 875 360 L 845 285 
+             L 835 660 L 565 660 L 555 285 
+             L 525 360 L 455 340 Z" fill="url(#blackSweater3D)"/>
+    <path d="M 565 285 L 565 660 L 835 660 L 835 285 Z" fill="url(#knitRibbing)" opacity="0.4"/>
 
-    <!-- Sweater Ribbed Texture & Collar V-Shape -->
-    <path d="M 640 175 L 700 280 L 760 175 Z" fill="#E2E8F0"/>
-    <path d="M 650 175 L 700 260 L 750 175 Z" fill="#18181B"/>
+    <!-- V-Neck Collar & Inner Shirt Trim -->
+    <path d="M 635 178 L 700 285 L 765 178 Z" fill="#F4F4F5"/>
+    <path d="M 645 178 L 700 268 L 755 178 Z" fill="#18181B"/>
   </g>
 
-  <!-- Black Recycled Fabric Waste Pile on Sand Left -->
-  <path d="M 280 620 C 320 570, 440 580, 480 630 C 500 660, 420 720, 310 710 Z" fill="#09090B" opacity="0.9" filter="url(#shadowHeavy)"/>
+  <!-- Black Recycled Fabric Waste Pile Left -->
+  <g filter="url(#heavyBeachShadow)">
+    <path d="M 270 630 C 310 575, 430 585, 470 640 C 490 670, 410 730, 300 720 Z" fill="#09090B" opacity="0.95"/>
+  </g>
 
   <!-- Large Central Black Recycled Yarn Spool -->
-  <g filter="url(#shadowHeavy)">
-    <ellipse cx="600" cy="460" rx="135" ry="22" fill="#09100D"/>
-    <path d="M 465 460 L 480 750 C 480 772, 720 772, 720 750 L 735 460 Z" fill="url(#blackSpoolGrad)"/>
+  <g filter="url(#heavyBeachShadow)">
+    <!-- Bottom Rim -->
+    <ellipse cx="600" cy="720" rx="130" ry="24" fill="#000000"/>
 
-    <!-- Kraft Paper Label Band -->
+    <!-- Spool Body -->
+    <path d="M 470 380 L 470 720 C 470 742, 730 742, 730 720 L 730 380 Z" fill="url(#blackSpool3D)"/>
+
+    <!-- Top Rim -->
+    <ellipse cx="600" cy="380" rx="130" ry="24" fill="#27272A"/>
+    <ellipse cx="600" cy="380" rx="122" ry="20" fill="#09090B"/>
+    <ellipse cx="600" cy="380" rx="32" ry="9" fill="#000000"/>
+
+    <!-- Photorealistic Kraft Paper Label Band -->
     <g>
-      <path d="M 470 530 L 476 680 C 476 698, 724 698, 724 680 L 730 530 Z" fill="url(#kraftGradPop)" stroke="#92400E" stroke-width="1.5"/>
+      <path d="M 467 475 L 467 635 C 467 655, 733 655, 733 635 L 733 475 Z" fill="url(#kraftRealPop)" stroke="#92400E" stroke-width="1.5"/>
 
-      <!-- Label Text -->
-      <text x="600" y="575" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="900" font-size="34" fill="#1C1917" text-anchor="middle" letter-spacing="3">AVANTEE™</text>
-      <text x="600" y="610" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="800" font-size="25" fill="#78350F" text-anchor="middle" letter-spacing="1">Popular</text>
+      <!-- Inner Border -->
+      <path d="M 477 485 L 477 625 C 477 642, 723 642, 723 625 L 723 485 Z" fill="none" stroke="#D97706" stroke-width="1" stroke-dasharray="6 3"/>
+
+      <!-- Company Name Text -->
+      <text x="600" y="528" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="900" font-size="36" fill="#1C1917" text-anchor="middle" letter-spacing="3">AVANTEE™</text>
+      <text x="600" y="564" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="800" font-size="26" fill="#78350F" text-anchor="middle" letter-spacing="1">Popular</text>
       
       <!-- Divider -->
-      <line x1="510" y1="624" x2="690" y2="624" stroke="#78350F" stroke-width="1.5" stroke-dasharray="4 2"/>
+      <line x1="510" y1="578" x2="690" y2="578" stroke="#78350F" stroke-width="1.5"/>
+      <circle cx="600" cy="578" r="4" fill="#78350F"/>
 
-      <text x="600" y="644" font-family="sans-serif" font-weight="700" font-size="13" fill="#44403C" text-anchor="middle">Recycled Cotton 60% | Recycled Polyester 40%</text>
-      <text x="600" y="662" font-family="sans-serif" font-weight="600" font-size="11" fill="#78350F" text-anchor="middle">100% GRS Certified • 120+ Pre-Dyed Shades</text>
+      <text x="600" y="600" font-family="'Inter', sans-serif" font-weight="700" font-size="13" fill="#292524" text-anchor="middle">Recycled Cotton 60% | Recycled Polyester 40%</text>
+      <text x="600" y="618" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#78350F" text-anchor="middle">100% GRS Certified • 120+ Pre-Dyed Shades</text>
     </g>
-
-    <!-- Top Core Hole -->
-    <ellipse cx="600" cy="460" rx="32" ry="9" fill="#000000"/>
   </g>
 
-  <!-- Blue PET Bottles on Sand Ground -->
-  <g filter="url(#shadowHeavy)">
-    <!-- Bottle 1 -->
-    <rect x="740" y="720" width="80" height="30" rx="10" fill="#38BDF8" opacity="0.85"/>
-    <rect x="815" y="726" width="15" height="18" rx="3" fill="#0284C7"/>
-    <!-- Bottle 2 -->
-    <rect x="790" y="745" width="85" height="32" rx="10" fill="#0284C7" opacity="0.85"/>
-    <rect x="870" y="752" width="16" height="18" rx="3" fill="#0369A1"/>
+  <!-- Clear PET Water Bottles Ground Right -->
+  <g filter="url(#heavyBeachShadow)">
+    <rect x="740" y="730" width="80" height="30" rx="10" fill="#38BDF8" opacity="0.85"/>
+    <rect x="815" y="736" width="15" height="18" rx="3" fill="#0284C7"/>
+    <rect x="790" y="755" width="85" height="32" rx="10" fill="#0284C7" opacity="0.85"/>
+    <rect x="870" y="762" width="16" height="18" rx="3" fill="#0369A1"/>
   </g>
 </svg>
