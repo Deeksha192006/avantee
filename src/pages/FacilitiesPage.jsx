@@ -18,30 +18,30 @@ export const FacilitiesPage = () => {
 
   const machines = [
     {
-      name: 'Rieter Ring Spinning Lines',
-      specs: 'Over 50,000 High-Speed Spindles',
-      desc: 'Swiss-engineered ring spinning frames with auto-doffing, individual spindle monitoring, and compact yarn attachments.',
-      image: '/images/yarn_cones_emerald.png',
+      name: 'Automated Loom Weaving Complex',
+      specs: 'High-Precision Automated Looms',
+      desc: 'Swiss-engineered weaving machinery producing high-density wool, silk, and recycled cotton suit fabric materials.',
+      image: '/images/textile_weave_loom.png',
     },
     {
       name: 'Trützschler High-Production Carding',
       specs: 'TC-19i Smart Carding Units',
-      desc: 'Automatic nep-control sensors and continuous web monitoring ensure micro-denier staple fibre alignment.',
-      image: '/images/fabric_usage_banner_emerald.png',
+      desc: 'Automatic nep-control sensors and continuous web monitoring ensure micro-denier staple fibre alignment for suiting cloth.',
+      image: '/images/suit_materials_showcase.png',
     },
     {
       name: 'Uster Spectro-Quality Testing Lab',
       specs: 'Uster Tester 6 & Tensorapid 5',
-      desc: 'Climate-controlled analytical lab conducting 100% online capacitive quality testing for yarn unevenness, hairiness, and tensile strength.',
-      image: '/images/suit_jackets_emerald.png',
+      desc: 'Climate-controlled analytical lab conducting 100% online capacitive quality testing for fabric unevenness and tensile strength.',
+      image: '/images/tailored_blazer_material.png',
     }
   ];
 
   const galleryImages = [
-    { src: '/images/yarn_cones_emerald.png', title: 'Automated Ring Spinning Hall' },
-    { src: '/images/yarn_balls_emerald.png', title: 'Recycled Emerald Yarn Spool Storage' },
-    { src: '/images/fabric_stack_emerald.png', title: 'Stacked Wool & Silk Fabric Storage' },
-    { src: '/images/folded_shirts_hd.png', title: 'Dress Shirt Fabric Quality Lab' },
+    { src: '/images/textile_weave_loom.png', title: 'Automated Weaving Loom Complex' },
+    { src: '/images/luxury_cloth_emerald.png', title: 'Recycled Emerald Wool-Silk Cloth Storage' },
+    { src: '/images/eco_material_rolls.png', title: 'Stacked Wool & Velvet Fabric Material Storage' },
+    { src: '/images/folded_cotton_fabrics.png', title: 'Dress Shirt Fabric Quality Testing Lab' },
   ];
 
   return (

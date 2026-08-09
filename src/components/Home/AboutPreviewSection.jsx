@@ -22,16 +22,16 @@ export const AboutPreviewSection = () => {
           >
             <div className={styles.primaryImgBox}>
               <img
-                src="/images/suit_jackets_emerald.png"
-                alt="Bespoke Emerald & Dark Tailored Suit Jackets"
+                src="/images/tailored_blazer_material.png"
+                alt="Bespoke Emerald Tailored Suit Blazer & Lapel Material"
                 className={styles.primaryImg}
               />
             </div>
 
             <div className={styles.secondaryImgBox}>
               <img
-                src="/images/yarn_cones_emerald.png"
-                alt="Precision Spun Emerald Recycled Yarn Cones"
+                src="/images/luxury_cloth_emerald.png"
+                alt="Luxurious Emerald & Charcoal Wool-Silk Suit Fabrics"
                 className={styles.secondaryImg}
               />
             </div>

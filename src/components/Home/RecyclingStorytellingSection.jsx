@@ -25,7 +25,7 @@ export const RecyclingStorytellingSection = () => {
       desc: t('process.step1Desc', 'High-quality garment cutting waste is collected from trusted manufacturing partners before it reaches consumers.'),
       badge: '100% Ethical Sourcing',
       icon: <FaRecycle />,
-      image: '/images/fabric_stack_emerald.png',
+      image: '/images/luxury_cloth_emerald.png',
     },
     {
       stepNum: '02',
@@ -33,7 +33,7 @@ export const RecyclingStorytellingSection = () => {
       desc: t('process.step2Desc', 'Every batch is carefully sorted based on colour, fibre composition, and quality to ensure consistent recycling results.'),
       badge: 'Shade & Composition Audit',
       icon: <FaFilter />,
-      image: '/images/yarn_balls_emerald.png',
+      image: '/images/eco_material_rolls.png',
     },
     {
       stepNum: '03',
@@ -41,7 +41,7 @@ export const RecyclingStorytellingSection = () => {
       desc: t('process.step3Desc', 'The textile waste is opened into reusable fibres using advanced mechanical recycling technology without unnecessary chemical processing.'),
       badge: 'Zero Chemical Solvents',
       icon: <FaCogs />,
-      image: '/images/yarn_cones_emerald.png',
+      image: '/images/textile_weave_loom.png',
     },
     {
       stepNum: '04',
@@ -49,15 +49,15 @@ export const RecyclingStorytellingSection = () => {
       desc: t('process.step4Desc', 'Recovered fibres are cleaned, aligned, and prepared for spinning to achieve uniform quality and reliable performance.'),
       badge: 'Micro-Denier Precision',
       icon: <FaWind />,
-      image: '/images/folded_shirts_hd.png',
+      image: '/images/folded_cotton_fabrics.png',
     },
     {
       stepNum: '05',
-      title: t('process.step5Title', 'Yarn Manufacturing & Ring Spinning'),
-      desc: t('process.step5Desc', 'Prepared fibres are transformed into premium recycled yarns using advanced ring spinning technology across count ranges.'),
-      badge: 'Swiss Rieter Technology',
+      title: t('process.step5Title', 'Fabric Weaving & Loom Manufacturing'),
+      desc: t('process.step5Desc', 'Prepared eco-fibres are transformed into premium woven fabrics and suit materials using advanced automated loom technology.'),
+      badge: 'Automated Loom Precision',
       icon: <FaSync />,
-      image: '/images/fabric_usage_banner_emerald.png',
+      image: '/images/suit_materials_showcase.png',
     },
     {
       stepNum: '06',
@@ -65,7 +65,7 @@ export const RecyclingStorytellingSection = () => {
       desc: t('process.step6Desc', 'The recycled yarn is converted into premium knitted, woven suitings, and dress fabrics suitable for luxury apparel and industrial applications.'),
       badge: 'Bespoke Suiting Weave',
       icon: <FaProjectDiagram />,
-      image: '/images/suit_jackets_emerald.png',
+      image: '/images/tailored_blazer_material.png',
     },
     {
       stepNum: '07',
@@ -73,7 +73,7 @@ export const RecyclingStorytellingSection = () => {
       desc: t('process.step7Desc', 'Every batch undergoes rigorous lab testing for tensile strength, color fastness, and purity before dispatch.'),
       badge: 'Uster Analytical Testing',
       icon: <FaMicroscope />,
-      image: '/images/yarn_cones_emerald.png',
+      image: '/images/luxury_cloth_emerald.png',
     },
   ];  {
       stepNum: '08',

@@ -14,28 +14,28 @@ export const HeroSection = () => {
 
   const heroImages = [
     {
-      url: '/images/yarn_cones_emerald.png',
-      caption: 'Precision-Spun Emerald Recycled Yarn Cones',
+      url: '/images/luxury_cloth_emerald.png',
+      caption: 'Luxury Emerald & Charcoal Wool-Silk Fabrics',
       badge: '100% GRS Certified Eco Material'
     },
     {
-      url: '/images/suit_jackets_emerald.png',
+      url: '/images/tailored_blazer_material.png',
       caption: 'Bespoke Emerald & Dark Tailored Suit Jackets',
       badge: 'Luxury Italian-Grade Weave'
     },
     {
-      url: '/images/folded_shirts_hd.png',
+      url: '/images/folded_cotton_fabrics.png',
       caption: 'Folded Fine Cotton & Pinstripe Dress Shirts',
       badge: 'High-Density Breathable Weave'
     },
     {
-      url: '/images/fabric_stack_emerald.png',
-      caption: 'Stacked Emerald & Charcoal Wool-Silk Suit Fabrics',
+      url: '/images/textile_weave_loom.png',
+      caption: 'Automated Precision Weaving Loom Lines',
       badge: 'Zero Water Dyeing Tech'
     },
     {
-      url: '/images/yarn_balls_emerald.png',
-      caption: 'Organic Micro-Denier Emerald Staple Yarn Balls',
+      url: '/images/eco_material_rolls.png',
+      caption: 'Stacked Eco-Friendly Velvet & Linen Rolls',
       badge: 'OEKO-TEX Standard 100'
     }
   ];
