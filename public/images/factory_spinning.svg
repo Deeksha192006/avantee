@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061A14" />
+      <stop offset="50%" stop-color="#0E3B2E" />
+      <stop offset="100%" stop-color="#1B7F5B" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E0AA" />
+      <stop offset="50%" stop-color="#D9B65D" />
+      <stop offset="100%" stop-color="#C59D3D" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)" />
+
+  <!-- Grid Blueprint Overlay -->
+  <g opacity="0.15" stroke="#DDF5E5" stroke-width="1">
+    <path d="M0 100 H800 M0 200 H800 M0 300 H800 M0 400 H800 M0 500 H800" />
+    <path d="M100 0 V600 M200 0 V600 M300 0 V600 M400 0 V600 M500 0 V600 M600 0 V600 M700 0 V600" />
+  </g>
+
+  <!-- Factory Spinning Machine Illustration -->
+  <g transform="translate(100, 80)">
+    <!-- Machine Frame -->
+    <rect x="50" y="200" width="500" height="220" rx="16" fill="#0A2A20" stroke="url(#goldGrad)" stroke-width="3" />
+    <rect x="80" y="230" width="440" height="160" rx="8" fill="#0E3B2E" />
+
+    <!-- Spool Wheels -->
+    <circle cx="150" cy="140" r="45" fill="none" stroke="url(#goldGrad)" stroke-width="6" />
+    <circle cx="150" cy="140" r="15" fill="#D9B65D" />
+    <circle cx="300" cy="140" r="45" fill="none" stroke="url(#goldGrad)" stroke-width="6" />
+    <circle cx="300" cy="140" r="15" fill="#D9B65D" />
+    <circle cx="450" cy="140" r="45" fill="none" stroke="url(#goldGrad)" stroke-width="6" />
+    <circle cx="450" cy="140" r="15" fill="#D9B65D" />
+
+    <!-- Thread Lines -->
+    <path d="M150 185 V350 M300 185 V350 M450 185 V350" stroke="#DDF5E5" stroke-width="3" stroke-dasharray="6,4" />
+
+    <!-- Cones -->
+    <path d="M130 350 L170 350 L160 270 L140 270 Z" fill="url(#goldGrad)" />
+    <path d="M280 350 L320 350 L310 270 L290 270 Z" fill="url(#goldGrad)" />
+    <path d="M430 350 L470 350 L460 270 L440 270 Z" fill="url(#goldGrad)" />
+
+    <!-- Digital Control Panel -->
+    <rect x="520" y="250" width="60" height="100" rx="6" fill="#061A14" stroke="#DDF5E5" stroke-width="2" />
+    <rect x="530" y="260" width="40" height="30" fill="#1B7F5B" />
+    <circle cx="550" cy="310" r="6" fill="#D9B65D" />
+    <circle cx="550" cy="330" r="6" fill="#DDF5E5" />
+  </g>
+
+  <!-- Title Badge -->
+  <rect x="50" y="50" width="340" height="46" rx="23" fill="rgba(6, 26, 20, 0.85)" stroke="url(#goldGrad)" stroke-width="1.5" />
+  <text x="70" y="79" font-family="sans-serif" font-weight="bold" font-size="18" fill="#FFFFFF">AVANTEE RING SPINNING LINE</text>
+</svg>

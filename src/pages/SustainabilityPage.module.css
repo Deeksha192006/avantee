@@ -1,0 +1,292 @@
+.sustainabilityPageWrapper {
+  background: var(--color-offwhite);
+  padding-top: 100px;
+}
+
+.pageHeader {
+  background: var(--color-deep-forest);
+  color: var(--color-white);
+  padding: 90px 0 70px;
+  text-align: center;
+}
+
+.headerBadge {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.headerTitle {
+  font-size: 3rem;
+  color: var(--color-white);
+  margin-bottom: 18px;
+}
+
+@media (max-width: 768px) {
+  .headerTitle {
+    font-size: 2.2rem;
+  }
+}
+
+.headerSubtitle {
+  font-size: 1.1rem;
+  color: var(--color-mint);
+  opacity: 0.85;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.typingSub {
+  display: block;
+  margin-top: 8px;
+  color: var(--gold-primary);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.impactCountersBar {
+  background: var(--color-deep-forest);
+  border-bottom: 1px solid rgba(221, 245, 229, 0.12);
+  padding: 24px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.counterGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .counterGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cBox, .cBoxGold {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cIcon {
+  font-size: 1.6rem;
+  color: var(--color-emerald);
+  margin-bottom: 6px;
+}
+
+.cIconGold {
+  font-size: 1.6rem;
+  color: var(--gold-primary);
+  margin-bottom: 6px;
+}
+
+.cNum {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+}
+
+.cText {
+  font-size: 0.8rem;
+  color: var(--color-mint);
+  opacity: 0.85;
+}
+
+.sectionTitleHeader {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.badge {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--color-emerald);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 2.6rem;
+  color: var(--color-deep-forest);
+}
+
+.infographicGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 900px) {
+  .infographicGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.infoStepCard {
+  background: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.infoStepCard:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-emerald);
+}
+
+.stepNum {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--color-emerald);
+  margin-bottom: 16px;
+}
+
+.stepTitle {
+  font-size: 1.3rem;
+  color: var(--color-deep-forest);
+  margin-bottom: 10px;
+}
+
+.stepDesc {
+  font-size: 0.95rem;
+  color: var(--color-charcoal);
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* Calculator Section */
+.calcSection {
+  background: #061A14;
+  color: var(--color-white);
+}
+
+.calcCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(217, 182, 93, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+  .calcCard {
+    padding: 24px;
+  }
+}
+
+.calcHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.calcIcon {
+  font-size: 2.4rem;
+  color: var(--gold-primary);
+}
+
+.calcTitle {
+  font-size: 1.8rem;
+  color: var(--color-white);
+}
+
+.calcSub {
+  font-size: 0.95rem;
+  color: var(--color-mint);
+  opacity: 0.8;
+}
+
+.inputBox {
+  margin-bottom: 40px;
+}
+
+.inputLabel {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  margin-bottom: 14px;
+}
+
+.rangeSlider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(221, 245, 229, 0.2);
+  accent-color: var(--gold-primary);
+  cursor: pointer;
+}
+
+.calcResultsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .calcResultsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resBox {
+  background: rgba(27, 127, 91, 0.25);
+  border: 1px solid rgba(221, 245, 229, 0.15);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.resBoxGold {
+  background: rgba(217, 182, 93, 0.2);
+  border: 1px solid var(--gold-primary);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.resIcon {
+  font-size: 1.8rem;
+  color: var(--color-mint);
+  margin-bottom: 12px;
+}
+
+.resIconGold {
+  font-size: 1.8rem;
+  color: var(--gold-primary);
+  margin-bottom: 12px;
+}
+
+.resVal {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 4px;
+}
+
+.resName {
+  font-size: 0.85rem;
+  color: var(--color-mint);
+  opacity: 0.85;
+}

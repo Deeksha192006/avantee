@@ -1,0 +1,589 @@
+.vizSectionWrapper {
+  position: relative;
+  background: var(--color-deep-forest);
+  color: var(--color-white);
+  padding: 120px 0 140px;
+  overflow: hidden;
+}
+
+/* Glass Card Specification */
+.glassCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(221, 245, 229, 0.15);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glassCard:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--gold-primary);
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(217, 182, 93, 0.25);
+}
+
+.cardSpotlightGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(217, 182, 93, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.glassCard:hover .cardSpotlightGlow {
+  opacity: 1;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* ----------------------------------------------------
+   SECTION 1: GLOBAL IMPACT (KPI CARDS)
+---------------------------------------------------- */
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 90px;
+}
+
+@media (max-width: 1100px) {
+  .kpiGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .kpiGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .kpiGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kpiCard {
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.kpiVal {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-shadow: 0 0 15px rgba(217, 182, 93, 0.4);
+}
+
+.kpiLabel {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-mint);
+  opacity: 0.88;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ----------------------------------------------------
+   SECTION 2 & 3: INTERACTIVE WORLD MAP & NETWORK
+---------------------------------------------------- */
+.mapWrapper {
+  margin-bottom: 90px;
+}
+
+.mapCard {
+  position: relative;
+  min-height: 480px;
+  background: radial-gradient(circle at center, #0E3B2E 0%, #061A14 100%);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  overflow: hidden;
+}
+
+.mapSvgBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+}
+
+.mapPinsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  position: relative;
+  z-index: 3;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .mapPinsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pinCard {
+  background: rgba(6, 26, 20, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(217, 182, 93, 0.35);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.pinCard:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(217, 182, 93, 0.35);
+}
+
+.pulseDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gold-primary);
+  box-shadow: 0 0 0 0 rgba(217, 182, 93, 0.7);
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(217, 182, 93, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(217, 182, 93, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(217, 182, 93, 0);
+  }
+}
+
+.countryName {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.countryRole {
+  font-size: 0.8rem;
+  color: var(--color-mint);
+  opacity: 0.85;
+}
+
+/* Network Connection Bar */
+.networkFlowBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(221, 245, 229, 0.12);
+  border-radius: var(--radius-full);
+  overflow-x: auto;
+}
+
+.networkNode {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.networkArrow {
+  color: var(--color-emerald);
+  font-size: 1rem;
+}
+
+/* ----------------------------------------------------
+   SECTION 4: CIRCULAR MANUFACTURING FLOW
+---------------------------------------------------- */
+.processFlowWrapper {
+  margin-bottom: 90px;
+}
+
+.flowGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+  .flowGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .flowGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.flowCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(221, 245, 229, 0.12);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.flowCard:hover {
+  background: rgba(27, 127, 91, 0.25);
+  border-color: var(--gold-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(217, 182, 93, 0.3);
+}
+
+.flowStepNum {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+
+.flowIcon {
+  font-size: 1.8rem;
+  color: var(--color-mint);
+  margin-bottom: 12px;
+}
+
+.flowStepTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 6px;
+}
+
+.flowStepDesc {
+  font-size: 0.82rem;
+  color: var(--color-mint);
+  opacity: 0.8;
+}
+
+/* ----------------------------------------------------
+   SECTION 5, 6, 7 & 9, 10: RECHARTS & CHARTS GRID
+---------------------------------------------------- */
+.chartsDualRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-bottom: 90px;
+}
+
+@media (max-width: 1024px) {
+  .chartsDualRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chartTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chartTitleIcon {
+  color: var(--gold-primary);
+}
+
+/* Doughnut Flex */
+.doughnutFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.doughnutWrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+.doughnutCenterText {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.centerVal {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+}
+
+.centerSub {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--color-mint);
+  text-transform: uppercase;
+}
+
+.legendList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.legendDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.legendPct {
+  margin-left: auto;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--gold-primary);
+}
+
+/* Horizontal Bar Chart (Applications) */
+.horizBarGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .horizBarGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.horizBarItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.horizMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.horizTrack {
+  height: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.horizFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-emerald) 0%, var(--gold-primary) 100%);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 12px rgba(217, 182, 93, 0.5);
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ----------------------------------------------------
+   SECTION 7: WATER & ENVIRONMENTAL RINGS
+---------------------------------------------------- */
+.sustainGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 90px;
+}
+
+@media (max-width: 900px) {
+  .sustainGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .sustainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ringCard {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 20px;
+}
+
+.ringSvgWrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 20px;
+}
+
+.ringCenterText {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+}
+
+.ringTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+/* ----------------------------------------------------
+   SECTION 8: ENVIRONMENTAL BENEFITS CARDS
+---------------------------------------------------- */
+.envGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 90px;
+}
+
+@media (max-width: 900px) {
+  .envGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .envGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.envCard {
+  padding: 32px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.envIconBox {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--gradient-emerald-forest);
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(27, 127, 91, 0.4);
+}
+
+.envTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 6px;
+}
+
+.envDesc {
+  font-size: 0.85rem;
+  color: var(--color-mint);
+  opacity: 0.82;
+  line-height: 1.5;
+}
+
+/* ----------------------------------------------------
+   SECTION 12: PREMIUM KPI STRIP
+---------------------------------------------------- */
+.kpiStripWrapper {
+  background: var(--gradient-emerald-forest);
+  border-radius: var(--radius-lg);
+  padding: 50px 40px;
+  border: 1px solid var(--gold-primary);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 35px rgba(217, 182, 93, 0.3);
+  margin-bottom: 40px;
+}
+
+.stripGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .stripGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .stripGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.stripVal {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  line-height: 1.1;
+  text-shadow: 0 0 20px rgba(217, 182, 93, 0.5);
+}
+
+.stripLabel {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}

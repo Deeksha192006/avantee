@@ -1,0 +1,35 @@
+.notFoundWrapper {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-deep-forest);
+  color: var(--color-white);
+  padding: 120px 24px 60px;
+  text-align: center;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.errCode {
+  font-family: var(--font-heading);
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  line-height: 1;
+}
+
+.errTitle {
+  font-size: 2rem;
+  color: var(--color-white);
+  margin: 10px 0 16px;
+}
+
+.errText {
+  font-size: 1rem;
+  color: var(--color-mint);
+  opacity: 0.85;
+  margin-bottom: 32px;
+}

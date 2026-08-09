@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Over Ons",
+    "products": "Producten",
+    "facilities": "Onze Faciliteiten",
+    "sustainability": "Duurzaamheid",
+    "contact": "Contact",
+    "letsTalk": "Laten We Praten",
+    "selectLanguage": "Taal Selecteren"
+  },
+  "hero": {
+    "badge": "Pionier in Duurzame Textielproductie",
+    "titleLine1": "Hoogwaardige Recycled",
+    "titleHighlight": "Garens & Vezels",
+    "titleLine2": "Voor Wereldwijde Industrieën",
+    "subtitle": "Avantee Industries Private Limited transformeert afval in luxe gerecyclede garens, eco-vezels en duurzame stoffen.",
+    "ctaPrimary": "Bekijk Producten",
+    "ctaSecondary": "Virtuele Tour",
+    "statYears": "Jaar van Uitmuntendheid",
+    "statCapacity": "Jaarlijkse Capaciteit MT",
+    "statExport": "Exportlanden",
+    "statRecycled": "Tons Plastic Omgeleid"
+  },
+  "about": {
+    "badge": "Erfgoed & Visie",
+    "title": "Vormgeven aan de Toekomst van Ecologisch Textiel",
+    "desc1": "Als pionier op het gebied van circulaire textieltechniek beschikt Avantee Industries over geavanceerde recyclingfaciliteiten.",
+    "desc2": "Wij ontwerpen GRS-gecertificeerde gerecyclede vezels en ringgesponnen garens voor de beste modemerken.",
+    "missionTitle": "Onze Missie",
+    "missionText": "Een revolutie teweegbrengen in textielproductie door 100% circulaire materialen.",
+    "visionTitle": "Onze Visie",
+    "visionText": "De wereldwijde productie leiden naar zero-carbon duurzame stoffen.",
+    "valuesTitle": "Kernwaarden",
+    "values": ["Circulaire Innovatie", "Onberispelijke Kwaliteit", "Milieubeheer", "Wereldwijde Traceerbaarheid"]
+  },
+  "products": {
+    "badge": "Ontworpen Prestaties",
+    "title": "Premium Gerecyclede Garens, Vezels & Stoffen",
+    "subtitle": "Ontdek ons portfolio van GRS en OEKO-TEX gecertificeerde textieloplossingen.",
+    "tabAll": "Alle Producten",
+    "tabFibres": "Gerecyclede Vezels",
+    "tabYarns": "Gerecyclede Garens",
+    "tabFabrics": "Eco Stoffen",
+    "viewDetails": "Specificaties",
+    "downloadBrochure": "Brochure Downloaden",
+    "blend": "Samenstelling",
+    "application": "Toepassingen",
+    "certifications": "Certificeringen"
+  },
+  "process": {
+    "badge": "Circulaire Workflow",
+    "title": "Ons Productieproces in 6 Stappen",
+    "step1": "Inzameling van Afval",
+    "step1Desc": "Ethische inkoop van PET-flessen en textielresten.",
+    "step2": "Milieuvriendelijk Versnipperen",
+    "step2Desc": "Zuiveren van polymeerchips met gesloten waterbehandeling.",
+    "step3": "Precisie Vezelextrusie",
+    "step3Desc": "Schoon polymeer omzetten in micro-denier stapelvezels.",
+    "step4": "Ring spinnen met Hoge Efficiëntie",
+    "step4Desc": "Gelijkmatige garens spinnen in diverse diktes.",
+    "step5": "Technisch Weven & Verven",
+    "step5Desc": "Zachte stoffen maken met waterloze kleurtechnologie.",
+    "step6": "Wereldwijde Kwaliteitscontrole",
+    "step6Desc": "Spectrofotometertests voor maximale treksterkte."
+  },
+  "sustainability": {
+    "badge": "Impact Statistieken",
+    "title": "Meetbaar Milieubeheer",
+    "subtitle": "Elke statistiek vertegenwoordigt een echte vermindering van industrieel afval.",
+    "waterSaved": "Gallons Water Bespaard",
+    "co2Reduced": "Kg CO2-uitstoot Voorkomen",
+    "energySaved": "kWh Schone Energie",
+    "wasteRecycled": "Miljard Plastic Flessen Gerecycled"
+  },
+  "facilities": {
+    "badge": "Industriële Infrastructuur",
+    "title": "Geautomatiseerde Productiefaciliteiten van Wereldklasse",
+    "subtitle": "Uitgerust met Rieter-spinlijnen en Trützschler-kaardmachines.",
+    "capacityUnit": "Ton/Dag",
+    "machines": "Hogesnelheidsspindels",
+    "labCert": "ISO Gecertificeerde Labs"
+  },
+  "contact": {
+    "badge": "Neem Contact Op",
+    "title": "Partner met Avantee Industries",
+    "subtitle": "Heeft u een vraag over textiel of groothandel? Ons team staat voor u klaar.",
+    "formTitle": "Stuur een Aanvraag",
+    "name": "Volledige Naam",
+    "email": "Zakelijk E-mailadres",
+    "phone": "Telefoonnummer",
+    "productInterest": "Product van Interesse",
+    "message": "Bericht / Volume Vereiste",
+    "submit": "Bericht Verzenden",
+    "sending": "Verzenden...",
+    "success": "Bedankt! Uw aanvraag is verzonden.",
+    "headquarters": "Wereldwijd Hoofdkantoor",
+    "address": "Avantee Complex, Industrieel Eco-Zone, Tamil Nadu, India",
+    "whatsapp": "Directe WhatsApp-ondersteuning"
+  },
+  "footer": {
+    "tagline": "Architecten van Duurzame Textieltechniek.",
+    "quickLinks": "Snelle Links",
+    "legal": "Privacybeleid | Servicevoorwaarden",
+    "newsletterTitle": "Blijf Voorop in Eco-Textiel",
+    "newsletterSubtitle": "Abonneer u op onze driemaandelijkse nieuwsbrief.",
+    "subscribe": "Abonneren",
+    "rights": "Alle rechten voorbehouden. Avantee Industries Private Limited."
+  }
+}

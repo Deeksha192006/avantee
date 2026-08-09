@@ -1,0 +1,296 @@
+.footerWrapper {
+  position: relative;
+  background: #061A14;
+  color: var(--color-white);
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.waveDivider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background: transparent;
+}
+
+.waveDivider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+.footerMain {
+  padding: 40px 0 30px;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 40px;
+}
+
+.newsletterCard {
+  background: linear-gradient(135deg, rgba(9, 16, 13, 0.95) 0%, rgba(14, 59, 46, 0.9) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 60px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(245, 158, 11, 0.12);
+}
+
+@media (max-width: 900px) {
+  .newsletterCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+  }
+}
+
+.newsletterText h3 {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.newsletterText p {
+  color: var(--color-mint);
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.newsletterForm {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+}
+
+@media (max-width: 500px) {
+  .newsletterForm {
+    flex-direction: column;
+  }
+}
+
+.emailInput {
+  flex: 1;
+  padding: 14px 22px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--color-white);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.emailInput:focus {
+  border-color: #FBBF24;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+}
+
+.emailInput::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
+  color: #09100D;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.45);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.subscribeBtn:hover {
+  transform: translateY(-2px) scale(1.04);
+  background: linear-gradient(135deg, #FDE047 0%, #FBBF24 50%, #F59E0B 100%);
+  box-shadow: 0 14px 32px rgba(245, 158, 11, 0.65);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1.4fr;
+  gap: 40px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(221, 245, 229, 0.1);
+}
+
+@media (max-width: 992px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.logoMark {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--gradient-gold);
+  color: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.4rem;
+  font-family: var(--font-heading);
+}
+
+.logoTitle {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+  display: block;
+}
+
+.logoSubtitle {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--gold-primary);
+  display: block;
+}
+
+.brandTagline {
+  color: var(--color-mint);
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.socialRow {
+  display: flex;
+  gap: 10px;
+}
+
+.socialCircle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.socialCircle:hover {
+  background: var(--gold-primary);
+  color: var(--color-black);
+  transform: translateY(-3px);
+}
+
+.colTitle {
+  color: var(--gold-primary);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linkList a {
+  color: var(--color-white);
+  opacity: 0.75;
+  font-size: 0.92rem;
+  transition: opacity 0.2s ease;
+}
+
+.linkList a:hover {
+  opacity: 1;
+  color: var(--color-mint);
+}
+
+.contactList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contactList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contactIcon {
+  color: var(--gold-primary);
+  margin-top: 4px;
+}
+
+.whatsappBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: var(--radius-full);
+  background: #25D366;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-top: 8px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.whatsappBadge:hover {
+  transform: translateY(-2px);
+}
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  .bottomBar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

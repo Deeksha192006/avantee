@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061A14" />
+      <stop offset="100%" stop-color="#0E3B2E" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E0AA" />
+      <stop offset="50%" stop-color="#D9B65D" />
+      <stop offset="100%" stop-color="#C59D3D" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad)" />
+
+  <!-- Fabric Weave Texture -->
+  <g opacity="0.25" stroke="url(#goldGrad)" stroke-width="2">
+    <path d="M0 50 H800 M0 100 H800 M0 150 H800 M0 200 H800 M0 250 H800 M0 300 H800 M0 350 H800 M0 400 H800 M0 450 H800 M0 500 H800 M0 550 H800" />
+    <path d="M50 0 V600 M100 0 V600 M150 0 V600 M200 0 V600 M250 0 V600 M300 0 V600 M350 0 V600 M400 0 V600 M450 0 V600 M500 0 V600 M550 0 V600 M600 0 V600 M650 0 V600 M700 0 V600 M750 0 V600" />
+  </g>
+
+  <!-- Fabric Roll Machine -->
+  <g transform="translate(100, 120)">
+    <rect x="50" y="200" width="500" height="180" rx="16" fill="#1B7F5B" stroke="url(#goldGrad)" stroke-width="3" />
+    <ellipse cx="550" cy="290" rx="30" ry="90" fill="#0E3B2E" stroke="url(#goldGrad)" stroke-width="3" />
+
+    <path d="M50 200 Q200 150 500 200" fill="none" stroke="#DDF5E5" stroke-width="6" />
+    <path d="M50 250 Q200 200 500 250" fill="none" stroke="#DDF5E5" stroke-width="6" />
+    <path d="M50 300 Q200 250 500 300" fill="none" stroke="#DDF5E5" stroke-width="6" />
+  </g>
+
+  <rect x="50" y="50" width="380" height="46" rx="23" fill="rgba(6, 26, 20, 0.85)" stroke="url(#goldGrad)" stroke-width="1.5" />
+  <text x="70" y="79" font-family="sans-serif" font-weight="bold" font-size="18" fill="#FFFFFF">UPCYCLED SUSTAINABLE FABRICS</text>
+</svg>

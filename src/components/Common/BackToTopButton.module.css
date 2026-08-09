@@ -1,0 +1,57 @@
+.backToTopBtn {
+  position: fixed;
+  bottom: 32px;
+  left: 32px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--color-deep-forest);
+  border: 1px solid var(--gold-primary);
+  color: var(--color-white);
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .backToTopBtn {
+    bottom: 20px;
+    left: 20px;
+    width: 46px;
+    height: 46px;
+  }
+}
+
+.progressSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.bgCircle {
+  fill: none;
+  stroke: rgba(221, 245, 229, 0.15);
+  stroke-width: 3;
+}
+
+.fillCircle {
+  fill: none;
+  stroke: var(--gold-primary);
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.1s ease;
+}
+
+.iconContent {
+  position: relative;
+  z-index: 2;
+  font-size: 1.1rem;
+  color: var(--gold-primary);
+  display: flex;
+}

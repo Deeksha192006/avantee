@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "products": "Produits",
+    "facilities": "Installations",
+    "sustainability": "Durabilité",
+    "contact": "Contact",
+    "letsTalk": "Discutons",
+    "selectLanguage": "Choisir la Langue"
+  },
+  "hero": {
+    "badge": "Pionnier de la Fabrication Textile Durable",
+    "titleLine1": "Création de Fils & Fibres",
+    "titleHighlight": "Recyclés Haute Performance",
+    "titleLine2": "Pour l'Industrie Mondiale",
+    "subtitle": "Avantee Industries transforme les déchets plastiques en fils recyclés luxueux et textiles écoresponsables de haute précision.",
+    "ctaPrimary": "Découvrir les Produits",
+    "ctaSecondary": "Visite Virtuelle usine",
+    "statYears": "Années d'Excellence",
+    "statCapacity": "Tonnes Capacité Annuelle",
+    "statExport": "Pays d'Exportation",
+    "statRecycled": "Tonnes de Plastique Recyclé"
+  },
+  "about": {
+    "badge": "Héritage & Vision",
+    "title": "L'Architecture du Textile Éco-Responsable",
+    "desc1": "Leader de l'ingénierie textile circulaire, Avantee Industries exploite des usines de recyclage de pointe en boucle fermée.",
+    "desc2": "Nous concevons des fibres et fils recyclés certifiés GRS prisés par les marques de luxe et les géants industriels.",
+    "missionTitle": "Notre Mission",
+    "missionText": "Révolutionner la production textile avec 100% de matériaux recyclés en boucle fermée.",
+    "visionTitle": "Notre Vision",
+    "visionText": "Devenir le leader mondial des textiles durables zéro carbone sans compromis sur la qualité.",
+    "valuesTitle": "Valeurs Fondamentales",
+    "values": ["Innovation Circulaire", "Qualité Irréprochable", "Éco-Responsabilité", "Traçabilité Globale"]
+  },
+  "products": {
+    "badge": "Performance Ingénierie",
+    "title": "Fils & Fibres Recyclés de Luxe",
+    "subtitle": "Explorez notre gamme complète certifiée GRS et OEKO-TEX.",
+    "tabAll": "Tous les Produits",
+    "tabFibres": "Fibres Recyclées",
+    "tabYarns": "Fils Recyclés",
+    "tabFabrics": "Tissus Écologiques",
+    "viewDetails": "Spécifications Techniques",
+    "downloadBrochure": "Télécharger la Brochure",
+    "blend": "Composition du Mélange",
+    "application": "Applications Clés",
+    "certifications": "Certifications"
+  },
+  "process": {
+    "badge": "Flux Circulaire",
+    "title": "Notre Processus de Fabrication en 6 Étapes",
+    "step1": "Collecte des Déchets Plastiques",
+    "step1Desc": "Approvisionnement éthique de bouteilles PET à l'échelle mondiale.",
+    "step2": "Lavage Éco-Responsable",
+    "step2Desc": "Purification par traitement d'eau non toxique.",
+    "step3": "Extrusion de Précision",
+    "step3Desc": "Transformation du polymère en micro-fibres.",
+    "step4": "Filature à Haute Efficacité",
+    "step4Desc": "Production de fils uniformes et résistants.",
+    "step5": "Tissage & Teinture Écologique",
+    "step5Desc": "Conception de tissus sans consommation d'eau inutile.",
+    "step6": "Contrôle Qualité International",
+    "step6Desc": "Tests spectrophotométriques de résistance ultime."
+  },
+  "sustainability": {
+    "badge": "Impact Écologique",
+    "title": "Gestion Environnementale Mesurable",
+    "subtitle": "Chaque chiffre témoigne d'une réduction réelle des déchets industriels.",
+    "waterSaved": "Litres d'Eau Économisés",
+    "co2Reduced": "Émissions CO2 Évitées",
+    "energySaved": "Énergie Propre Utilisée",
+    "wasteRecycled": "Bouteilles Plastiques Recyclées"
+  },
+  "facilities": {
+    "badge": "Infrastructure Industrielle",
+    "title": "Usines Automatiseé de Classe Mondiale",
+    "subtitle": "Équipées de lignes de filature Rieter et de machines Trützschler.",
+    "capacityUnit": "Tonnes/Jour",
+    "machines": "Broches Haute Vitesse",
+    "labCert": "Laboratoires Certifiés ISO"
+  },
+  "contact": {
+    "badge": "Contactez-Nous",
+    "title": "Partenaire d'Avantee Industries",
+    "subtitle": "Notre équipe technique mondiale est à votre disposition.",
+    "formTitle": "Envoyer une Demande",
+    "name": "Nom Complet",
+    "email": "E-mail Professionnel",
+    "phone": "Téléphone",
+    "productInterest": "Produit Souhaité",
+    "message": "Message / Quantité Requise",
+    "submit": "Envoyer le Message",
+    "sending": "Transmission...",
+    "success": "Merci ! Votre demande a été transmise à notre équipe.",
+    "headquarters": "Siège Social",
+    "address": "Complexe Avantee, Zone Industrielle, Tamil Nadu, Inde",
+    "whatsapp": "Support WhatsApp Direct"
+  },
+  "footer": {
+    "tagline": "Architectes de l'Ingénierie Textile Durable.",
+    "quickLinks": "Liens Rapides",
+    "legal": "Politique de Confidentialité | Conditions d'Utilisation",
+    "newsletterTitle": "Restez Informé de nos Innovations",
+    "newsletterSubtitle": "Abonnez-vous à notre bulletin trimestriel de durabilité.",
+    "subscribe": "S'abonner",
+    "rights": "Tous droits réservés. Avantee Industries Private Limited."
+  }
+}

@@ -1,0 +1,197 @@
+.globeFloatingBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(14, 59, 46, 0.9);
+  border: 1px solid var(--gold-primary);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 0.88rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(14, 59, 46, 0.3);
+  z-index: 10;
+}
+
+.globeGlowRing {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(217, 182, 93, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.globeIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  font-size: 1.1rem;
+}
+
+.flagBadge {
+  font-size: 1.15rem;
+}
+
+.codeText {
+  color: var(--color-mint);
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+}
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 20, 0.85);
+  backdrop-filter: blur(16px);
+}
+
+.modalContainer {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  background: linear-gradient(145deg, rgba(14, 59, 46, 0.96) 0%, rgba(8, 35, 27, 0.98) 100%);
+  border: 1px solid rgba(217, 182, 93, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(217, 182, 93, 0.15);
+  z-index: 2;
+  color: var(--color-white);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(221, 245, 229, 0.12);
+}
+
+.headerTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.modalGlobeIcon {
+  font-size: 2rem;
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+}
+
+.modalTitle {
+  font-size: 1.4rem;
+  color: var(--color-white);
+  margin-bottom: 2px;
+}
+
+.modalSubtitle {
+  font-size: 0.82rem;
+  color: var(--color-mint);
+  opacity: 0.8;
+}
+
+.closeBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--gold-primary);
+}
+
+/* Grid Layout */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 480px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.langCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(221, 245, 229, 0.1);
+  color: var(--color-white);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: left;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.langCard:hover {
+  background: rgba(27, 127, 91, 0.3);
+  border-color: var(--gold-primary);
+}
+
+.selectedCard {
+  background: linear-gradient(135deg, rgba(27, 127, 91, 0.5) 0%, rgba(14, 59, 46, 0.8) 100%);
+  border-color: var(--gold-primary);
+  box-shadow: 0 4px 15px rgba(217, 182, 93, 0.25);
+}
+
+.flagIcon {
+  font-size: 1.4rem;
+}
+
+.langName {
+  flex: 1;
+}
+
+.checkBadge {
+  color: var(--gold-primary);
+  font-size: 0.9rem;
+  display: flex;
+}
+
+.footerNote {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-mint);
+  opacity: 0.75;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E3B2E" />
+      <stop offset="100%" stop-color="#061A14" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E0AA" />
+      <stop offset="50%" stop-color="#D9B65D" />
+      <stop offset="100%" stop-color="#C59D3D" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad)" />
+
+  <g opacity="0.15" stroke="#DDF5E5" stroke-width="1">
+    <circle cx="400" cy="300" r="150" fill="none" stroke-dasharray="8,8" />
+    <circle cx="400" cy="300" r="250" fill="none" stroke-dasharray="12,12" />
+  </g>
+
+  <!-- Yarn Cones Group -->
+  <g transform="translate(150, 100)">
+    <!-- Big Cone Left -->
+    <path d="M100 420 L220 420 L190 180 L130 180 Z" fill="url(#goldGrad)" />
+    <ellipse cx="160" cy="180" rx="30" ry="10" fill="#F3E0AA" />
+    <ellipse cx="160" cy="420" rx="60" ry="18" fill="#C59D3D" />
+
+    <!-- Big Cone Center -->
+    <path d="M240 420 L360 420 L330 140 L270 140 Z" fill="#1B7F5B" />
+    <ellipse cx="300" cy="140" rx="30" ry="10" fill="#DDF5E5" />
+    <ellipse cx="300" cy="420" rx="60" ry="18" fill="#0E3B2E" />
+
+    <!-- Big Cone Right -->
+    <path d="M380 420 L500 420 L470 180 L410 180 Z" fill="url(#goldGrad)" />
+    <ellipse cx="440" cy="180" rx="30" ry="10" fill="#F3E0AA" />
+    <ellipse cx="440" cy="420" rx="60" ry="18" fill="#C59D3D" />
+
+    <!-- Threads Crossing -->
+    <path d="M160 180 Q230 80 300 140 Q370 80 440 180" fill="none" stroke="#DDF5E5" stroke-width="4" stroke-dasharray="4,4" />
+  </g>
+
+  <rect x="50" y="50" width="380" height="46" rx="23" fill="rgba(6, 26, 20, 0.85)" stroke="url(#goldGrad)" stroke-width="1.5" />
+  <text x="70" y="79" font-family="sans-serif" font-weight="bold" font-size="18" fill="#FFFFFF">HIGH-TENACITY RECYCLED YARNS</text>
+</svg>

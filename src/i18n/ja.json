@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "会社概要",
+    "products": "製品情報",
+    "facilities": "生産設備",
+    "sustainability": "サステナビリティ",
+    "contact": "お問い合わせ",
+    "letsTalk": "お問い合わせ",
+    "selectLanguage": "言語を選択"
+  },
+  "hero": {
+    "badge": "サステナブル繊維製造のパイオニア",
+    "titleLine1": "高性能リサイクル糸と",
+    "titleHighlight": "環境対応型ファイバー",
+    "titleLine2": "世界の産業のために",
+    "subtitle": "Avantee Industriesは、プラスチック廃棄物を高品質なリサイクル糸や持続可能なファブリックに再生します。",
+    "ctaPrimary": "製品を見る",
+    "ctaSecondary": "バーチャル工場見学",
+    "statYears": "年の信頼と実績",
+    "statCapacity": "トン 年間生産能力",
+    "statExport": "輸出対応国",
+    "statRecycled": "トン 資源リサイクル"
+  },
+  "about": {
+    "badge": "伝統とビジョン",
+    "title": "環境配慮型繊維の未来を創る",
+    "desc1": "循環型テキスタイルエンジニアリングの最先端として、Avantee Industriesは最新のクローズドループ施設を運営しています。",
+    "desc2": "GRS認証を取得したリサイクル繊維と糸を製造し、世界中のラグジュアリーブランドや産業大手から信頼されています。",
+    "missionTitle": "私たちのミッション",
+    "missionText": "100%リサイクル素材を通じて、環境負荷を最小限に抑えた繊維生産の革新を推進します。",
+    "visionTitle": "私たちのビジョン",
+    "visionText": "品質を一切妥協することなく、グローバルなゼロカーボン持続可能ファブリックのリーダーを目指します。",
+    "valuesTitle": "コアバリュー",
+    "values": ["循環型の革新", "妥協なき品質", "環境保護への貢献", "グローバルなトレーサビリティ"]
+  },
+  "products": {
+    "badge": "エンジニアリング性能",
+    "title": "プレミアムリサイクル糸・繊維・生地",
+    "subtitle": "GRSおよびOEKO-TEX認証を受けた包括的な繊維ソリューションをご覧ください。",
+    "tabAll": "すべての製品",
+    "tabFibres": "リサイクル繊維",
+    "tabYarns": "リサイクル糸",
+    "tabFabrics": "エコファブリック",
+    "viewDetails": "技術仕様",
+    "downloadBrochure": "カタログダウンロード",
+    "blend": "混紡組成",
+    "application": "主な用途",
+    "certifications": "保有認証"
+  },
+  "process": {
+    "badge": "循環ワークフロー",
+    "title": "6段階の製造プロセス",
+    "step1": "プラスチック廃棄物の収集",
+    "step1Desc": "世界中からPETボトルを適切に調達。",
+    "step2": "環境配慮型洗浄・精製",
+    "step2Desc": "無毒なクローズドループ水処理で洗浄。",
+    "step3": "精密ファイバー押出",
+    "step3Desc": "ポリマーをマイクロデニール短繊維へ成形。",
+    "step4": "高効率リング紡績",
+    "step4Desc": "均一で高強度な紡績糸を生産。",
+    "step5": "環境対応製織・染色",
+    "step5Desc": "節水型染色技術による生地の製造。",
+    "step6": "グローバル品質検査",
+    "step6Desc": "分光光度計および引っ張り強度検査を実施。"
+  },
+  "sustainability": {
+    "badge": "環境への影響",
+    "title": "数値で見る環境貢献",
+    "subtitle": "すべての数値は産業廃棄物削減とリサイクル推進の証です。",
+    "waterSaved": "節水された水量（ガロン）",
+    "co2Reduced": "削減されたCO2排出量（kg）",
+    "energySaved": "使用したクリーンエネルギー（kWh）",
+    "wasteRecycled": "リサイクルされたペットボトル（億本）"
+  },
+  "facilities": {
+    "badge": "産業インフラ",
+    "title": "世界標準の自動化製造工場",
+    "subtitle": "Rieter紡績機やTrützschlerカード機および最新検査ラボを完備。",
+    "capacityUnit": "トン/日",
+    "machines": "高速紡績スピンドル",
+    "labCert": "ISO認証試験ラボ"
+  },
+  "contact": {
+    "badge": "お問い合わせ",
+    "title": "Avantee Industriesとのパートナーシップ",
+    "subtitle": "当社のグローバルエンジニアリングチームがご要望にお応えします。",
+    "formTitle": "お問い合わせフォーム",
+    "name": "お名前",
+    "email": "メールアドレス",
+    "phone": "電話番号",
+    "productInterest": "ご希望の製品",
+    "message": "メッセージ / 必要数量",
+    "submit": "送信する",
+    "sending": "送信中...",
+    "success": "ありがとうございます。担当者よりご連絡いたします。",
+    "headquarters": "グローバル本社",
+    "address": "インド・タミル・ナードゥ州 エコ産業区 Avantee Complex",
+    "whatsapp": "WhatsAppチャット対応"
+  },
+  "footer": {
+    "tagline": "サステナブルテキスタイルエンジニアリングの創案者",
+    "quickLinks": "クイックリンク",
+    "legal": "プライバシーポリシー | 利用規約",
+    "newsletterTitle": "最新イノベーション情報をお届け",
+    "newsletterSubtitle": "季刊サステナビリティ・ニュースレターにご登録ください。",
+    "subscribe": "登録する",
+    "rights": "All rights reserved. Avantee Industries Private Limited."
+  }
+}

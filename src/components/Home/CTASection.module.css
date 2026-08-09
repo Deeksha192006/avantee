@@ -1,0 +1,70 @@
+.ctaWrapper {
+  position: relative;
+  background: radial-gradient(circle at center, #0E3B2E 0%, #061A14 100%);
+  color: var(--color-white);
+  padding: 120px 0;
+  text-align: center;
+  overflow: hidden;
+  border-top: 1px solid var(--gold-primary);
+}
+
+.ctaCard {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  border: 1.5px solid var(--gold-primary);
+  border-radius: var(--radius-lg);
+  padding: 80px 40px;
+  max-width: 960px;
+  margin: 0 auto;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(217, 182, 93, 0.25);
+  position: relative;
+  z-index: 3;
+}
+
+.ctaBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  background: rgba(217, 182, 93, 0.15);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-primary);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.ctaTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+  .ctaTitle {
+    font-size: 2.2rem;
+  }
+}
+
+.ctaSubtitle {
+  font-size: 1.15rem;
+  color: var(--color-mint);
+  opacity: 0.88;
+  max-width: 680px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.btnRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}

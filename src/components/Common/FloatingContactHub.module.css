@@ -1,0 +1,116 @@
+.floatingWrapper {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+@media (max-width: 768px) {
+  .floatingWrapper {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+.mainTriggerBtn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--gradient-emerald-forest);
+  border: 1.5px solid var(--gold-primary);
+  color: var(--color-white);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(14, 59, 46, 0.5);
+  position: relative;
+}
+
+.pulseRing {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-primary);
+  opacity: 0.6;
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+.expandedHub {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.actionBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.actionBtn:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp {
+  background: #25D366;
+}
+
+.phone {
+  background: var(--color-emerald);
+}
+
+.email {
+  background: var(--gold-secondary);
+}
+
+.tooltip {
+  position: absolute;
+  right: 60px;
+  background: rgba(14, 59, 46, 0.95);
+  color: var(--color-white);
+  padding: 6px 12px;
+  border-radius: var(--radius-xs);
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  border: 1px solid var(--gold-primary);
+}
+
+.actionBtn:hover .tooltip {
+  opacity: 1;
+}

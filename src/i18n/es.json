@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "products": "Productos",
+    "facilities": "Instalaciones",
+    "sustainability": "Sostenibilidad",
+    "contact": "Contacto",
+    "letsTalk": "Hablemos",
+    "selectLanguage": "Seleccionar Idioma"
+  },
+  "hero": {
+    "badge": "Pioneros en Fabricación Textil Sostenible",
+    "titleLine1": "Creando Hilos y Fibras",
+    "titleHighlight": "Reciclados de Alto Rendimiento",
+    "titleLine2": "Para Industrias Globales",
+    "subtitle": "Avantee Industries Private Limited transforma los residuos posconsumo en hilos reciclados de lujo, ecofibras y tejidos sostenibles de alta resistencia.",
+    "ctaPrimary": "Explorar Productos",
+    "ctaSecondary": "Recorrido Virtual",
+    "statYears": "Años de Excelencia",
+    "statCapacity": "Capacidad Anual MT",
+    "statExport": "Países de Exportación",
+    "statRecycled": "Toneladas de Plástico"
+  },
+  "about": {
+    "badge": "Herencia y Visión",
+    "title": "Diseñando el Futuro de los Textiles Ecológicos",
+    "desc1": "Establecida como pionera en ingeniería textil circular, Avantee Industries opera instalaciones de reciclaje de circuito cerrado de última generación.",
+    "desc2": "Diseñamos fibras recicladas certificadas por GRS e hilos de hilado en anillo para casas de moda de lujo y líderes industriales.",
+    "missionTitle": "Nuestra Misión",
+    "missionText": "Revolucionar la producción textil a través de materiales 100% reciclados circulares.",
+    "visionTitle": "Nuestra Visión",
+    "visionText": "Liderar la fabricación industrial global hacia tejidos sostenibles de cero carbono.",
+    "valuesTitle": "Valores Fundamentales",
+    "values": ["Innovación Circular", "Calidad Incondicional", "Gestión Ambiental", "Trazabilidad Global"]
+  },
+  "products": {
+    "badge": "Rendimiento Diseñado",
+    "title": "Hilos, Fibras y Tejidos Reciclados Premium",
+    "subtitle": "Descubra nuestra cartera de soluciones textiles sostenibles certificadas por GRS y OEKO-TEX.",
+    "tabAll": "Todos los Productos",
+    "tabFibres": "Fibras Recicladas",
+    "tabYarns": "Hilos Reciclados",
+    "tabFabrics": "Tejidos Ecológicos",
+    "viewDetails": "Especificaciones",
+    "downloadBrochure": "Descargar Folleto",
+    "blend": "Composición",
+    "application": "Aplicaciones Clave",
+    "certifications": "Certificaciones"
+  },
+  "process": {
+    "badge": "Flujo Circular",
+    "title": "Nuestro Proceso de Fabricación de 6 Pasos",
+    "step1": "Recolección de Residuos",
+    "step1Desc": "Obtención ética de botellas de PET y recortes textiles a nivel mundial.",
+    "step2": "Triturado y Lavado Ecológico",
+    "step2Desc": "Purificación de chips de polímero mediante tratamiento de agua de circuito cerrado.",
+    "step3": "Extrusión de Fibra de Precisión",
+    "step3Desc": "Transformación del polímero limpio en fibras cortadas de microdenier.",
+    "step4": "Hilado en Anillo de Alta Eficiencia",
+    "step4Desc": "Hilandos uniformes y consistentes en diversos rangos de números.",
+    "step5": "Tejido Técnico y Teñido",
+    "step5Desc": "Creación de tejidos suaves y duraderos con tecnología de color sin agua.",
+    "step6": "Garantía de Calidad Global",
+    "step6Desc": "Pruebas de espectrofotómetro para la máxima resistencia a la tracción."
+  },
+  "sustainability": {
+    "badge": "Métricas de Impacto",
+    "title": "Gestión Ambiental Medible",
+    "subtitle": "Cada métrica representa una reducción real de residuos industriales y consumo de recursos.",
+    "waterSaved": "Galones de Agua Ahorrados",
+    "co2Reduced": "Kg de Emisiones CO2 Reducidos",
+    "energySaved": "kWh de Energía Limpia",
+    "wasteRecycled": "Mil Millones de Botellas Recicladas"
+  },
+  "facilities": {
+    "badge": "Infraestructura Industrial",
+    "title": "Instalaciones de Fabricación Automatizadas Mundiales",
+    "subtitle": "Equipadas con líneas de hilado Rieter y maquinaria de cardado Trützschler.",
+    "capacityUnit": "Toneladas/Día",
+    "machines": "Husos de Alta Velocidad",
+    "labCert": "Laboratorios Certificados ISO"
+  },
+  "contact": {
+    "badge": "Conéctese con Nosotros",
+    "title": "Asóciese con Avantee Industries",
+    "subtitle": "¿Tiene una consulta textil personalizada o solicitud al por mayor? Nuestro equipo está listo.",
+    "formTitle": "Enviar una Consulta",
+    "name": "Nombre Completo",
+    "email": "Correo Empresarial",
+    "phone": "Teléfono",
+    "productInterest": "Producto de Interés",
+    "message": "Mensaje / Requisito de Volumen",
+    "submit": "Enviar Mensaje",
+    "sending": "Transmitiendo...",
+    "success": "¡Gracias! Su solicitud ha sido enviada.",
+    "headquarters": "Sede Central Global",
+    "address": "Complejo Avantee, Zona Eco-Industrial, Tamil Nadu, India",
+    "whatsapp": "Soporte de WhatsApp Instantáneo"
+  },
+  "footer": {
+    "tagline": "Arquitectos de la Ingeniería Textil Sostenible.",
+    "quickLinks": "Enlaces Rápidos",
+    "legal": "Política de Privacidad | Términos de Servicio",
+    "newsletterTitle": "Manténgase a la Vanguardia en Ecotextiles",
+    "newsletterSubtitle": "Suscríbase a nuestro boletín trimestral de innovación.",
+    "subscribe": "Suscribirse",
+    "rights": "Todos los derechos reservados. Avantee Industries Private Limited."
+  }
+}

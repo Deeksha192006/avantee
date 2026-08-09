@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Hem",
+    "about": "Om Oss",
+    "products": "Produkter",
+    "facilities": "Våra Anläggningar",
+    "sustainability": "Hållbarhet",
+    "contact": "Kontakt",
+    "letsTalk": "Låt Oss Prata",
+    "selectLanguage": "Välj Språk"
+  },
+  "hero": {
+    "badge": "Pionjärer Inom Hållbar Textiltillverkning",
+    "titleLine1": "Tillverkning av Återvunnet",
+    "titleHighlight": "Garn & Fibrer",
+    "titleLine2": "För Globala Industrier",
+    "subtitle": "Avantee Industries Private Limited förvandlar konsumentavfall till lyxiga återvunna garner, ekofibrer och hållbara tyger.",
+    "ctaPrimary": "Utforska Produkter",
+    "ctaSecondary": "Virtuell Rundtur",
+    "statYears": "År av Spetskompetens",
+    "statCapacity": "Årlig Kapacitet MT",
+    "statExport": "Exportländer",
+    "statRecycled": "Ton Plast Återvunnen"
+  },
+  "about": {
+    "badge": "Arv & Vision",
+    "title": "Designar Framtiden För Miljövänliga Textilier",
+    "desc1": "Som pionjär inom cirkulär textilteknik driver Avantee Industries toppmoderna återvinningsanläggningar.",
+    "desc2": "Vi tillverkar GRS-certifierade återvunna fibrer och ringspunnet garn för lyxmodemärken och industriella ledare.",
+    "missionTitle": "Vårt Uppdrag",
+    "missionText": "Att revolutionera textilproduktionen genom 100% cirkulära återvunna material.",
+    "visionTitle": "Vår Vision",
+    "visionText": "Att leda global tillverkning mot koldioxidneutrala tyger.",
+    "valuesTitle": "Kärnvärden",
+    "values": ["Cirkulär Innovation", "Kompromisslös Kvalitet", "Miljöansvar", "Global Spårbarhet"]
+  },
+  "products": {
+    "badge": "Konstruerad Prestanda",
+    "title": "Premium Återvunna Garner, Fibrer & Tyger",
+    "subtitle": "Upptäck vår portfölj av GRS- och OEKO-TEX-certifierade hållbara textillösningar.",
+    "tabAll": "Alla Produkter",
+    "tabFibres": "Återvunna Fibrer",
+    "tabYarns": "Återvunna Garner",
+    "tabFabrics": "Ekotyger",
+    "viewDetails": "Tekniska Specifikationer",
+    "downloadBrochure": "Ladda Ner Broschyr",
+    "blend": "Sammansättning",
+    "application": "Användningsområden",
+    "certifications": "Certifieringar"
+  },
+  "process": {
+    "badge": "Cirkulärt Arbetsflöde",
+    "title": "Vår 6-Stegs Tillverkningsprocess",
+    "step1": "Insamling av Avfall",
+    "step1Desc": "Etisk inköp av PET-flaskor och textilrester globalt.",
+    "step2": "Miljövänlig Strimling & Tvätt",
+    "step2Desc": "Rening av polymerchips med sluten vattenbehandling.",
+    "step3": "Precisionsfiberextrudering",
+    "step3Desc": "Omvandling av ren polymer till mikrofibrer.",
+    "step4": "Högeffektiv Ringspinnning",
+    "step4Desc": "Spinnande av jämna garner i olika grovlekar.",
+    "step5": "Teknisk Vävning & Färgning",
+    "step5Desc": "Skapa mjuka tyger med vattenfri färgteknik.",
+    "step6": "Global Kvalitetssäkring",
+    "step6Desc": "Spektrofotometertester för maximal draghållfasthet."
+  },
+  "sustainability": {
+    "badge": "Mätbar Påverkan",
+    "title": "Mätbart Miljöansvar",
+    "subtitle": "Varje mätvärde representerar en verklig minskning av industriellt avfall.",
+    "waterSaved": "Galloner Vatten Sparat",
+    "co2Reduced": "Kg CO2-utsläpp Minskat",
+    "energySaved": "kWh Ren Energi",
+    "wasteRecycled": "Miljard Plastflaskor Återvunna"
+  },
+  "facilities": {
+    "badge": "Industriell Infrastruktur",
+    "title": "Automatiserade Tillverkningsanläggningar i Världsklass",
+    "subtitle": "Utrustad med Rieter-spinnlinjer och Trützschler-kardningsmaskiner.",
+    "capacityUnit": "Ton/Dag",
+    "machines": "Höghastighetsspindlar",
+    "labCert": "ISO-certifierade Laboratorier"
+  },
+  "contact": {
+    "badge": "Kontakta Oss",
+    "title": "Bli Partner med Avantee Industries",
+    "subtitle": "Har du en skräddarsydd förfrågan eller partipartiförfrågan? Vårt team är redo.",
+    "formTitle": "Skicka en Förfrågan",
+    "name": "Fullständigt Namn",
+    "email": "E-post för Företag",
+    "phone": "Telefonnummer",
+    "productInterest": "Produkt av Intresse",
+    "message": "Meddelande / Volymkrav",
+    "submit": "Skicka Meddelande",
+    "sending": "Skickar...",
+    "success": "Tack! Din förfrågan har skickats till vårt säljteam.",
+    "headquarters": "Globalt Huvudkontor",
+    "address": "Avantee Complex, Industrial Eco-Zone, Tamil Nadu, Indien",
+    "whatsapp": "Direkt WhatsApp-support"
+  },
+  "footer": {
+    "tagline": "Arkitekter för Hållbar Textilteknik.",
+    "quickLinks": "Snabblänkar",
+    "legal": "Integritetspolicy | Användarvillkor",
+    "newsletterTitle": "Håll Dig Steget Före Inom Ekotextilier",
+    "newsletterSubtitle": "Prenumerera på vårt nyhetsbrev.",
+    "subscribe": "Prenumerera",
+    "rights": "Alla rättigheter förbehållna. Avantee Industries Private Limited."
+  }
+}

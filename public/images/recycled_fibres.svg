@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E3B2E" />
+      <stop offset="100%" stop-color="#1B7F5B" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E0AA" />
+      <stop offset="50%" stop-color="#D9B65D" />
+      <stop offset="100%" stop-color="#C59D3D" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad)" />
+
+  <g opacity="0.2" fill="none" stroke="#DDF5E5" stroke-width="2">
+    <path d="M50 300 Q200 100 400 300 T750 300" />
+    <path d="M50 350 Q200 150 400 350 T750 350" />
+    <path d="M50 250 Q200 50 400 250 T750 250" />
+  </g>
+
+  <!-- Fibre Strands & Recycling Flakes -->
+  <g transform="translate(100, 150)">
+    <circle cx="200" cy="150" r="100" fill="rgba(221, 245, 229, 0.15)" stroke="url(#goldGrad)" stroke-width="4" />
+    <circle cx="400" cy="150" r="120" fill="rgba(217, 182, 93, 0.2)" stroke="url(#goldGrad)" stroke-width="4" />
+
+    <!-- Wave Lines -->
+    <path d="M120 150 Q160 100 200 150 T280 150" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+    <path d="M120 180 Q160 130 200 180 T280 180" fill="none" stroke="url(#goldGrad)" stroke-width="6" stroke-linecap="round" />
+
+    <path d="M310 150 Q360 80 410 150 T510 150" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" />
+    <path d="M310 190 Q360 120 410 190 T510 190" fill="none" stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round" />
+  </g>
+
+  <rect x="50" y="50" width="380" height="46" rx="23" fill="rgba(6, 26, 20, 0.85)" stroke="url(#goldGrad)" stroke-width="1.5" />
+  <text x="70" y="79" font-family="sans-serif" font-weight="bold" font-size="18" fill="#FFFFFF">ECO-STAPLE RECYCLED FIBRES</text>
+</svg>

@@ -1,0 +1,50 @@
+.gridPattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Light Theme (For White / Light Backgrounds -> Crisp Black Grid Lines) */
+.lightTheme.grid {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 0, 0, 0.85) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.lightTheme.dots {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.85) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+.lightTheme.blueprint {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.lightTheme.diagonal {
+  background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.35) 0, rgba(0, 0, 0, 0.35) 1px, transparent 0, transparent 32px);
+}
+
+/* Dark Theme (For Dark Green / Black Backgrounds -> Crisp White Grid Lines) */
+.darkTheme.grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.85) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.darkTheme.dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.85) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+.darkTheme.blueprint {
+  background-image: linear-gradient(rgba(221, 245, 229, 0.85) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(221, 245, 229, 0.85) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.darkTheme.diagonal {
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.35) 0, rgba(255, 255, 255, 0.35) 1px, transparent 0, transparent 32px);
+}

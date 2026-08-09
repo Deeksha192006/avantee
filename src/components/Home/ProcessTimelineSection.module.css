@@ -1,0 +1,135 @@
+.processWrapper {
+  background: var(--color-deep-forest);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.badge {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 2.6rem;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--color-mint);
+  opacity: 0.85;
+}
+
+.timelineGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .timelineGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .timelineGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stepCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(221, 245, 229, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.stepCard:hover, .activeCard {
+  background: rgba(27, 127, 91, 0.25);
+  border-color: var(--gold-primary);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stepNum {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--gold-primary);
+}
+
+.iconCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(221, 245, 229, 0.1);
+  color: var(--color-mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.activeCard .iconCircle {
+  background: var(--gold-primary);
+  color: var(--color-black);
+}
+
+.stepTitle {
+  font-size: 1.25rem;
+  color: var(--color-white);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.stepDesc {
+  font-size: 0.92rem;
+  color: var(--color-mint);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.glowLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.activeCard .glowLine, .stepCard:hover .glowLine {
+  opacity: 1;
+}

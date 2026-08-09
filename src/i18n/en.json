@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "facilities": "Our Facilities",
+    "sustainability": "Sustainability",
+    "contact": "Contact",
+    "letsTalk": "Let's Talk",
+    "selectLanguage": "Select Language"
+  },
+  "hero": {
+    "badge": "Pioneering Sustainable Textile Manufacturing",
+    "titleLine1": "Crafting High-Performance",
+    "titleHighlight": "Recycled Yarns & Fibres",
+    "titleLine2": "For Global Industries",
+    "subtitle": "Avantee Industries Private Limited transforms post-consumer waste into luxury recycled yarns, eco-fibres, and high-tensile sustainable fabrics with zero-water compromise.",
+    "ctaPrimary": "Explore Products",
+    "ctaSecondary": "Virtual Facility Tour",
+    "statYears": "Years of Excellence",
+    "statCapacity": "MT Annual Capacity",
+    "statExport": "Countries Exported",
+    "statRecycled": "Tons Plastic Diverted"
+  },
+  "about": {
+    "badge": "Heritage & Vision",
+    "title": "Architecting the Future of Eco-Conscious Textiles",
+    "desc1": "Established as a trailblazer in circular textile engineering, Avantee Industries Private Limited operates state-of-the-art closed-loop recycling facilities.",
+    "desc2": "We engineer GRS-certified recycled fibres, ring-spun yarns, and technical textiles trusted by luxury fashion houses, automotive giants, and industrial leaders worldwide.",
+    "missionTitle": "Our Mission",
+    "missionText": "To revolutionize textile production through 100% circular recycled materials while minimizing environmental footprint.",
+    "visionTitle": "Our Vision",
+    "visionText": "To lead global industrial manufacturing toward zero-carbon sustainable fabrics without compromising strength or softness.",
+    "valuesTitle": "Core Values",
+    "values": ["Circular Innovation", "Uncompromising Quality", "Environmental Stewardship", "Global Traceability"]
+  },
+  "products": {
+    "badge": "Engineered Performance",
+    "title": "Premium Recycled Yarns, Fibres & Fabrics",
+    "subtitle": "Discover our comprehensive portfolio of GRS and OEKO-TEX certified sustainable textile solutions.",
+    "tabAll": "All Products",
+    "tabFibres": "Recycled Fibres",
+    "tabYarns": "Recycled Yarns",
+    "tabFabrics": "Eco Fabrics",
+    "viewDetails": "Technical Specs",
+    "downloadBrochure": "Download Brochure",
+    "blend": "Blend Composition",
+    "application": "Key Applications",
+    "certifications": "Certifications"
+  },
+  "process": {
+    "badge": "Circular Workflow",
+    "title": "Our 6-Step Manufacturing Process",
+    "step1": "Post-Consumer Waste Collection",
+    "step1Desc": "Ethically sourcing PET bottles and textile scraps globally.",
+    "step2": "Eco-Friendly Shredding & Washing",
+    "step2Desc": "Purifying polymer chips using non-toxic closed-loop water treatment.",
+    "step3": "Precision Fiber Extrusion",
+    "step3Desc": "Transforming clean polymer into micro-denier staple fibres.",
+    "step4": "High-Efficiency Ring Spinning",
+    "step4Desc": "Spinning consistent, uniform yarns across diverse count ranges.",
+    "step5": "Technical Weaving & Dyeing",
+    "step5Desc": "Creating soft, durable fabrics with waterless color technology.",
+    "step6": "Global Quality Assurance",
+    "step6Desc": "Spectrophotometer testing for ultimate tensile strength & purity."
+  },
+  "sustainability": {
+    "badge": "Impact Metrics",
+    "title": "Measurable Environmental Stewardship",
+    "subtitle": "Every metric represents real reduction in industrial waste and resource consumption.",
+    "waterSaved": "Gallons Water Saved",
+    "co2Reduced": "Kg CO2 Emissions Prevented",
+    "energySaved": "kWh Clean Energy Utilized",
+    "wasteRecycled": "Billion Plastic Bottles Recycled"
+  },
+  "facilities": {
+    "badge": "Industrial Infrastructure",
+    "title": "World-Class Automated Manufacturing Facilities",
+    "subtitle": "Equipped with Rieter spinning lines, Trützschler carding machinery, and automated spectro-labs.",
+    "capacityUnit": "Tons/Day",
+    "machines": "High-Speed Spindles",
+    "labCert": "ISO 9001 & 14001 Certified Labs"
+  },
+  "contact": {
+    "badge": "Connect With Us",
+    "title": "Partner With Avantee Industries",
+    "subtitle": "Have a custom textile inquiry or wholesale request? Our global engineering team is ready to assist.",
+    "formTitle": "Send An Inquiry",
+    "name": "Full Name",
+    "email": "Business Email",
+    "phone": "Phone Number",
+    "productInterest": "Product of Interest",
+    "message": "Message / Volume Requirement",
+    "submit": "Send Message",
+    "sending": "Transmitting...",
+    "success": "Thank you! Your request has been sent to our sales leadership team.",
+    "headquarters": "Global Headquarters",
+    "address": "Avantee Complex, Industrial Eco-Zone, Tamil Nadu, India",
+    "whatsapp": "Instant WhatsApp Support"
+  },
+  "footer": {
+    "tagline": "Architects of Sustainable Textile Engineering.",
+    "quickLinks": "Quick Links",
+    "legal": "Privacy Policy | Terms of Service",
+    "newsletterTitle": "Stay Ahead in Eco-Textiles",
+    "newsletterSubtitle": "Subscribe to our quarterly sustainability & product innovation bulletin.",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved. Avantee Industries Private Limited."
+  }
+}

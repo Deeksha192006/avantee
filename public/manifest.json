@@ -1,0 +1,15 @@
+{
+  "short_name": "Avantee",
+  "name": "Avantee Industries Private Limited",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#061A14",
+  "theme_color": "#0E3B2E",
+  "display": "standalone"
+}

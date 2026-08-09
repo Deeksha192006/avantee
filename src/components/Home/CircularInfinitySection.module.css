@@ -1,0 +1,200 @@
+.infinitySectionWrapper {
+  position: relative;
+  background: var(--color-deep-forest);
+  color: var(--color-white);
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.infinityGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .infinityGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.leftContentCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(217, 182, 93, 0.15);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-primary);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.desc {
+  font-size: 1.05rem;
+  color: var(--color-mint);
+  opacity: 0.88;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.featureChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.chip {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(221, 245, 229, 0.15);
+  color: var(--color-white);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Infinity Diagram Container */
+.infinitySvgCard {
+  position: relative;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(217, 182, 93, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 32px 20px 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 35px rgba(217, 182, 93, 0.2);
+}
+
+.infinitySvg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Ribbon Tracks */
+.ribbonBackTrack {
+  fill: none;
+  stroke: #1B7F5B;
+  stroke-width: 36;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ribbonBorderTrack {
+  fill: none;
+  stroke: var(--gold-primary);
+  stroke-width: 40;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.3;
+}
+
+.ribbonGradientTrack {
+  fill: none;
+  stroke: url(#infinityRibbonGradient);
+  stroke-width: 32;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.flowDashAnimation {
+  fill: none;
+  stroke: #DDF5E5;
+  stroke-width: 3;
+  stroke-dasharray: 12 8;
+  animation: flowDash 15s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes flowDash {
+  to {
+    stroke-dashoffset: -400;
+  }
+}
+
+/* Nodes & Icons */
+.nodeGroup {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nodeGroup:hover {
+  transform: scale(1.18);
+}
+
+.nodeBadgeCircle {
+  fill: #061A14;
+  stroke: var(--gold-primary);
+  stroke-width: 3;
+  box-shadow: 0 0 15px rgba(217, 182, 93, 0.6);
+  transition: all 0.3s ease;
+}
+
+.nodeGroup:hover .nodeBadgeCircle {
+  fill: var(--color-emerald);
+  stroke: #FFFFFF;
+  filter: drop-shadow(0 0 15px rgba(217, 182, 93, 0.9));
+}
+
+.nodeIcon {
+  fill: var(--gold-primary);
+  transition: fill 0.3s ease;
+}
+
+.nodeGroup:hover .nodeIcon {
+  fill: #FFFFFF;
+}
+
+.nodeLabelText {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 800;
+  fill: #FFFFFF;
+  text-anchor: middle;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
+.activeNodeCard {
+  margin-top: 16px;
+  background: rgba(6, 26, 20, 0.92);
+  border: 1px solid var(--gold-primary);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  margin-bottom: 4px;
+}
+
+.cardDesc {
+  font-size: 0.85rem;
+  color: var(--color-mint);
+}

@@ -1,0 +1,251 @@
+.contactPageWrapper {
+  background: var(--color-offwhite);
+  padding-top: 100px;
+}
+
+.pageHeader {
+  background: var(--color-deep-forest);
+  color: var(--color-white);
+  padding: 90px 0 70px;
+  text-align: center;
+}
+
+.headerBadge {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.headerTitle {
+  font-size: 3rem;
+  color: var(--color-white);
+  margin-bottom: 18px;
+}
+
+@media (max-width: 768px) {
+  .headerTitle {
+    font-size: 2.2rem;
+  }
+}
+
+.headerSubtitle {
+  font-size: 1.1rem;
+  color: var(--color-mint);
+  opacity: 0.85;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.typingSub {
+  display: block;
+  margin-top: 8px;
+  color: var(--gold-primary);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.contactMetricBar {
+  background: var(--color-deep-forest);
+  border-bottom: 1px solid rgba(221, 245, 229, 0.12);
+  padding: 22px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.mainSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.metricGrid {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.mItem, .mItemGold {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-white);
+}
+
+.mIcon {
+  font-size: 1.6rem;
+  color: var(--color-emerald);
+}
+
+.mIconGold {
+  font-size: 1.6rem;
+  color: var(--gold-primary);
+}
+
+.mNum {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+}
+
+.mLabel {
+  font-size: 0.82rem;
+  color: var(--color-mint);
+  font-weight: 600;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formCard {
+  background: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 600px) {
+  .formCard {
+    padding: 24px;
+  }
+}
+
+.formHeading {
+  font-size: 1.6rem;
+  color: var(--color-deep-forest);
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-deep-forest);
+}
+
+.rowTwo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .rowTwo {
+    grid-template-columns: 1fr;
+  }
+}
+
+.input, .select, .textarea {
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-light);
+  background: var(--color-offwhite);
+  font-size: 0.95rem;
+  color: var(--color-charcoal);
+  outline: none;
+  font-family: inherit;
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  border-color: var(--color-emerald);
+  background: var(--color-white);
+  box-shadow: 0 0 0 3px rgba(27, 127, 91, 0.15);
+}
+
+.successAlert {
+  background: var(--color-mint);
+  border: 1px solid var(--color-emerald);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  text-align: center;
+  color: var(--color-deep-forest);
+}
+
+.successIcon {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-emerald);
+  color: var(--color-white);
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+/* Info Col */
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.officeCard {
+  background: var(--gradient-emerald-forest);
+  color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+}
+
+.officeIcon {
+  font-size: 2rem;
+  color: var(--gold-primary);
+  margin-bottom: 16px;
+}
+
+.officeTitle {
+  font-size: 1.3rem;
+  color: var(--color-white);
+  margin-bottom: 8px;
+}
+
+.officeText {
+  font-size: 0.95rem;
+  color: var(--color-mint);
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--gold-primary);
+  font-weight: 600;
+}
+
+.mapCard {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+}

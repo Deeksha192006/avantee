@@ -1,0 +1,116 @@
+.preloaderScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0E3B2E 0%, #061A14 100%);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+}
+
+.loaderContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.logoBadgeWrapper {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.emblemCircle {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svgCircle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.bgCircle {
+  fill: none;
+  stroke: rgba(221, 245, 229, 0.1);
+  stroke-width: 4;
+}
+
+.progressCircle {
+  fill: none;
+  stroke: url(#goldGradient);
+  stroke: var(--gold-primary);
+  stroke-width: 4;
+  stroke-dasharray: 283;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.logoLetter {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  text-shadow: 0 0 20px rgba(217, 182, 93, 0.5);
+}
+
+.brandTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--color-emerald-bright);
+  margin-bottom: 6px;
+}
+
+.goldText {
+  color: var(--color-emerald-bright);
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: #D4D4D8;
+  opacity: 0.9;
+  margin-bottom: 32px;
+}
+
+.progressContainer {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.progressBarTrack {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-emerald) 0%, var(--gold-primary) 100%);
+  border-radius: 4px;
+  transition: width 0.1s linear;
+}
+
+.counterText {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--gold-primary);
+}

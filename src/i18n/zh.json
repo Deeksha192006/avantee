@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "products": "产品中心",
+    "facilities": "生产设施",
+    "sustainability": "可持续发展",
+    "contact": "联系我们",
+    "letsTalk": "洽谈合作",
+    "selectLanguage": "选择语言"
+  },
+  "hero": {
+    "badge": "开创可持续纺织品制造新时代",
+    "titleLine1": "打造高性能",
+    "titleHighlight": "再生纱线与环保纤维",
+    "titleLine2": "服务全球产业",
+    "subtitle": "Avantee Industries 将废弃塑料转化为高品质再生纱线、环保纤维及可持续面料。",
+    "ctaPrimary": "探索产品",
+    "ctaSecondary": "虚拟工厂参观",
+    "statYears": "年卓越历程",
+    "statCapacity": "吨年产能",
+    "statExport": "出口国家",
+    "statRecycled": "吨塑料循环利用"
+  },
+  "about": {
+    "badge": "传承与愿景",
+    "title": "重塑环保纺织品的未来",
+    "desc1": "作为循环纺织工程的先驱，Avantee Industries 运营着先进的闭环回收工厂。",
+    "desc2": "我们制造获得 GRS 认证的再生纤维和纱线，深受全球奢华时尚品牌和工业巨头信赖。",
+    "missionTitle": "我们的使命",
+    "missionText": "通过 100% 可循环再生材料革新纺织品生产，最大限度减少环境 footprint。",
+    "visionTitle": "我们的愿景",
+    "visionText": "成为全球零碳可持续面料领域的领军者。",
+    "valuesTitle": "核心价值观",
+    "values": ["循环创新", "极致品质", "环境守护", "全球可追溯性"]
+  },
+  "products": {
+    "badge": "工程级性能",
+    "title": "高端再生纱线与环保面料",
+    "subtitle": "探索我们获得 GRS 和 OEKO-TEX 认证的完整纺织解决方案。",
+    "tabAll": "全部产品",
+    "tabFibres": "再生纤维",
+    "tabYarns": "再生纱线",
+    "tabFabrics": "环保面料",
+    "viewDetails": "技术规格",
+    "downloadBrochure": "下载产品手册",
+    "blend": "混纺成分",
+    "application": "主要应用领域",
+    "certifications": "权威认证"
+  },
+  "process": {
+    "badge": "循环工作流",
+    "title": "6步绿色制造工序",
+    "step1": "回收塑料收集",
+    "step1Desc": "在全球范围内合规采购 PET 瓶和废料。",
+    "step2": "环保清洗与净化",
+    "step2Desc": "无毒闭环水处理与深度净化。",
+    "step3": "精密熔体挤出",
+    "step3Desc": "将高纯度聚合物挤出为微旦短纤维。",
+    "step4": "高效环锭纺纱",
+    "step4Desc": "纺制高强力、均匀度极佳的纱线。",
+    "step5": "绿色织造与染色",
+    "step5Desc": "采用节水印染技术打造柔顺面料。",
+    "step6": "全球质量品控",
+    "step6Desc": "分光光度计与拉力测试确保极致品质。"
+  },
+  "sustainability": {
+    "badge": "环保影响",
+    "title": "可衡量的环境守护",
+    "subtitle": "每一项数据都代表着对工业废弃物和资源消耗的真实减少。",
+    "waterSaved": "节约用水（加仑）",
+    "co2Reduced": "减少二氧化碳排放（千克）",
+    "energySaved": "消耗清洁能源（千瓦时）",
+    "wasteRecycled": "回收利用塑料瓶（亿个）"
+  },
+  "facilities": {
+    "badge": "工业基础设施",
+    "title": "世界级自动化制造工厂",
+    "subtitle": "配备 Rieter 纺纱线和 Trützschler 梳棉设备及自动化实验室。",
+    "capacityUnit": "吨/天",
+    "machines": "高速纺锭",
+    "labCert": "ISO 认证实验室"
+  },
+  "contact": {
+    "badge": "联系我们",
+    "title": "与 Avantee Industries 合作",
+    "subtitle": "我们的全球工程团队随时为您提供专业纺织品咨询。",
+    "formTitle": "发送询价",
+    "name": "姓名",
+    "email": "工作邮箱",
+    "phone": "联系电话",
+    "productInterest": "意向产品",
+    "message": "需求描述 / 采购数量",
+    "submit": "发送信息",
+    "sending": "发送中...",
+    "success": "感谢您的咨询！我们的销售团队将尽快与您联系。",
+    "headquarters": "全球总部",
+    "address": "印度泰米尔纳德邦生态工业区 Avantee 大厦",
+    "whatsapp": "WhatsApp 即时客服"
+  },
+  "footer": {
+    "tagline": "可持续纺织工程的缔造者。",
+    "quickLinks": "快速链接",
+    "legal": "隐私政策 | 服务条款",
+    "newsletterTitle": "掌握纺织前沿动态",
+    "newsletterSubtitle": "订阅我们的季度可持续发展与产品创新简报。",
+    "subscribe": "订阅",
+    "rights": "版权所有。Avantee Industries Private Limited。"
+  }
+}

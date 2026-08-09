@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+  /* Brand Primary Colors (Matching Avantee Emerald Logo #1EB548 & #22C55E) */
+  --color-deep-forest: #09100D;
+  --color-emerald: #1EB548;
+  --color-emerald-bright: #22C55E;
+  --color-mint: #DCFCE7;
+  --color-mint-glow: rgba(34, 197, 94, 0.35);
+  
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-offwhite: #FAFBFA;
+  --color-light-gray: #E7ECE8;
+  --color-charcoal: #121A16;
+  --color-black: #060B09;
+  --color-border-light: rgba(30, 181, 72, 0.18);
+  --color-border-dark: rgba(34, 197, 94, 0.25);
+
+  /* Gold Accent Gradient */
+  --gold-primary: #1EB548;
+  --gold-secondary: #22C55E;
+  --gradient-gold: linear-gradient(135deg, #22C55E 0%, #1EB548 100%);
+  --gradient-gold-text: linear-gradient(135deg, #86EFAC 0%, #22C55E 50%, #1EB548 100%);
+  --gradient-emerald-forest: linear-gradient(135deg, #060B09 0%, #0E3B2E 50%, #1EB548 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing Tokens */
+  --space-hero: 160px;
+  --space-section-lg: 120px;
+  --space-section-sm: 96px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 20px rgba(30, 181, 72, 0.08);
+  --shadow-md: 0 10px 30px rgba(30, 181, 72, 0.16);
+  --shadow-lg: 0 20px 50px rgba(30, 181, 72, 0.24);
+  --shadow-glow: 0 0 35px rgba(34, 197, 94, 0.45);
+  --shadow-gold-glow: 0 0 30px rgba(30, 181, 72, 0.4);
+
+  /* Border Radii */
+  --radius-xs: 6px;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+  --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
+  --transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s;
+}
+
+[data-theme="dark"] {
+  --color-bg-primary: var(--color-deep-forest);
+  --color-text-primary: var(--color-white);
+}

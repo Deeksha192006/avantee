@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "products": "Produkte",
+    "facilities": "Produktion",
+    "sustainability": "Nachhaltigkeit",
+    "contact": "Kontakt",
+    "letsTalk": "Kontakt aufnehmen",
+    "selectLanguage": "Sprache wählen"
+  },
+  "hero": {
+    "badge": "Pionier für nachhaltige Textilherstellung",
+    "titleLine1": "Herstellung von Hochleistungs-",
+    "titleHighlight": "Recyclinggarnen & Fasern",
+    "titleLine2": "für globale Industrien",
+    "subtitle": "Avantee Industries verwandelt Plastikmüll in luxuriöse Recyclinggarne, Öko-Fasern und nachhaltige Stoffe.",
+    "ctaPrimary": "Produkte entdecken",
+    "ctaSecondary": "Virtueller Fabrikrundgang",
+    "statYears": "Jahre Exzellenz",
+    "statCapacity": "Tonnen Jahreskapazität",
+    "statExport": "Exportländer",
+    "statRecycled": "Tonnen Plastik Rezykliert"
+  },
+  "about": {
+    "badge": "Tradition & Vision",
+    "title": "Die Zukunft umweltbewusster Textilien",
+    "desc1": "Als Vorreiter im zirkulären Textilingenieurwesen betreibt Avantee Industries modernste Recyclinganlagen im geschlossenen Kreislauf.",
+    "desc2": "Wir entwickeln GRS-zertifizierte Recyclingfasern und Garne für weltweite Luxus- und Industriemarken.",
+    "missionTitle": "Unsere Mission",
+    "missionText": "Revolutionierung der Textilproduktion durch 100% zirkuläre Recyclingmaterialien.",
+    "visionTitle": "Unsere Vision",
+    "visionText": "Weltweiter Marktführer für CO2-freie nachhaltige Stoffe höchster Qualität zu werden.",
+    "valuesTitle": "Kernwerte",
+    "values": ["Kreislauf-Innovation", "Höchste Qualität", "Umweltverantwortung", "Globale Rückverfolgbarkeit"]
+  },
+  "products": {
+    "badge": "Leistungsstarke Technik",
+    "title": "Premium Recyclinggarne & Fasern",
+    "subtitle": "Entdecken Sie unser GRS- und OEKO-TEX-zertifiziertes Textilportfolio.",
+    "tabAll": "Alle Produkte",
+    "tabFibres": "Recyclingfasern",
+    "tabYarns": "Recyclinggarne",
+    "tabFabrics": "Öko-Stoffe",
+    "viewDetails": "Technische Daten",
+    "downloadBrochure": "Broschüre herunterladen",
+    "blend": "Mischungsverhältnis",
+    "application": "Hauptanwendungen",
+    "certifications": "Zertifizierungen"
+  },
+  "process": {
+    "badge": "Kreislaufprozess",
+    "title": "Unser 6-stufiger Herstellungsprozess",
+    "step1": "Sammlung von Plastikmüll",
+    "step1Desc": "Ethizierte weltweite Beschaffung von PET-Flaschen.",
+    "step2": "Umweltfreundliches Waschen",
+    "step2Desc": "Reinigung durch ungiftige Wasseraufbereitung.",
+    "step3": "Präzisions-Faserextrusion",
+    "step3Desc": "Umwandlung von Polymeren in Mikrofaser-Stapel.",
+    "step4": "Ring-Spinnverfahren",
+    "step4Desc": "Herstellung gleichmäßiger und starker Garne.",
+    "step5": "Technisches Weben & Färben",
+    "step5Desc": "Herstellung weicher Stoffe mit wassersparender Technologie.",
+    "step6": "Internationale Qualitätssicherung",
+    "step6Desc": "Spektralfotometrische Prüfung auf Reißfestigkeit."
+  },
+  "sustainability": {
+    "badge": "Ökologische Wirkung",
+    "title": "Messbare Umweltverantwortung",
+    "subtitle": "Jede Kennzahl steht für eine reale Reduzierung von Industrieabfällen.",
+    "waterSaved": "Liter Wasser Gespart",
+    "co2Reduced": "Eingesparte CO2-Emissionen",
+    "energySaved": "Genutzte Saubere Energie",
+    "wasteRecycled": "Recycelte Plastikflaschen"
+  },
+  "facilities": {
+    "badge": "Industrieinfrastruktur",
+    "title": "Hochmoderne automatisierte Produktionsanlagen",
+    "subtitle": "Ausgestattet mit Rieter-Spinnlinien und Trützschler-Karden.",
+    "capacityUnit": "Tonnen/Tag",
+    "machines": "Hochgeschwindigkeitsspindeln",
+    "labCert": "ISO-zertifizierte Prüflabore"
+  },
+  "contact": {
+    "badge": "Kontaktieren Sie uns",
+    "title": "Partnerschaft mit Avantee Industries",
+    "subtitle": "Unser globales Ingenieurteam steht Ihnen zur Verfügung.",
+    "formTitle": "Anfrage senden",
+    "name": "Vollständiger Name",
+    "email": "Geschäftliche E-Mail",
+    "phone": "Telefonnummer",
+    "productInterest": "Gewünschtes Produkt",
+    "message": "Nachricht / Mengenanforderung",
+    "submit": "Nachricht Senden",
+    "sending": "Wird gesendet...",
+    "success": "Vielen Dank! Ihre Anfrage wurde an unser Vertriebsteam weitergeleitet.",
+    "headquarters": "Hauptsitz",
+    "address": "Avantee Komplex, Industriezone, Tamil Nadu, Indien",
+    "whatsapp": "Direkter WhatsApp-Support"
+  },
+  "footer": {
+    "tagline": "Architekten nachhaltiger Textiltechnik.",
+    "quickLinks": "Quick-Links",
+    "legal": "Datenschutz | Nutzungsbedingungen",
+    "newsletterTitle": "Bleiben Sie informiert",
+    "newsletterSubtitle": "Abonnieren Sie unseren vierteljährlichen Nachhaltigkeits-Newsletter.",
+    "subscribe": "Abonnieren",
+    "rights": "Alle Rechte vorbehalten. Avantee Industries Private Limited."
+  }
+}
