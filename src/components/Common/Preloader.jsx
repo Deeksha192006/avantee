@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Preloader.module.css';
 
-import { AvanteeLogoMark } from './AvanteeLogo';
+import { AvanteeLogo } from './AvanteeLogo';
 
 export const Preloader = ({ onComplete }) => {
   const [progress, setProgress] = useState(0);
@@ -33,48 +33,15 @@ export const Preloader = ({ onComplete }) => {
       transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
     >
       <div className={styles.loaderContent}>
-        {/* Animated Brand Emblem */}
+        {/* Exact User-Provided Logo Image */}
         <motion.div
-          className={styles.logoBadgeWrapper}
-          initial={{ scale: 0.8, opacity: 0 }}
+          className={styles.logoWrapper}
+          initial={{ scale: 0.88, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <div className={styles.emblemCircle}>
-            <svg viewBox="0 0 100 100" className={styles.svgCircle}>
-              <circle
-                cx="50"
-                cy="50"
-                r="45"
-                className={styles.bgCircle}
-              />
-              <circle
-                cx="50"
-                cy="50"
-                r="45"
-                className={styles.progressCircle}
-                style={{
-                  strokeDashoffset: 283 - (283 * progress) / 100,
-                }}
-              />
-            </svg>
-            <div className={styles.logoLetter}>
-              <AvanteeLogoMark size={54} />
-            </div>
-          </div>
+          <AvanteeLogo width={360} />
         </motion.div>
-
-        {/* Corporate Title & Tagline */}
-        <motion.h1
-          className={styles.brandTitle}
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          AVANTEE
-        </motion.h1>
-
-        <p className={styles.subtitle}>WHERE VARIETY MEETS EXCELLENCE</p>
 
         {/* Counter Percentage */}
         <div className={styles.progressContainer}>
