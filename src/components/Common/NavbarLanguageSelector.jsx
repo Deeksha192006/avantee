@@ -91,7 +91,7 @@ export const NavbarLanguageSelector = ({ isMobile = false }) => {
                     <div className={styles.flagCircle}>
                       <FlagIcon code={lang.code} size={22} />
                     </div>
-                    <span className={styles.itemLabel}>{lang.label}</span>
+                    <span className={styles.itemLabel}>{lang.name}</span>
                   </button>
                 );
               })}

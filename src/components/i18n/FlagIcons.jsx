@@ -4,14 +4,36 @@ import React from 'react';
 export const FlagIcon = ({ code, size = 24 }) => {
   switch (code) {
     case 'en':
-      // 🇬🇧 United Kingdom Flag
+    case 'us':
+      // 🇺🇸 United States Flag (US English)
       return (
         <svg width={size} height={size} viewBox="0 0 100 100" style={{ borderRadius: '50%', display: 'block' }}>
-          <circle cx="50" cy="50" r="50" fill="#00247D" />
-          <path d="M0,0 L100,100 M100,0 L0,100" stroke="#FFFFFF" strokeWidth="16" />
-          <path d="M0,0 L100,100 M100,0 L0,100" stroke="#CF142B" strokeWidth="10" />
-          <path d="M50,0 V100 M0,50 H100" stroke="#FFFFFF" strokeWidth="24" />
-          <path d="M50,0 V100 M0,50 H100" stroke="#CF142B" strokeWidth="14" />
+          <clipPath id="usFlagCircle">
+            <circle cx="50" cy="50" r="50" />
+          </clipPath>
+          <g clipPath="url(#usFlagCircle)">
+            <rect x="0" y="0" width="100" height="100" fill="#B22234" />
+            <rect x="0" y="7.69" width="100" height="7.69" fill="#FFFFFF" />
+            <rect x="0" y="23.07" width="100" height="7.69" fill="#FFFFFF" />
+            <rect x="0" y="38.46" width="100" height="7.69" fill="#FFFFFF" />
+            <rect x="0" y="53.84" width="100" height="7.69" fill="#FFFFFF" />
+            <rect x="0" y="69.23" width="100" height="7.69" fill="#FFFFFF" />
+            <rect x="0" y="84.61" width="100" height="7.69" fill="#FFFFFF" />
+            <rect x="0" y="0" width="45" height="53.84" fill="#3C3B6E" />
+            <circle cx="10" cy="10" r="2.5" fill="#FFFFFF" />
+            <circle cx="22.5" cy="10" r="2.5" fill="#FFFFFF" />
+            <circle cx="35" cy="10" r="2.5" fill="#FFFFFF" />
+            <circle cx="16.25" cy="18" r="2.5" fill="#FFFFFF" />
+            <circle cx="28.75" cy="18" r="2.5" fill="#FFFFFF" />
+            <circle cx="10" cy="26" r="2.5" fill="#FFFFFF" />
+            <circle cx="22.5" cy="26" r="2.5" fill="#FFFFFF" />
+            <circle cx="35" cy="26" r="2.5" fill="#FFFFFF" />
+            <circle cx="16.25" cy="34" r="2.5" fill="#FFFFFF" />
+            <circle cx="28.75" cy="34" r="2.5" fill="#FFFFFF" />
+            <circle cx="10" cy="42" r="2.5" fill="#FFFFFF" />
+            <circle cx="22.5" cy="42" r="2.5" fill="#FFFFFF" />
+            <circle cx="35" cy="42" r="2.5" fill="#FFFFFF" />
+          </g>
         </svg>
       );
 

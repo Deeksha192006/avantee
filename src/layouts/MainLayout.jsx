@@ -41,17 +41,17 @@ export const MainLayout = ({ children }) => {
       {/* Language Switcher Modal */}
       <GlobeLanguageModal />
 
-      {/* Floating Action Hub (WhatsApp, Call, Email) */}
+      {/* Floating Contact Bubble (Always visible top-to-bottom on all pages) */}
       <FloatingContactHub />
-
-      {/* Back to Top Circular Progress Button */}
-      <BackToTopButton />
 
       {/* Main App Shell */}
       <div className="app-shell" style={{ opacity: loading ? 0 : 1, transition: 'opacity 0.6s ease' }}>
         <Navbar />
         <main>{children}</main>
         <Footer />
+
+        {/* Back to Top Circular Progress Button (Bottom Left) */}
+        <BackToTopButton />
       </div>
     </ReactLenis>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGlobe, FaTimes, FaCheck } from 'react-icons/fa';
 import { useTranslation } from '../../context/LanguageContext';
+import { FlagIcon } from './FlagIcons';
 import styles from './GlobeLanguageModal.module.css';
 
 export const GlobeLanguageButton = () => {
@@ -23,7 +24,9 @@ export const GlobeLanguageButton = () => {
       >
         <FaGlobe className={styles.globeIcon} />
       </motion.div>
-      <span className={styles.flagBadge}>{selectedLangObj.flag}</span>
+      <span className={styles.flagBadge}>
+        <FlagIcon code={selectedLangObj.code} size={18} />
+      </span>
       <span className={styles.codeText}>{selectedLangObj.code.toUpperCase()}</span>
     </motion.button>
   );
@@ -95,7 +98,9 @@ export const GlobeLanguageModal = () => {
                     whileHover={{ scale: 1.03, translateY: -2 }}
                     whileTap={{ scale: 0.97 }}
                   >
-                    <span className={styles.flagIcon}>{lang.flag}</span>
+                    <span className={styles.flagIcon}>
+                      <FlagIcon code={lang.code} size={24} />
+                    </span>
                     <span className={styles.langName}>{lang.name}</span>
                     {isSelected && (
                       <motion.span

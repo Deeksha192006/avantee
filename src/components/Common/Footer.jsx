@@ -89,15 +89,15 @@ export const Footer = () => {
 
             {/* Col 4: Contact & Location */}
             <div className={styles.linkCol}>
-              <h4 className={styles.colTitle}>{t('contact.headquarters', 'Global Headquarters')}</h4>
+              <h4 className={styles.colTitle}>Headquarters Contact Desk</h4>
               <ul className={styles.contactList}>
                 <li>
                   <FaMapMarkerAlt className={styles.contactIcon} />
-                  <span>Avantee Complex, Eco Zone, Tamil Nadu, India</span>
+                  <span>Door No. 2/133, Senjudaiyampalayam, Namakkal – 637204, TN, India</span>
                 </li>
                 <li>
                   <FaPhone className={styles.contactIcon} />
-                  <span>+91 422 9876 5430</span>
+                  <span>+91 4268290885</span>
                 </li>
                 <li>
                   <FaEnvelope className={styles.contactIcon} />
@@ -105,13 +105,13 @@ export const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/919840855885"
                     target="_blank"
                     rel="noreferrer"
                     className={styles.whatsappBadge}
                   >
                     <FaWhatsapp />
-                    <span>{t('contact.whatsapp', 'Instant WhatsApp Support')}</span>
+                    <span>Instant WhatsApp Support</span>
                   </a>
                 </li>
               </ul>

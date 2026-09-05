@@ -1,7 +1,21 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
-import { FaPhoneAlt, FaEnvelope, FaPaperPlane, FaBuilding, FaGlobe, FaClock, FaCheck } from 'react-icons/fa';
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaPaperPlane,
+  FaBuilding,
+  FaIndustry,
+  FaStore,
+  FaGlobe,
+  FaClock,
+  FaCheck,
+  FaMapMarkerAlt,
+  FaFileInvoiceDollar,
+  FaYarn,
+  FaLayerGroup
+} from 'react-icons/fa';
 import { useTranslation } from '../context/LanguageContext';
 import { TypingText } from '../components/Common/TypingText';
 import { AnimatedCounter } from '../components/Common/AnimatedCounter';
@@ -35,16 +49,47 @@ export const ContactPage = () => {
     });
   };
 
+  const departmentPhones = [
+    {
+      dept: 'Recycled Yarns',
+      phone: '+91 9442455885',
+      href: 'tel:+919442455885',
+      icon: '🧶',
+      badge: 'Yarn Sales'
+    },
+    {
+      dept: 'Recycled Fabrics',
+      phone: '+91 9345655885',
+      href: 'tel:+919345655885',
+      icon: '🧵',
+      badge: 'Fabric Sales'
+    },
+    {
+      dept: 'Brand Sales / International',
+      phone: '+91 9840855885',
+      href: 'tel:+919840855885',
+      icon: '🌐',
+      badge: 'Global Sales'
+    },
+    {
+      dept: 'Headquarters',
+      phone: '+91 4268290885',
+      href: 'tel:+914268290885',
+      icon: '🏢',
+      badge: 'Main Office'
+    }
+  ];
+
   return (
     <div className={styles.contactPageWrapper}>
-      {/* Header */}
+      {/* Page Header */}
       <section className={styles.pageHeader}>
         <GridBackground variant="blueprint" dark={true} opacity={0.08} />
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <span className={styles.headerBadge}>{t('contact.badge', 'Connect With Us')}</span>
-          <h1 className={styles.headerTitle}>{t('contact.title', 'Partner With Avantee Industries')}</h1>
+          <h1 className={styles.headerTitle}>Get in Touch</h1>
           <p className={styles.headerSubtitle}>
-            {t('contact.subtitle')}{' '}
+            Partner with Avantee Industries Private Limited for GRS certified recycled yarns, fabrics, and technical textiles.
             <span className={styles.typingSub}>
               <TypingText phrases={contactTypingPhrases} speed={60} delay={2200} />
             </span>
@@ -82,7 +127,119 @@ export const ContactPage = () => {
         </div>
       </section>
 
-      {/* Main Grid */}
+      {/* Get In Touch - Office Locations & GSTIN Section */}
+      <section className={styles.getInTouchSection}>
+        <div className="container">
+          <div className={styles.sectionHeaderTitle}>
+            <span className={styles.sectionSubBadge}>Official Corporate Locations</span>
+            <h2>Get in Touch</h2>
+            <p>Connect directly with our manufacturing headquarters or domestic sales offices</p>
+          </div>
+
+          <div className={styles.officesGrid}>
+            {/* Head Office & Factory Card */}
+            <motion.div
+              className={styles.locationCard}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className={styles.cardHeaderBar}>
+                <div className={styles.cardIconBox}>
+                  <FaIndustry />
+                </div>
+                <div>
+                  <span className={styles.cardCategory}>Manufacturing Hub</span>
+                  <h3 className={styles.cardMainTitle}>Head Office & Factory Address</h3>
+                </div>
+              </div>
+
+              <h4 className={styles.companyName}>Avantee Industries Private Limited</h4>
+
+              <div className={styles.addressBlock}>
+                <FaMapMarkerAlt className={styles.mapIcon} />
+                <p>
+                  Door No. 2/133, Senjudaiyampalayam, Irukkur,<br />
+                  Paramathi Velur, Namakkal – 637204,<br />
+                  Tamil Nadu, India.
+                </p>
+              </div>
+
+              <div className={styles.gstinBadge}>
+                <FaFileInvoiceDollar />
+                <span>GSTIN: <strong>33AAZCA8582H1ZZ</strong></span>
+              </div>
+            </motion.div>
+
+            {/* Domestic Sales Office Card */}
+            <motion.div
+              className={styles.locationCard}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+            >
+              <div className={styles.cardHeaderBar}>
+                <div className={`${styles.cardIconBox} ${styles.salesIconBox}`}>
+                  <FaStore />
+                </div>
+                <div>
+                  <span className={styles.cardCategory}>Sales & Commercial Hub</span>
+                  <h3 className={styles.cardMainTitle}>Domestic Sales Office</h3>
+                </div>
+              </div>
+
+              <h4 className={styles.companyName}>Avantee Industries Private Limited</h4>
+
+              <div className={styles.addressBlock}>
+                <FaMapMarkerAlt className={styles.mapIcon} />
+                <p>
+                  SF No. 269/2, Thandagoundenputhur, Kalipalayam,<br />
+                  Avinashi, Kalipalayam, Tiruppur – 641666,<br />
+                  Tamil Nadu, India.
+                </p>
+              </div>
+
+              <div className={styles.gstinBadge}>
+                <FaFileInvoiceDollar />
+                <span>GSTIN: <strong>33AAZCA8582H1ZZ</strong></span>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Department Direct Call Directory Grid */}
+          <div className={styles.deptPhoneSection}>
+            <h3 className={styles.deptSectionHeading}>Department Direct Desk Directory</h3>
+            <div className={styles.phoneGrid}>
+              {departmentPhones.map((item, idx) => (
+                <motion.a
+                  key={item.phone}
+                  href={item.href}
+                  className={styles.phoneCard}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  whileHover={{ scale: 1.03, translateY: -4 }}
+                >
+                  <div className={styles.phoneCardHeader}>
+                    <span className={styles.emojiIcon}>{item.icon}</span>
+                    <span className={styles.deptBadge}>{item.badge}</span>
+                  </div>
+                  <span className={styles.deptTitle}>{item.dept}</span>
+                  <div className={styles.phoneNumberRow}>
+                    <FaPhoneAlt className={styles.callIcon} />
+                    <span className={styles.phoneNumText}>{item.phone}</span>
+                  </div>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Grid: Form & Map */}
       <section className={`section-padding ${styles.mainSection}`}>
         <GridBackground variant="dots" dark={false} opacity={0.08} />
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
@@ -131,7 +288,7 @@ export const ContactPage = () => {
                       <label>{t('contact.phone', 'Phone Number')}</label>
                       <input
                         type="tel"
-                        placeholder="+1 (555) 000-0000"
+                        placeholder="+91 98765 43210"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className={styles.input}
@@ -146,10 +303,10 @@ export const ContactPage = () => {
                       onChange={(e) => setFormData({ ...formData, product: e.target.value })}
                       className={styles.select}
                     >
-                      <option value="Recycled Yarns">Recycled Ring-Spun Yarns</option>
-                      <option value="Recycled Fibres">Eco-Staple PET Fibres</option>
-                      <option value="Eco Fabrics">Upcycled Eco Fabrics</option>
-                      <option value="Custom Engineering">Custom Technical Blend Requirement</option>
+                      <option value="Recycled Yarns">Recycled Ring-Spun Yarns (+91 9442455885)</option>
+                      <option value="Recycled Fabrics">Recycled Fabrics (+91 9345655885)</option>
+                      <option value="Brand Sales / International">Brand Sales / International (+91 9840855885)</option>
+                      <option value="Headquarters">Headquarters (+91 4268290885)</option>
                     </select>
                   </div>
 
@@ -182,10 +339,10 @@ export const ContactPage = () => {
             >
               <div className={styles.officeCard}>
                 <FaBuilding className={styles.officeIcon} />
-                <h4 className={styles.officeTitle}>{t('contact.headquarters', 'Global Headquarters')}</h4>
-                <p className={styles.officeText}>{t('contact.address')}</p>
+                <h4 className={styles.officeTitle}>Headquarters Contact Desk</h4>
+                <p className={styles.officeText}>Avantee Industries Private Limited, Namakkal, Tamil Nadu, India.</p>
                 <div className={styles.contactDetails}>
-                  <div><FaPhoneAlt /> +91 422 9876 5430</div>
+                  <div><FaPhoneAlt /> +91 4268290885</div>
                   <div><FaEnvelope /> info@avanteeindustries.com</div>
                 </div>
               </div>
@@ -196,7 +353,7 @@ export const ContactPage = () => {
                   title="Avantee Map Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125322.47775619379!2d76.90100412852233!3d11.016844482068711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                   width="100%"
-                  height="260"
+                  height="300"
                   style={{ border: 0, borderRadius: '16px' }}
                   allowFullScreen=""
                   loading="lazy"

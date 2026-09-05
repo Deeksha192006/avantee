@@ -1,67 +1,54 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaCommentAlt, FaTimes } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { FaPhoneAlt } from 'react-icons/fa';
 import styles from './FloatingContactHub.module.css';
 
 export const FloatingContactHub = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const [mounted, setMounted] = useState(false);
 
-  return (
-    <div className={styles.floatingWrapper}>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className={styles.expandedHub}
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ type: 'spring', damping: 20, stiffness: 300 }}
-          >
-            <a
-              href="https://wa.me/919876543210"
-              target="_blank"
-              rel="noreferrer"
-              className={`${styles.actionBtn} ${styles.whatsapp}`}
-              data-cursor="hover"
-              data-cursor-text="Chat"
-            >
-              <FaWhatsapp />
-              <span className={styles.tooltip}>WhatsApp Chat</span>
-            </a>
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-            <a
-              href="tel:+914229876543"
-              className={`${styles.actionBtn} ${styles.phone}`}
-              data-cursor="hover"
-              data-cursor-text="Call"
-            >
-              <FaPhoneAlt />
-              <span className={styles.tooltip}>Direct Call</span>
-            </a>
+  const handleContactClick = (e) => {
+    if (location.pathname === '/contact') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
-            <a
-              href="mailto:info@avanteeindustries.com"
-              className={`${styles.actionBtn} ${styles.email}`}
-              data-cursor="hover"
-              data-cursor-text="Email"
-            >
-              <FaEnvelope />
-              <span className={styles.tooltip}>Send Email</span>
-            </a>
-          </motion.div>
-        )}
-      </AnimatePresence>
+  if (!mounted || typeof document === 'undefined') return null;
 
-      <motion.button
-        className={styles.mainTriggerBtn}
-        onClick={() => setIsOpen(!isOpen)}
-        whileHover={{ scale: 1.1 }}
+  return ReactDOM.createPortal(
+    <div className={styles.floatingWrapper} id="floating-contact-symbol">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.15 }}
         whileTap={{ scale: 0.9 }}
-        aria-label="Contact Options"
+        className={styles.bubbleMotion}
       >
-        <span className={styles.pulseRing} />
-        {isOpen ? <FaTimes /> : <FaCommentAlt />}
-      </motion.button>
-    </div>
+        <Link
+          to="/contact"
+          onClick={handleContactClick}
+          className={styles.contactBubble}
+          aria-label="Contact Us - Redirect to Contact Page"
+          title="Contact Us - Click to open Contact Page"
+        >
+          {/* Animated Outer Pulse Ring */}
+          <span className={styles.pulseRing} />
+
+          {/* Contact Bubble Icon */}
+          <FaPhoneAlt className={styles.bubbleIcon} />
+
+          {/* Hover Tooltip Badge */}
+          <span className={styles.bubbleTooltip}>Contact Us</span>
+        </Link>
+      </motion.div>
+    </div>,
+    document.body
   );
 };

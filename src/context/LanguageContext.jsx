@@ -10,12 +10,12 @@ const translations = { en, fr, de, es, nl, sv };
 
 // Strictly the 6 requested client languages
 export const LANGUAGES = [
-  { code: 'en', label: 'EN', name: 'English', dir: 'ltr' },
-  { code: 'fr', label: 'FR', name: 'French', dir: 'ltr' },
-  { code: 'de', label: 'DE', name: 'German', dir: 'ltr' },
-  { code: 'es', label: 'ES', name: 'Spanish', dir: 'ltr' },
-  { code: 'nl', label: 'NL', name: 'Dutch', dir: 'ltr' },
-  { code: 'sv', label: 'SE', name: 'Swedish', dir: 'ltr' },
+  { code: 'en', label: 'US English', name: 'US English', shortLabel: 'US', dir: 'ltr' },
+  { code: 'fr', label: 'FR', name: 'French', shortLabel: 'FR', dir: 'ltr' },
+  { code: 'de', label: 'DE', name: 'German', shortLabel: 'DE', dir: 'ltr' },
+  { code: 'es', label: 'ES', name: 'Spanish', shortLabel: 'ES', dir: 'ltr' },
+  { code: 'nl', label: 'NL', name: 'Dutch', shortLabel: 'NL', dir: 'ltr' },
+  { code: 'sv', label: 'SE', name: 'Swedish', shortLabel: 'SE', dir: 'ltr' },
 ];
 
 const LanguageContext = createContext();

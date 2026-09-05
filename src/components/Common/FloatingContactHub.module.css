@@ -1,68 +1,126 @@
 .floatingWrapper {
-  position: fixed;
-  bottom: 32px;
-  right: 32px;
-  z-index: 9998;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
+  position: fixed !important;
+  bottom: 32px !important;
+  right: 32px !important;
+  z-index: 9999999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  pointer-events: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 @media (max-width: 768px) {
   .floatingWrapper {
-    bottom: 20px;
-    right: 20px;
+    bottom: 22px !important;
+    right: 18px !important;
   }
 }
 
-.mainTriggerBtn {
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: var(--gradient-emerald-forest);
-  border: 1.5px solid var(--gold-primary);
-  color: var(--color-white);
-  font-size: 1.4rem;
+.bubbleMotion {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(14, 59, 46, 0.5);
+}
+
+/* Circular Floating Contact Bubble */
+.contactBubble {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0e3b2e 0%, #1b7f5b 100%);
+  border: 2.5px solid #d9b65d;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  box-shadow: 0 12px 35px rgba(14, 59, 46, 0.75), 0 0 28px rgba(217, 182, 93, 0.55);
   position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contactBubble:hover {
+  background: linear-gradient(135deg, #1b7f5b 0%, #0e3b2e 100%);
+  border-color: #ffffff;
+  box-shadow: 0 16px 45px rgba(27, 127, 91, 0.9), 0 0 40px rgba(217, 182, 93, 0.8);
+}
+
+.bubbleIcon {
+  color: #d9b65d;
+  transition: color 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+}
+
+.contactBubble:hover .bubbleIcon {
+  color: #ffffff;
+  transform: scale(1.18);
 }
 
 .pulseRing {
   position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
+  top: -7px;
+  left: -7px;
+  right: -7px;
+  bottom: -7px;
   border-radius: 50%;
-  border: 2px solid var(--gold-primary);
-  opacity: 0.6;
-  animation: pulseGlow 2s infinite;
+  border: 2px solid #d9b65d;
+  opacity: 0.7;
+  animation: pulseAnimation 2.2s infinite ease-in-out;
+  pointer-events: none;
 }
 
-@keyframes pulseGlow {
+@keyframes pulseAnimation {
   0% {
     transform: scale(1);
-    opacity: 0.6;
+    opacity: 0.7;
   }
   50% {
-    transform: scale(1.15);
-    opacity: 0.2;
+    transform: scale(1.22);
+    opacity: 0.15;
   }
   100% {
     transform: scale(1);
-    opacity: 0.6;
+    opacity: 0.7;
   }
+}
+
+/* Hover Tooltip Badge */
+.bubbleTooltip {
+  position: absolute;
+  right: 74px;
+  background: rgba(6, 26, 20, 0.96);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-family: var(--font-heading, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateX(6px);
+  border: 1px solid #d9b65d;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+}
+
+.contactBubble:hover .bubbleTooltip {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .expandedHub {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  align-items: center;
+  align-items: flex-end;
+  padding-right: 4px;
 }
 
 .actionBtn {
@@ -74,13 +132,20 @@
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   position: relative;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
 }
 
 .actionBtn:hover {
-  transform: scale(1.1);
+  transform: scale(1.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.inquiry {
+  background: var(--gradient-emerald-forest, linear-gradient(135deg, #1b7f5b 0%, #0e3b2e 100%));
+  border: 1px solid var(--gold-primary);
 }
 
 .whatsapp {
@@ -88,27 +153,28 @@
 }
 
 .phone {
-  background: var(--color-emerald);
+  background: #0284c7;
 }
 
 .email {
-  background: var(--gold-secondary);
+  background: var(--gold-secondary, #d9b65d);
 }
 
 .tooltip {
   position: absolute;
   right: 60px;
-  background: rgba(14, 59, 46, 0.95);
+  background: rgba(6, 26, 20, 0.96);
   color: var(--color-white);
-  padding: 6px 12px;
-  border-radius: var(--radius-xs);
+  padding: 6px 14px;
+  border-radius: var(--radius-xs, 6px);
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease;
   border: 1px solid var(--gold-primary);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .actionBtn:hover .tooltip {
