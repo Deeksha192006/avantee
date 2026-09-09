@@ -37,7 +37,7 @@ export const AboutPreviewSection = () => {
             </div>
 
             <div className={styles.badgeExperience}>
-              <span className={styles.badgeYears}>25+</span>
+              <span className={styles.badgeYears}>10+</span>
               <div className={styles.badgeTextGroup}>
                 <span className={styles.badgeTitle}>YEARS OF</span>
                 <span className={styles.badgeSub}>CIRCULAR INNOVATION</span>
@@ -64,14 +64,14 @@ export const AboutPreviewSection = () => {
             </p>
 
             <p className={styles.desc}>
-              {t('about.desc2')}
+              {t('about.desc2', 'We engineer GRS-certified recycled fibres, yarns, and technical textiles trusted by luxury fashion houses, automotive giants, and industrial leaders worldwide.')}
             </p>
 
             {/* Core Values List */}
             <div className={styles.valuesGrid}>
               <div className={styles.valueItem}>
                 <FaCheckCircle className={styles.checkIcon} />
-                <span>GRS & OEKO-TEX Standard 100</span>
+                <span>GRS & RCS Certified</span>
               </div>
               <div className={styles.valueItem}>
                 <FaCheckCircle className={styles.checkIcon} />

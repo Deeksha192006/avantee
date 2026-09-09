@@ -78,8 +78,8 @@ export const RecyclingStorytellingSection = () => {
     {
       stepNum: '08',
       title: t('process.step8Title', 'Delivered to Global Customers'),
-      desc: t('process.step8Desc', 'Premium recycled fibres, yarns, and fabrics are supplied to leading fashion brands and industrial partners across 45+ countries.'),
-      badge: '45+ Global Export Markets',
+      desc: t('process.step8Desc', 'Premium recycled fibres, yarns, and fabrics are supplied to leading fashion brands and industrial partners across 5+ countries.'),
+      badge: '5+ Global Export Markets',
       icon: <FaGlobeAmericas />,
       image: '/images/fabric_usage_banner.png',
     },

@@ -48,7 +48,7 @@ export const Footer = () => {
             {/* Col 1: Brand Info with Official Logo */}
             <div className={styles.brandCol}>
               <Link to="/" className={styles.footerLogo}>
-                <AvanteeLogo width={220} />
+                <AvanteeLogo width={220} variant="footer" />
               </Link>
               <p className={styles.brandTagline}>
                 {t('footer.tagline', 'Architects of Sustainable Textile Engineering.')}

@@ -56,8 +56,8 @@ export const DataVisualizationSection = () => {
 
   // SECTION 1: GLOBAL IMPACT KPI CARDS
   const kpis = [
-    { target: 50000, suffix: '+', label: 'Tons Recycled', icon: <FaRecycle /> },
-    { target: 25, suffix: '+', label: 'Countries Served', icon: <FaGlobe /> },
+    { target: 4000, suffix: '+', label: 'Tons Recycled', icon: <FaRecycle /> },
+    { target: 5, suffix: '+', label: 'Countries Served', icon: <FaGlobe /> },
     { target: 500, suffix: '+', label: 'Business Clients', icon: <FaBuilding /> },
     { target: 99, suffix: '%', label: 'Quality Assurance', icon: <FaShieldAlt /> },
     { target: 100, suffix: '%', label: 'Pre-Consumer Waste', icon: <FaCheckCircle /> },
@@ -82,7 +82,7 @@ export const DataVisualizationSection = () => {
     { num: '05', title: 'Yarn Manufacturing', desc: 'Swiss Rieter ring-spinning lines.', icon: <FaSync /> },
     { num: '06', title: 'Fabric Production', desc: 'Waterless dope-dyed weaving.', icon: <FaProjectDiagram /> },
     { num: '07', title: 'Quality Inspection', desc: 'Uster spectrophotometric lab tests.', icon: <FaFlask /> },
-    { num: '08', title: 'Global Delivery', desc: 'Exported across 45+ international markets.', icon: <FaTruckLoading /> },
+    { num: '08', title: 'Global Delivery', desc: 'Exported across 5+ international markets.', icon: <FaTruckLoading /> },
   ];
 
   // SECTION 5: PRODUCT MIX DOUGHNUT DATA (Recharts)
@@ -139,11 +139,11 @@ export const DataVisualizationSection = () => {
 
   // SECTION 12: PREMIUM KPI STRIP DATA
   const stripStats = [
-    { num: 50000, suffix: '+', label: 'Recycled Materials (Tons)' },
+    { num: 4000, suffix: '+', label: 'Recycled Materials (Tons)' },
     { num: 500, suffix: '+', label: 'Happy Customers' },
-    { num: 25, suffix: '+', label: 'Global Destinations' },
+    { num: 5, suffix: '+', label: 'Global Destinations' },
     { num: 100, suffix: '%', label: 'Quality Assurance' },
-    { num: 25, suffix: '+', label: 'Years Experience' },
+    { num: 10, suffix: '+', label: 'Years Experience' },
   ];
 
   return (

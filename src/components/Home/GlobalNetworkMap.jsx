@@ -71,7 +71,7 @@ export const GlobalNetworkMap = () => {
         <SectionTitle
           label="Worldwide Export Presence"
           title="Connecting Sustainable Manufacturing Globally"
-          subtitle="Shipping GRS-certified recycled materials to over 45+ countries across North America, Europe, Asia, and the Middle East."
+          subtitle="Shipping GRS-certified recycled materials to over 5+ countries across North America, Europe, Asia, and the Middle East."
         />
 
         {/* Interactive Vector World Map Container */}

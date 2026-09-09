@@ -70,7 +70,7 @@ export const CircularInfinitySection = () => {
     {
       id: 'n6',
       title: 'Retailing Brand',
-      desc: 'Supplying leading international sustainable apparel brands across 45+ countries.',
+      desc: 'Supplying leading international sustainable apparel brands across 5+ countries.',
       x: 300,
       y: 190,
       labelY: 225,
@@ -131,7 +131,7 @@ export const CircularInfinitySection = () => {
             <div className={styles.featureChips}>
               <span className={styles.chip}>✦ 100% Pre-Consumer Waste</span>
               <span className={styles.chip}>✦ Zero-Landfill Closed Loop</span>
-              <span className={styles.chip}>✦ GRS & OEKO-TEX 100 Certified</span>
+              <span className={styles.chip}>✦ GRS & RCS Certified</span>
               <span className={styles.chip}>✦ Zero Chemical Solvents</span>
             </div>
 

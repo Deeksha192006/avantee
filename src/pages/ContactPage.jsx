@@ -35,7 +35,7 @@ export const ContactPage = () => {
 
   const contactTypingPhrases = [
     'Instant Global Inquiry Response within 24 Hours.',
-    'Exporting to 45+ International Destinations.',
+    'Exporting to 5+ International Destinations.',
     'Custom OEM & Technical Spec Quotations.',
   ];
 
@@ -112,7 +112,7 @@ export const ContactPage = () => {
             <div className={styles.mItemGold}>
               <FaGlobe className={styles.mIconGold} />
               <span className={styles.mNum}>
-                <AnimatedCounter value="45" suffix="+" duration={2.2} />
+                <AnimatedCounter value="5" suffix="+" duration={2.2} />
               </span>
               <span className={styles.mLabel}>Export Destinations</span>
             </div>

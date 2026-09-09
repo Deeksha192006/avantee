@@ -8,20 +8,20 @@
   display: flex;
   align-items: center;
   border-radius: 0;
-  background: rgba(14, 59, 46, 0.95);
+  background: var(--color-header-bg, #E1E8DD);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(217, 182, 93, 0.3);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(30, 181, 72, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .scrolledNavbar {
   height: 74px;
   top: 0;
-  background: rgba(6, 26, 20, 0.98);
-  border-bottom-color: var(--gold-primary);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(217, 182, 93, 0.2);
+  background: rgba(225, 232, 221, 0.98);
+  border-bottom-color: var(--color-emerald);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .navContainer {
@@ -93,7 +93,7 @@
   position: relative;
   font-size: 0.96rem;
   font-weight: 600;
-  color: var(--color-white);
+  color: #122B20;
   opacity: 0.88;
   transition: all 0.25s ease;
   padding: 10px 0;
@@ -102,11 +102,11 @@
 
 .navLinkItem:hover {
   opacity: 1;
-  color: var(--gold-primary);
+  color: var(--color-emerald);
 }
 
 .activeText {
-  color: var(--gold-primary);
+  color: var(--color-emerald);
   font-weight: 700;
   opacity: 1;
 }
@@ -117,9 +117,9 @@
   left: 0;
   width: 100%;
   height: 2.5px;
-  background: var(--gold-primary);
+  background: var(--color-emerald);
   border-radius: 2px;
-  box-shadow: 0 0 12px var(--gold-primary);
+  box-shadow: 0 0 12px var(--color-emerald);
 }
 
 .rightActions {
@@ -133,12 +133,12 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--color-white);
+  background: rgba(18, 43, 32, 0.08);
+  color: #122B20;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(18, 43, 32, 0.2);
 }
 
 @media (max-width: 1024px) {

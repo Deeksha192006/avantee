@@ -198,21 +198,21 @@ export const HeroSection = () => {
           >
             <div className={styles.statBox}>
               <span className={styles.statNumber}>
-                <AnimatedCounter value="25" suffix="+" duration={2.2} />
+                <AnimatedCounter value="10" suffix="+" duration={2.2} />
               </span>
               <span className={styles.statLabel}>{t('hero.statYears', 'Years of Excellence')}</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.statBox}>
               <span className={styles.statNumber}>
-                <AnimatedCounter value="50" suffix="K+" duration={2.5} />
+                <AnimatedCounter value="4" suffix="K+" duration={2.5} />
               </span>
               <span className={styles.statLabel}>{t('hero.statCapacity', 'MT Annual Capacity')}</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.statBox}>
               <span className={styles.statNumber}>
-                <AnimatedCounter value="45" suffix="+" duration={2} />
+                <AnimatedCounter value="5" suffix="+" duration={2} />
               </span>
               <span className={styles.statLabel}>{t('hero.statExport', 'Countries Exported')}</span>
             </div>

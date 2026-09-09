@@ -32,7 +32,7 @@ export const ProductsShowcaseSection = () => {
       features: [
         'AVANTEE Signature Eco-Kraft Spool Label',
         '80% Recycled Cotton / 20% Organic Viscose',
-        'GRS & OEKO-TEX Standard 100 Certified',
+        'GRS & RCS Certified',
         'Zero Water Waste Dope-Dyeing Tech',
         'Ultra-Soft Premium Fleece Finish',
       ],
@@ -123,12 +123,12 @@ export const ProductsShowcaseSection = () => {
     },
     {
       icon: <FaGlobe />,
-      title: 'Exported to 45+ Nations',
+      title: 'Exported to 5+ Nations',
       desc: 'Trusted by major international apparel brands, weavers, and knitters across 5 continents.',
     },
     {
       icon: <FaIndustry />,
-      title: '50,000 MT Annual Capacity',
+      title: '4,000 MT Annual Capacity',
       desc: 'Integrated large-scale manufacturing infrastructure ensuring reliable volume supply year-round.',
     },
     {

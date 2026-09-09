@@ -12,17 +12,17 @@ export const AboutPage = () => {
   const { t } = useTranslation();
 
   const aboutTypingPhrases = [
-    '25+ Years of Sustainable Textile Innovation.',
+    '10+ Years of Sustainable Textile Innovation.',
     'Pioneering Zero Waste Circularity.',
-    'Exporting GRS Certified Yarns to 45+ Nations.',
+    'Exporting GRS Certified Yarns to 5+ Nations.',
   ];
 
   const timelineMilestones = [
     { year: '1999', title: 'Founding of Avantee Complex', desc: 'Started initial spinning unit in Tamil Nadu with 5,000 spindles.' },
     { year: '2008', title: 'Closed-Loop PET Recycling Facility', desc: 'Commissioned first automated post-consumer plastic bottle recycling plant.' },
-    { year: '2015', title: 'GRS & OEKO-TEX Certification', desc: 'Achieved full Global Recycled Standard accreditation for exported yarns.' },
+    { year: '2015', title: 'GRS & RCS Certification', desc: 'Achieved full Global Recycled Standard accreditation for exported yarns.' },
     { year: '2020', title: 'Zero Liquid Discharge (ZLD) Technology', desc: 'Eliminated water waste in yarn dyeing with 98% recycled water recycling.' },
-    { year: '2024', title: '50,000 MT Annual Capacity Benchmark', desc: 'Expanded into 45+ international markets across North America, Europe, and Asia.' },
+    { year: '2024', title: '4,000 MT Annual Capacity Benchmark', desc: 'Expanded into 5+ international markets across North America, Europe, and Asia.' },
   ];
 
   const leadershipTeam = [
@@ -143,7 +143,7 @@ export const AboutPage = () => {
             label="JOURNEY & MILESTONES"
             title={
               <>
-                <AnimatedCounter value="25" suffix="+" duration={2} /> Years of Sustainable Engineering
+                <AnimatedCounter value="10" suffix="+" duration={2} /> Years of Sustainable Engineering
               </>
             }
           />

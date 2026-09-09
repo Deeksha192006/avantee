@@ -5,7 +5,7 @@ import styles from './PartnersLogos.module.css';
 export const PartnersLogos = () => {
   const certifications = [
     { title: 'Global Recycled Standard', code: 'GRS v4.0 Certified', icon: <FaAward /> },
-    { title: 'OEKO-TEX Standard 100', code: 'Class I Eco Safety', icon: <FaShieldAlt /> },
+    { title: 'Recycling Claim Standard', code: 'RCS Certified', icon: <FaShieldAlt /> },
     { title: 'ISO 14001 & 9001', code: 'Environmental Quality', icon: <FaCertificate /> },
     { title: 'HIGG Index Verified', code: 'Sustainable Apparel Coalition', icon: <FaCheckDouble /> },
     { title: 'Global Organic Textile', code: 'GOTS Certified Blends', icon: <FaLeaf /> },
