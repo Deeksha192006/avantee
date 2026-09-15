@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes, FaArrowRight, FaPhoneAlt } from 'react-icons/fa';
+import { FaBars, FaTimes, FaPhoneAlt } from 'react-icons/fa';
 import { useTranslation } from '../../context/LanguageContext';
 import { NavbarLanguageSelector } from './NavbarLanguageSelector';
+import { GlobeLanguageButton } from '../i18n/GlobeLanguageModal';
 import styles from './Navbar.module.css';
 
 import { AvanteeLogo, AvanteeLogoMark } from './AvanteeLogo';
@@ -70,14 +71,8 @@ export const Navbar = () => {
 
         {/* Right CTA Actions */}
         <div className={styles.rightActions}>
-          {/* Premium Horizontal Flag Language Switcher Bar */}
-          <NavbarLanguageSelector />
-
-          {/* Let's Talk CTA */}
-          <Link to="/contact" className="btn-primary">
-            <span>{t('nav.letsTalk', "Let's Talk")}</span>
-            <FaArrowRight style={{ fontSize: '0.8rem' }} />
-          </Link>
+          {/* Multi-Language Globe Button */}
+          <GlobeLanguageButton />
 
           {/* Mobile Hamburger Toggle */}
           <button
@@ -126,9 +121,8 @@ export const Navbar = () => {
                 >
                   <Link
                     to={link.path}
-                    className={`${styles.mobileNavLink} ${
-                      location.pathname === link.path ? styles.mobileActive : ''
-                    }`}
+                    className={`${styles.mobileNavLink} ${location.pathname === link.path ? styles.mobileActive : ''
+                      }`}
                   >
                     {link.label}
                   </Link>

@@ -5,12 +5,17 @@ import de from '../i18n/de.json';
 import es from '../i18n/es.json';
 import nl from '../i18n/nl.json';
 import sv from '../i18n/sv.json';
+import hi from '../i18n/hi.json';
+import ta from '../i18n/ta.json';
+import ar from '../i18n/ar.json';
+import ja from '../i18n/ja.json';
+import zh from '../i18n/zh.json';
 
-const translations = { en, fr, de, es, nl, sv };
+const translations = { en, fr, de, es, nl, sv, hi, ta, ar, ja, zh };
 
-// Strictly the 6 requested client languages
+// Available internationalization languages (EN, FR, DE, ES, NL, SE)
 export const LANGUAGES = [
-  { code: 'en', label: 'US English', name: 'US English', shortLabel: 'US', dir: 'ltr' },
+  { code: 'en', label: 'EN', name: 'English (UK)', shortLabel: 'EN', dir: 'ltr' },
   { code: 'fr', label: 'FR', name: 'French', shortLabel: 'FR', dir: 'ltr' },
   { code: 'de', label: 'DE', name: 'German', shortLabel: 'DE', dir: 'ltr' },
   { code: 'es', label: 'ES', name: 'Spanish', shortLabel: 'ES', dir: 'ltr' },
@@ -26,6 +31,7 @@ export const LanguageProvider = ({ children }) => {
     return localStorage.getItem('avantee_lang') || 'en';
   });
   const [isAnimatingTransition, setIsAnimatingTransition] = useState(false);
+  const [isGlobeModalOpen, setIsGlobeModalOpen] = useState(false);
 
   const selectedLangObj = LANGUAGES.find(l => l.code === currentLang) || LANGUAGES[0];
 
@@ -39,6 +45,7 @@ export const LanguageProvider = ({ children }) => {
   }, [currentLang, selectedLangObj]);
 
   const switchLanguage = (langCode) => {
+    setIsGlobeModalOpen(false);
     if (langCode === currentLang) return;
 
     setIsAnimatingTransition(true);
@@ -86,6 +93,8 @@ export const LanguageProvider = ({ children }) => {
         switchLanguage,
         t,
         isAnimatingTransition,
+        isGlobeModalOpen,
+        setIsGlobeModalOpen,
       }}
     >
       <div

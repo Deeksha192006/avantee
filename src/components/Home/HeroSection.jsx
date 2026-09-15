@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaArrowRight, FaPlay, FaLeaf, FaRecycle, FaAward, FaGlobeAmericas } from 'react-icons/fa';
+import { FaArrowRight, FaPlay, FaLeaf } from 'react-icons/fa';
 import { useTranslation } from '../../context/LanguageContext';
 import { TypingText } from '../Common/TypingText';
 import { AnimatedCounter } from '../Common/AnimatedCounter';
@@ -30,8 +30,8 @@ export const HeroSection = () => {
     },
     {
       url: '/images/tailored_blazer_material.png',
-      caption: 'AVANTEE Suiting — Luxury Emerald Tailored Suit',
-      badge: 'Italian-Grade Luxury Suiting Weave'
+      caption: 'AVANTEE Circular Fiber — Recycled Cotton Bales & Spool',
+      badge: '100% Circular Eco Textile Fiber'
     },
     {
       url: '/images/luxury_cloth_emerald.png',
@@ -237,43 +237,7 @@ export const HeroSection = () => {
                 />
               ))}
             </div>
-
-            <div className={styles.visualGlassOverlay}>
-              <div className={styles.certBadge}>
-                <FaAward className={styles.goldBadgeIcon} />
-                <div>
-                  <span className={styles.certTitle}>{heroImages[currentImgIdx].caption}</span>
-                  <span className={styles.certSub}>{heroImages[currentImgIdx].badge}</span>
-                </div>
-              </div>
-            </div>
           </div>
-
-          <motion.div
-            className={`${styles.floatingCard} ${styles.cardLeft}`}
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-          >
-            <FaRecycle className={styles.cardIcon} />
-            <div>
-              <span className={styles.cardVal}>
-                <AnimatedCounter value="5.2" suffix="B" duration={2.5} />
-              </span>
-              <span className={styles.cardSub}>PET Bottles Recycled</span>
-            </div>
-          </motion.div>
-
-          <motion.div
-            className={`${styles.floatingCard} ${styles.cardRight}`}
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-          >
-            <FaGlobeAmericas className={styles.cardIconGold} />
-            <div>
-              <span className={styles.cardVal}>Zero Water</span>
-              <span className={styles.cardSub}>Waterless Dyeing Tech</span>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
 

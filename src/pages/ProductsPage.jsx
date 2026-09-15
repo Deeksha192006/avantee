@@ -82,13 +82,13 @@ export const ProductsPage = () => {
     {
       id: 'p4',
       category: 'fabrics',
-      name: 'Bespoke Emerald Tailored Suit Blazer & Lapel Material',
-      tag: 'Italian-Grade Luxury Weave',
-      denier: '320 GSM Wool-Silk & Recycled Poly Blend',
-      cut: 'Width 58 / 60 Inches',
+      name: 'AVANTEE Recycled Fiber Bales & Branded Spool',
+      tag: '100% Upcycled Textile Fiber',
+      denier: 'Count Ne 10s to Ne 40s Eco Yarn',
+      cut: 'Branded Kraft Paper Band Spools',
       image: '/images/tailored_blazer_material.png',
-      desc: 'Exquisite emerald green, dark charcoal, and deep navy suit fabrics tailored for high-end sustainable menswear and formal blazers.',
-      applications: ['Bespoke Suits & Blazers', 'Luxury Formalwear', 'Corporate Uniforms', 'Custom Apparel'],
+      desc: 'Raw upcycled textile bales and GRS-certified cotton-polyester yarn spools engineered for sustainable apparel and polo shirt manufacturing.',
+      applications: ['Recycled Polo Shirts', 'Eco-Friendly Knits', 'Circular Garment Weaving', 'Sustainable Apparel'],
       specs: { TensileStrength: '1350 N Warp / 1100 N Weft', TearResistance: '95 N', AbrasionCycles: '> 60,000 Rubs', WaterRepellency: 'Grade 90' }
     },
     {

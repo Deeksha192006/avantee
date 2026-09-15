@@ -75,33 +75,6 @@ export const ProductsShowcaseSection = () => {
       image: '/images/avantee_ocean_sweater_spool.jpg',
       layoutRight: true,
     },
-    {
-      id: 'prod-fabrics',
-      category: 'RECYCLED FABRICS',
-      title: 'Bespoke Suitings & Tailored Materials',
-      description:
-        'Manufactured using our own recycled materials, our fabrics combine premium luxury suiting quality with responsible manufacturing to create modern circular textile solutions.',
-      features: [
-        'Soft Finish',
-        'Premium Texture',
-        'Durable',
-        'Eco Friendly',
-        'Quality Controlled',
-      ],
-      applications: [
-        'Bespoke Suiting',
-        'Casual Wear',
-        'Fashion Apparel',
-        'Children Wear',
-        'Home Textiles',
-      ],
-      ctaPrimaryText: 'Explore Suitings',
-      ctaPrimaryLink: '/products',
-      ctaSecondaryText: 'Contact Team',
-      ctaSecondaryLink: '/contact',
-      image: '/images/tailored_blazer_material.png',
-      layoutRight: false,
-    },
   ];
 
   // Why Choose Our Products - 6 Key Propositions
@@ -171,8 +144,8 @@ export const ProductsShowcaseSection = () => {
     {
       id: 'g3',
       category: 'fabrics',
-      catLabel: 'SUITS & BLAZERS',
-      title: 'Bespoke Emerald Tailored Suit Blazer & Lapel Material',
+      catLabel: 'RECYCLED FIBERS',
+      title: 'AVANTEE Recycled Fiber Bales & Branded Spool',
       image: '/images/tailored_blazer_material.png',
     },
     {
@@ -242,9 +215,8 @@ export const ProductsShowcaseSection = () => {
         {showcases.map((prod) => (
           <motion.div
             key={prod.id}
-            className={`${styles.showcaseBlock} ${
-              prod.layoutRight ? styles.reverseLayout : ''
-            }`}
+            className={`${styles.showcaseBlock} ${prod.layoutRight ? styles.reverseLayout : ''
+              }`}
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, margin: '-100px' }}
@@ -409,9 +381,8 @@ export const ProductsShowcaseSection = () => {
             {['all', 'fibres', 'yarns', 'fabrics', 'factory', 'quality'].map((cat) => (
               <button
                 key={cat}
-                className={`${styles.galleryTab} ${
-                  activeGalleryTab === cat ? styles.activeGalleryTab : ''
-                }`}
+                className={`${styles.galleryTab} ${activeGalleryTab === cat ? styles.activeGalleryTab : ''
+                  }`}
                 onClick={() => setActiveGalleryTab(cat)}
               >
                 {cat.toUpperCase()}

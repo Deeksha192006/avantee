@@ -4,8 +4,9 @@
   right: 32px !important;
   z-index: 9999999 !important;
   display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  gap: 14px !important;
   pointer-events: auto !important;
   opacity: 1 !important;
   visibility: visible !important;

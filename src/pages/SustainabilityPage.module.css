@@ -68,7 +68,8 @@
   }
 }
 
-.cBox, .cBoxGold {
+.cBox,
+.cBoxGold {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,6 +105,29 @@
   text-align: center;
   max-width: 650px;
   margin: 0 auto 50px;
+}
+
+.diagramWrapper {
+  max-width: 780px;
+  margin: 0 auto 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageCard {
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infinityDiagramImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .badge {

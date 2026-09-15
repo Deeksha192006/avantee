@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   border-radius: 0;
-  background: var(--color-header-bg, #E1E8DD);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(30, 181, 72, 0.2);
@@ -19,7 +19,7 @@
 .scrolledNavbar {
   height: 74px;
   top: 0;
-  background: rgba(225, 232, 221, 0.98);
+  background: rgba(255, 255, 255, 0.98);
   border-bottom-color: var(--color-emerald);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }

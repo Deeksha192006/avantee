@@ -1,125 +1,152 @@
-.langWrapper {
-  position: relative;
-  display: inline-block;
-}
-
-/* Compact Glass Trigger Pill */
-.triggerPill {
-  display: inline-flex;
+/* Vertical Side Language Navigation Strip (Positioned absolute in document flow, traveling with page content) */
+.sideLangBar {
+  position: absolute;
+  right: 0;
+  top: 50vh;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  background: rgba(18, 43, 32, 0.06);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(30, 181, 72, 0.35);
-  color: #122B20;
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  outline: none;
+  gap: 2px;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
 }
 
-.triggerPill:hover {
-  background: rgba(30, 181, 72, 0.12);
-  border-color: var(--color-emerald);
-  box-shadow: 0 0 16px rgba(30, 181, 72, 0.25);
-  transform: translateY(-1px);
+/* Scroll Arrow Navigation Buttons (Top & Bottom) */
+.scrollArrowBtn {
+  background: #2D3237;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #10B981;
+  width: 32px;
+  height: 22px;
+  border-radius: 6px 0 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.4);
+  outline: none;
+  z-index: 2;
+}
+
+.scrollArrowBtn:hover {
+  background: #10B981;
+  color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+.visibleArrow {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hiddenArrow {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.sideLangContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 6px 8px 6px;
+  background: #2D3237;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -4px 4px 18px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-right: none;
+  max-height: 65vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  cursor: grab;
+  user-select: none;
+  scrollbar-width: thin;
+  scrollbar-color: #10B981 #1E2328;
+}
+
+.dragging {
+  cursor: grabbing !important;
+  scroll-behavior: auto !important;
+}
+
+/* Sleek Emerald Green Custom Scrollbar (Matching User Screenshot Green Indicator) */
+.sideLangContainer::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sideLangContainer::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.sideLangContainer::-webkit-scrollbar-thumb {
+  background: #10B981;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+.sideLangContainer::-webkit-scrollbar-thumb:hover {
+  background: #22C55E;
+}
+
+.sideLangBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 5px 6px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  width: 100%;
+}
+
+.sideLangBtn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.08);
+}
+
+.activeSideLang {
+  background: rgba(16, 185, 129, 0.45);
+  border: 1px solid #10B981;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.7);
+  animation: activePulse 2.5s infinite ease-in-out;
+}
+
+@keyframes activePulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(16, 185, 129, 0.95);
+  }
+}
+
+.langCodeText {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  line-height: 1;
 }
 
 .flagCircle {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.chevronIcon {
-  font-size: 0.75rem;
-  color: var(--gold-primary);
-  transition: transform 0.3s ease;
-}
-
-.openChevron {
-  transform: rotate(180deg);
-}
-
-/* Luxury Glass Dropdown Popover */
-.dropdownMenu {
-  position: absolute;
-  top: calc(100% + 12px);
-  right: 0;
-  z-index: 10000;
-  background: rgba(6, 26, 20, 0.96);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--gold-primary);
-  border-radius: var(--radius-md);
-  padding: 16px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(217, 182, 93, 0.2);
-  min-width: 310px;
-}
-
-.dropdownHeader {
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  color: var(--gold-primary);
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(221, 245, 229, 0.12);
-}
-
-.flagGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.dropdownItem {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
-  border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  cursor: pointer;
-  transition: all 0.25s ease;
-  outline: none;
-}
-
-.dropdownItem:hover {
-  background: rgba(27, 127, 91, 0.3);
-  border-color: var(--gold-primary);
-  transform: scale(1.03);
-}
-
-.activeItem {
-  background: rgba(217, 182, 93, 0.18);
-  border-color: var(--gold-primary);
-  box-shadow: 0 0 12px rgba(217, 182, 93, 0.3);
-}
-
-.itemLabel {
-  font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--color-white);
-}
-
-.activeItem .itemLabel {
-  color: var(--gold-primary);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Mobile Inline Horizontal Grid */
@@ -128,4 +155,28 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   padding: 12px 0;
+}
+
+.mobileItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.mobileActiveItem {
+  background: var(--color-emerald);
+  border-color: var(--color-emerald-bright);
+}
+
+.mobileLabel {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #FFFFFF;
 }

@@ -6,6 +6,8 @@ export const AvanteeLogo = ({ width = 210, height, variant = 'light', className 
     logoSrc = '/images/avantee_logo_footer.png?v=1';
   }
 
+  const isLight = variant !== 'footer' && variant !== 'dark';
+
   return (
     <img
       src={logoSrc}
@@ -17,6 +19,7 @@ export const AvanteeLogo = ({ width = 210, height, variant = 'light', className 
         display: 'block',
         maxWidth: '100%',
         backgroundColor: 'transparent',
+        mixBlendMode: isLight ? 'multiply' : 'normal',
       }}
       className={className}
     />
@@ -33,6 +36,7 @@ export const AvanteeLogoMark = ({ size = 44, className = '' }) => {
         height: 'auto',
         objectFit: 'contain',
         display: 'block',
+        mixBlendMode: 'multiply',
       }}
       className={className}
     />

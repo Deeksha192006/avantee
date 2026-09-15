@@ -75,128 +75,28 @@
   font-weight: 600;
 }
 
-/* Infinity Diagram Container */
-.infinitySvgCard {
+/* Infinity Diagram Image Container */
+.infinityImageContainer {
   position: relative;
   width: 100%;
-  max-width: 650px;
+  max-width: 680px;
   margin-left: auto;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(20px);
-  border: 1.5px solid rgba(217, 182, 93, 0.35);
-  border-radius: var(--radius-lg);
-  padding: 32px 28px 24px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 35px rgba(217, 182, 93, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.infinitySvg {
+.imageCard {
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infinityDarkImg {
   width: 100%;
   height: auto;
-  overflow: visible;
-}
-
-/* Ribbon Tracks */
-.ribbonBackTrack {
-  fill: none;
-  stroke: #1B7F5B;
-  stroke-width: 36;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.ribbonBorderTrack {
-  fill: none;
-  stroke: var(--gold-primary);
-  stroke-width: 40;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  opacity: 0.3;
-}
-
-.ribbonGradientTrack {
-  fill: none;
-  stroke: url(#infinityRibbonGradient);
-  stroke-width: 32;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.flowDashAnimation {
-  fill: none;
-  stroke: #DDF5E5;
-  stroke-width: 3;
-  stroke-dasharray: 12 8;
-  animation: flowDash 15s linear infinite;
-  opacity: 0.8;
-}
-
-@keyframes flowDash {
-  to {
-    stroke-dashoffset: -400;
-  }
-}
-
-/* Nodes & Icons */
-.nodeGroup {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.nodeGroup:hover {
-  transform: scale(1.18);
-}
-
-.nodeBadgeCircle {
-  fill: #061A14;
-  stroke: var(--gold-primary);
-  stroke-width: 3;
-  box-shadow: 0 0 15px rgba(217, 182, 93, 0.6);
-  transition: all 0.3s ease;
-}
-
-.nodeGroup:hover .nodeBadgeCircle {
-  fill: var(--color-emerald);
-  stroke: #FFFFFF;
-  filter: drop-shadow(0 0 15px rgba(217, 182, 93, 0.9));
-}
-
-.nodeIcon {
-  fill: var(--gold-primary);
-  transition: fill 0.3s ease;
-}
-
-.nodeGroup:hover .nodeIcon {
-  fill: #FFFFFF;
-}
-
-.nodeLabelText {
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 800;
-  fill: #FFFFFF;
-  text-anchor: middle;
-  letter-spacing: 0.04em;
-  pointer-events: none;
-}
-
-.activeNodeCard {
-  margin-top: 16px;
-  background: rgba(6, 26, 20, 0.92);
-  border: 1px solid var(--gold-primary);
-  border-radius: var(--radius-md);
-  padding: 16px 20px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-}
-
-.cardTitle {
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--gold-primary);
-  margin-bottom: 4px;
-}
-
-.cardDesc {
-  font-size: 0.85rem;
-  color: var(--color-mint);
+  display: block;
+  object-fit: contain;
 }

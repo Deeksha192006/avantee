@@ -143,93 +143,20 @@ export const CircularInfinitySection = () => {
             </div>
           </motion.div>
 
-          {/* Right Infinity Ribbon Diagram (Matching 1st Image) */}
+          {/* Right Infinity Diagram Image (Matching User Uploaded Image) */}
           <motion.div
-            className={styles.infinitySvgCard}
+            className={styles.infinityImageContainer}
             initial={{ opacity: 0, scale: 0.94 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={scrollAnim}
             transition={{ duration: 0.8 }}
           >
-            <svg
-              className={styles.infinitySvg}
-              viewBox="0 0 600 380"
-              width="100%"
-              height="100%"
-            >
-              <defs>
-                <linearGradient id="infinityRibbonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#1B7F5B" />
-                  <stop offset="35%" stopColor="#22C55E" />
-                  <stop offset="70%" stopColor="#10B981" />
-                  <stop offset="100%" stopColor="#D9B65D" />
-                </linearGradient>
-
-                <marker id="arrowhead" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#FFFFFF" />
-                </marker>
-              </defs>
-
-              {/* Gold Glow Outer Border Track */}
-              <path d={ribbonPath} className={styles.ribbonBorderTrack} />
-
-              {/* Thick Green Infinity Ribbon */}
-              <path d={ribbonPath} className={styles.ribbonGradientTrack} />
-
-              {/* Flow Direction Animated Dash Line */}
-              <path d={ribbonPath} className={styles.flowDashAnimation} />
-
-              {/* Directional Flow Arrowheads on Ribbon */}
-              <path d="M 120 100 L 135 110" stroke="#FFFFFF" strokeWidth="4" markerEnd="url(#arrowhead)" />
-              <path d="M 230 260 L 245 250" stroke="#FFFFFF" strokeWidth="4" markerEnd="url(#arrowhead)" />
-              <path d="M 370 120 L 385 110" stroke="#FFFFFF" strokeWidth="4" markerEnd="url(#arrowhead)" />
-              <path d="M 490 270 L 505 260" stroke="#FFFFFF" strokeWidth="4" markerEnd="url(#arrowhead)" />
-
-              {/* 8 Nodes with Badges and Icons */}
-              {nodes.map((node) => (
-                <g
-                  key={node.id}
-                  className={styles.nodeGroup}
-                  onClick={() => setActiveNode(node)}
-                  onMouseEnter={() => setActiveNode(node)}
-                >
-                  {/* Badge Circle */}
-                  <circle
-                    cx={node.x}
-                    cy={node.y}
-                    r="20"
-                    className={styles.nodeBadgeCircle}
-                  />
-
-                  {/* Icon Text Symbol */}
-                  <foreignObject
-                    x={node.x - 12}
-                    y={node.y - 12}
-                    width="24"
-                    height="24"
-                    style={{ pointerEvents: 'none', color: '#D9B65D' }}
-                  >
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', fontSize: '14px' }}>
-                      {node.icon}
-                    </div>
-                  </foreignObject>
-
-                  {/* Node Label Text */}
-                  <text
-                    x={node.labelX !== undefined ? node.labelX : node.x}
-                    y={node.labelY}
-                    className={styles.nodeLabelText}
-                  >
-                    {node.title}
-                  </text>
-                </g>
-              ))}
-            </svg>
-
-            {/* Active Node Detail Card */}
-            <div className={styles.activeNodeCard}>
-              <h4 className={styles.cardTitle}>{activeNode.title}</h4>
-              <p className={styles.cardDesc}>{activeNode.desc}</p>
+            <div className={styles.imageCard}>
+              <img
+                src="/images/circular_infinity_loop.png"
+                alt="Closed-Loop Infinity Recycling Journey Diagram"
+                className={styles.infinityDarkImg}
+              />
             </div>
           </motion.div>
         </div>

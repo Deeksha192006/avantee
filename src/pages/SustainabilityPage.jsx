@@ -10,7 +10,7 @@ import styles from './SustainabilityPage.module.css';
 
 export const SustainabilityPage = () => {
   const { t } = useTranslation();
-  const [tonnage, setTonnage] = useState(50);
+  const [tonnage, setTonnage] = useState(12000);
 
   const ecoTypingPhrases = [
     'Diverting 5.2 Billion PET Bottles.',
@@ -42,43 +42,6 @@ export const SustainabilityPage = () => {
         </div>
       </section>
 
-      {/* Global Impact Numbers Counter Bar */}
-      <section className={styles.impactCountersBar}>
-        <GridBackground variant="grid" dark={true} opacity={0.08} />
-        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <div className={styles.counterGrid}>
-            <div className={styles.cBox}>
-              <FaTint className={styles.cIcon} />
-              <span className={styles.cNum}>
-                <AnimatedCounter value="480" suffix="M+" duration={2.5} />
-              </span>
-              <span className={styles.cText}>Gallons Water Saved</span>
-            </div>
-            <div className={styles.cBoxGold}>
-              <FaCloud className={styles.cIconGold} />
-              <span className={styles.cNum}>
-                <AnimatedCounter value="950" suffix="K+" duration={2.2} />
-              </span>
-              <span className={styles.cText}>Kg CO2 Reduced</span>
-            </div>
-            <div className={styles.cBox}>
-              <FaBolt className={styles.cIcon} />
-              <span className={styles.cNum}>
-                <AnimatedCounter value="320" suffix="M" duration={2} />
-              </span>
-              <span className={styles.cText}>kWh Energy Saved</span>
-            </div>
-            <div className={styles.cBoxGold}>
-              <FaRecycle className={styles.cIconGold} />
-              <span className={styles.cNum}>
-                <AnimatedCounter value="5.2" suffix="B+" duration={2.8} />
-              </span>
-              <span className={styles.cText}>PET Bottles Recycled</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Circular Economy Infographic Section */}
       <section className={`section-padding ${styles.infographicSection}`}>
         <GridBackground variant="dots" dark={false} opacity={0.08} />
@@ -88,6 +51,17 @@ export const SustainabilityPage = () => {
             light={true}
             title="The 360° Circular Textile Framework"
           />
+
+          {/* Infinity Loop Diagram Showcase */}
+          <div className={styles.diagramWrapper}>
+            <div className={styles.imageCard}>
+              <img
+                src="/images/circular_infinity_loop.png"
+                alt="Closed-Loop Infinity Recycling Journey Diagram"
+                className={styles.infinityDiagramImg}
+              />
+            </div>
+          </div>
 
           <div className={styles.infographicGrid}>
             <motion.div className={styles.infoStepCard} whileHover={{ y: -6 }}>
@@ -126,13 +100,13 @@ export const SustainabilityPage = () => {
 
             <div className={styles.inputBox}>
               <label className={styles.inputLabel}>
-                Target Annual Yarn Requirement: <strong>{tonnage} Metric Tons</strong>
+                Target Annual Yarn Requirement: <strong>{tonnage.toLocaleString()} Metric Tons</strong>
               </label>
               <input
                 type="range"
-                min="5"
-                max="500"
-                step="5"
+                min="100"
+                max="25000"
+                step="100"
                 value={tonnage}
                 onChange={(e) => setTonnage(Number(e.target.value))}
                 className={styles.rangeSlider}

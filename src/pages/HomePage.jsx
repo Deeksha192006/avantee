@@ -1,6 +1,5 @@
 import React from 'react';
 import { HeroSection } from '../components/Home/HeroSection';
-import { MarqueeSection } from '../components/Home/MarqueeSection';
 import { CircularInfinitySection } from '../components/Home/CircularInfinitySection';
 import { AboutPreviewSection } from '../components/Home/AboutPreviewSection';
 import { ProductsShowcaseSection } from '../components/Home/ProductsShowcaseSection';
@@ -15,10 +14,7 @@ export const HomePage = () => {
       {/* 1. Hero Section */}
       <HeroSection />
 
-      {/* 2. Certifications Ticker Marquee */}
-      <MarqueeSection />
-
-      {/* 3. Interactive Infinity Loop Circular Economy (Matching Reference Diagram) */}
+      {/* 2. Interactive Infinity Loop Circular Economy (Matching Reference Diagram) */}
       <CircularInfinitySection />
 
       {/* 4. Company Heritage & Vision */}

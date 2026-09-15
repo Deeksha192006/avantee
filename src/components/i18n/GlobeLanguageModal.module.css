@@ -2,17 +2,36 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  background: rgba(14, 59, 46, 0.9);
-  border: 1px solid var(--gold-primary);
+  padding: 8px 14px;
+  border-radius: 30px;
+  background: #122B20;
+  border: 1px solid rgba(16, 185, 129, 0.4);
   color: var(--color-white);
   font-weight: 600;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(14, 59, 46, 0.3);
-  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: globePulse 3.5s ease-in-out infinite;
+}
+
+@keyframes globePulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    box-shadow: 0 6px 22px rgba(16, 185, 129, 0.45);
+    border-color: rgba(16, 185, 129, 0.85);
+  }
+}
+
+.globeFloatingBtn:hover {
+  border-color: #10B981;
+  background: #1E3A2F;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
 }
 
 .globeGlowRing {

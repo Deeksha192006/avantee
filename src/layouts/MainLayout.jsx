@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { ReactLenis } from 'lenis/react';
 import { AnimatePresence } from 'framer-motion';
 import { Preloader } from '../components/Common/Preloader';
-import { CustomCursor } from '../components/Common/CustomCursor';
 import { MouseSpotlight } from '../components/Common/MouseSpotlight';
 import { BackToTopButton } from '../components/Common/BackToTopButton';
 import { ScrollProgressBar } from '../components/Common/ScrollProgressBar';
@@ -10,6 +9,7 @@ import { Navbar } from '../components/Common/Navbar';
 import { Footer } from '../components/Common/Footer';
 import { GlobeLanguageModal } from '../components/i18n/GlobeLanguageModal';
 import { FloatingContactHub } from '../components/Common/FloatingContactHub';
+import { NavbarLanguageSelector } from '../components/Common/NavbarLanguageSelector';
 
 export const MainLayout = ({ children }) => {
   const [loading, setLoading] = useState(true);
@@ -35,18 +35,19 @@ export const MainLayout = ({ children }) => {
         {loading && <Preloader key="preloader" onComplete={() => setLoading(false)} />}
       </AnimatePresence>
 
-      {/* Custom Mouse Cursor Ring */}
-      <CustomCursor />
-
       {/* Language Switcher Modal */}
       <GlobeLanguageModal />
 
-      {/* Floating Contact Bubble (Always visible top-to-bottom on all pages) */}
+      {/* Floating Contact Hub */}
       <FloatingContactHub />
 
       {/* Main App Shell */}
-      <div className="app-shell" style={{ opacity: loading ? 0 : 1, transition: 'opacity 0.6s ease' }}>
+      <div className="app-shell" style={{ opacity: loading ? 0 : 1, transition: 'opacity 0.6s ease', position: 'relative' }}>
         <Navbar />
+
+        {/* Vertical Multi-Language Navigation Strip (Positions absolute inside webpage document flow, moves naturally with scroll) */}
+        <NavbarLanguageSelector />
+
         <main>{children}</main>
         <Footer />
 
