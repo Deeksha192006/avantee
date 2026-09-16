@@ -1,12 +1,10 @@
 import React from 'react';
 
 export const AvanteeLogo = ({ width = 210, height, variant = 'light', className = '' }) => {
-  let logoSrc = '/images/avantee_official_logo.png?v=3';
+  let logoSrc = '/images/avantee_official_logo.png?v=5';
   if (variant === 'footer' || variant === 'dark') {
-    logoSrc = '/images/avantee_logo_footer.png?v=1';
+    logoSrc = '/images/avantee_logo_footer.png?v=2';
   }
-
-  const isLight = variant !== 'footer' && variant !== 'dark';
 
   return (
     <img
@@ -19,7 +17,6 @@ export const AvanteeLogo = ({ width = 210, height, variant = 'light', className 
         display: 'block',
         maxWidth: '100%',
         backgroundColor: 'transparent',
-        mixBlendMode: isLight ? 'multiply' : 'normal',
       }}
       className={className}
     />
@@ -29,14 +26,14 @@ export const AvanteeLogo = ({ width = 210, height, variant = 'light', className 
 export const AvanteeLogoMark = ({ size = 44, className = '' }) => {
   return (
     <img
-      src="/images/avantee_official_logo.png?v=3"
+      src="/images/avantee_official_logo.png?v=5"
       alt="Avantee Logo"
       style={{
         width: `${size}px`,
         height: 'auto',
         objectFit: 'contain',
         display: 'block',
-        mixBlendMode: 'multiply',
+        backgroundColor: 'transparent',
       }}
       className={className}
     />
