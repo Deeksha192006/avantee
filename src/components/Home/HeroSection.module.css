@@ -31,35 +31,7 @@
 }
 
 .heroBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.gradientOrb1 {
-  position: absolute;
-  top: -20%;
-  left: -10%;
-  width: 60vw;
-  height: 60vw;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(27, 127, 91, 0.4) 0%, transparent 70%);
-  filter: blur(80px);
-}
-
-.gradientOrb2 {
-  position: absolute;
-  bottom: -20%;
-  right: -10%;
-  width: 50vw;
-  height: 50vw;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(217, 182, 93, 0.2) 0%, transparent 70%);
-  filter: blur(90px);
+  display: none;
 }
 
 .heroContainer {

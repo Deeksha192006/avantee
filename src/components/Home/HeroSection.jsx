@@ -79,8 +79,8 @@ export const HeroSection = () => {
 
   return (
     <section className={styles.heroWrapper}>
-      {/* Subtle Animated Blueprint Engineering Grid */}
-      <GridBackground variant="blueprint" dark={true} opacity={0.08} />
+      {/* Subtle Blueprint Engineering Grid */}
+      <GridBackground variant="blueprint" dark={false} opacity={0.05} />
 
       {/* Background Gradient Mesh & Floating Orbs */}
       <div className={styles.heroBackground}>

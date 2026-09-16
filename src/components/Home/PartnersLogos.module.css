@@ -18,24 +18,16 @@
 }
 
 .certGrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-}
-
-@media (max-width: 1024px) {
-  .certGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .certGrid {
-    grid-template-columns: 1fr;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
 .certCard {
+  flex: 1;
+  max-width: 360px;
+  min-width: 260px;
   background: var(--color-white);
   border: 1px solid var(--color-border-light);
   border-radius: var(--radius-md);

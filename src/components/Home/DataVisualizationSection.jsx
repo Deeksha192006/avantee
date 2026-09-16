@@ -151,35 +151,6 @@ export const DataVisualizationSection = () => {
       <GridBackground variant="blueprint" dark={true} opacity={0.08} />
 
       <div className="container" style={{ position: 'relative', zIndex: 3 }}>
-        {/* HEADER */}
-        <div className={styles.sectionHeader}>
-          <SectionTitle
-            label="MANUFACTURING & SUSTAINABILITY DATA"
-            title="Quantifiable Excellence & Global Impact"
-            subtitle="Explore our interactive production charts, circular waste recovery metrics, and global logistics network."
-          />
-        </div>
-
-        {/* SECTION 1: GLOBAL IMPACT KPI CARDS */}
-        <div className={styles.kpiGrid}>
-          {kpis.map((k, idx) => (
-            <motion.div
-              key={k.label}
-              className={`${styles.glassCard} ${styles.kpiCard}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={scrollAnim}
-              transition={{ delay: idx * 0.1 }}
-              whileHover={{ y: -6 }}
-            >
-              <div className={styles.cardSpotlightGlow} />
-              <div className={styles.kpiVal}>
-                <AnimatedCounter target={k.target} suffix={k.suffix} />
-              </div>
-              <div className={styles.kpiLabel}>{k.label}</div>
-            </motion.div>
-          ))}
-        </div>
 
         {/* SECTION 2 & 3: INTERACTIVE WORLD MAP & SOURCING NETWORK */}
         <div className={styles.mapWrapper}>

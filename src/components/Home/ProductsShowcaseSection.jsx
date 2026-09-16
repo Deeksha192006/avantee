@@ -24,55 +24,107 @@ export const ProductsShowcaseSection = () => {
   // 4 Full-Screen Showcase Products
   const showcases = [
     {
-      id: 'prod-hoodie-spool',
-      category: 'RECYCLED MINT HOODIE & YARNS',
-      title: 'AVANTEE Signature Mint Eco Hoodie & Spool',
+      id: 'prod-knit-yarn',
+      category: 'RECYCLED KNIT YARN',
+      title: 'Recycled Knit Yarn',
       description:
-        'Our flagship GRS-certified mint eco-yarn and matching fleece hoodie, spun from 100% recycled cotton & viscose with zero-water dyeing technology for sustainable fashion brands.',
+        'Engineered for high elasticity, ultra-soft hand feel, and uniform loop stability. Spun from 100% GRS-certified recycled fibers with zero-water dyeing technology for sustainable circular knitwear.',
       features: [
-        'AVANTEE Signature Eco-Kraft Spool Label',
-        '80% Recycled Cotton / 20% Organic Viscose',
-        'GRS & RCS Certified',
+        '100% GRS & RCS Certified',
         'Zero Water Waste Dope-Dyeing Tech',
-        'Ultra-Soft Premium Fleece Finish',
+        'Ultra-Soft Premium Hand Feel',
+        'High Elasticity & Loop Stability',
+        'Micro-Denier Staple Fiber Blend',
       ],
       applications: [
         'Sustainable Hoodies & Sweatshirts',
-        'Eco Casualwear & Streetwear',
-        'Circular Apparel Collections',
-        'Home & Leisure Textiles',
+        'Knitwear & T-Shirts',
+        'Activewear & Athleisure',
+        'Circuits & Seamless Apparel',
       ],
-      ctaPrimaryText: 'Explore Eco Hoodies',
+      ctaPrimaryText: 'Explore Knit Yarns',
       ctaPrimaryLink: '/products',
       ctaSecondaryText: 'Enquire Now',
       ctaSecondaryLink: '/contact',
-      image: '/images/avantee_mint_hoodie_spool.jpg',
-      layoutRight: false,
+      image: '/images/recycled_knit_yarn.jpg',
+      layoutRight: true,
     },
     {
-      id: 'prod-ocean-sweater',
-      category: 'RECYCLED OCEAN PET & YARNS',
-      title: 'AVANTEE Ocean Recycled PET Sweater & Spool',
+      id: 'prod-weaving-yarn',
+      category: 'RECYCLED WEAVING YARN',
+      title: 'Recycled Weaving Yarn',
       description:
-        'Engineered by upcycling recovered post-consumer ocean plastic bottles and recycled cotton into high-tenacity circular yarn and sleek V-neck luxury knitwear.',
+        'High-tenacity ring-spun and open-end recycled yarns crafted for high-speed weaving looms with minimal yarn breakage, superior warp tensile strength, and crisp fabric finish.',
       features: [
-        'Upcycled Post-Consumer Ocean PET Bottles',
         'High Tensile & Tear Resistance',
-        'Zero Water Waste Dyeing',
-        'Full Traceable Supply Chain',
-        'Luxury Knit V-Neck Finish',
+        'Optimal Warp & Weft Performance',
+        '100% Traceable Recycled Material',
+        'Consistent Uster Capacitive Testing',
+        'Zero Water Waste Masterbatch Dyeing',
       ],
       applications: [
-        'Luxury V-Neck Knitwear',
-        'Sustainable Winterwear',
-        'High-Performance Eco Apparel',
-        'Corporate Sustainable Uniforms',
+        'Woven Apparel & Shirting',
+        'Suitings & Trousers',
+        'Industrial Eco-Canvas',
+        'Sustainable Home Textiles',
       ],
-      ctaPrimaryText: 'Explore Ocean Yarns',
+      ctaPrimaryText: 'Explore Weaving Yarns',
       ctaPrimaryLink: '/products',
-      ctaSecondaryText: 'Download Spec Sheet',
+      ctaSecondaryText: 'Enquire Now',
       ctaSecondaryLink: '/contact',
-      image: '/images/avantee_ocean_sweater_spool.jpg',
+      image: '/images/recycled_weaving_yarn.jpg',
+      layoutRight: true,
+    },
+    {
+      id: 'prod-melange-yarn',
+      category: 'RECYCLED MELANGE YARN',
+      title: 'Recycled Melange Yarn',
+      description:
+        'Richly textured multi-tonal recycled melange yarns created by precision blending pre-dyed eco-fibers. Delivers vibrant heather shades with zero additional chemical water processing.',
+      features: [
+        'Multi-Tonal Heather Color Palette',
+        'Pre-Dyed Fiber Blending Tech',
+        '100% Waterless Dyeing Process',
+        'GRS Certified Recycled Cotton',
+        'Soft Touch & Luxury Surface Finish',
+      ],
+      applications: [
+        'Heather Knitwear & Sweaters',
+        'Casualwear & Fleece',
+        'Fashion Garments',
+        'Decorative Textiles & Furnishings',
+      ],
+      ctaPrimaryText: 'Explore Melange Yarns',
+      ctaPrimaryLink: '/products',
+      ctaSecondaryText: 'Enquire Now',
+      ctaSecondaryLink: '/contact',
+      image: '/images/recycled_melange_yarn.jpg',
+      layoutRight: true,
+    },
+    {
+      id: 'prod-denim-yarn',
+      category: 'RECYCLED DENIM YARN',
+      title: 'Recycled Denim Yarn',
+      description:
+        'Upcycled indigo denim yarns produced from post-consumer denim fabric waste. Provides authentic slub textures and deep indigo hues while eliminating virgin cotton farming.',
+      features: [
+        'Upcycled Post-Consumer Denim Waste',
+        'Authentic Slub & Texture Profile',
+        'Deep Indigo Dope-Dyed Masterbatch',
+        'High Structural Durability',
+        '100% Circular Supply Chain',
+      ],
+      applications: [
+        'Eco Jeans & Denim Jackets',
+        'Upcycled Denim Apparel',
+        'Heavy Canvas Bags & Accessories',
+        'Workwear & Streetwear',
+      ],
+      ctaPrimaryText: 'Explore Denim Yarns',
+      ctaPrimaryLink: '/products',
+      ctaSecondaryText: 'Enquire Now',
+      ctaSecondaryLink: '/contact',
+      image: '/images/recycled_denim_yarn.jpg',
       layoutRight: true,
     },
   ];
@@ -207,8 +259,7 @@ export const ProductsShowcaseSection = () => {
         <SectionTitle
           label="OUR PRODUCTS"
           light={true}
-          title="Premium Circular Textile Solutions"
-          subtitle="From responsibly sourced textile waste to high-performance recycled materials, Avantee Industries delivers sustainable fibres, yarns, and fabrics through one integrated manufacturing ecosystem."
+          title="Recycled Sustainability Yarns"
         />
 
         {/* 3 FULL-SCREEN SHOWCASE PRODUCTS */}

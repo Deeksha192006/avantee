@@ -1,14 +1,11 @@
 import React from 'react';
-import { FaCertificate, FaShieldAlt, FaAward, FaCheckDouble, FaLeaf } from 'react-icons/fa';
+import { FaShieldAlt, FaAward } from 'react-icons/fa';
 import styles from './PartnersLogos.module.css';
 
 export const PartnersLogos = () => {
   const certifications = [
     { title: 'Global Recycled Standard', code: 'GRS v4.0 Certified', icon: <FaAward /> },
     { title: 'Recycling Claim Standard', code: 'RCS Certified', icon: <FaShieldAlt /> },
-    { title: 'ISO 14001 & 9001', code: 'Environmental Quality', icon: <FaCertificate /> },
-    { title: 'HIGG Index Verified', code: 'Sustainable Apparel Coalition', icon: <FaCheckDouble /> },
-    { title: 'Global Organic Textile', code: 'GOTS Certified Blends', icon: <FaLeaf /> },
   ];
 
   return (
