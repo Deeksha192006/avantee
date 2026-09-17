@@ -166,13 +166,6 @@
   margin-top: 2px;
 }
 
-.companyName {
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--color-deep-forest);
-  margin-bottom: 16px;
-}
-
 .addressBlock {
   display: flex;
   gap: 14px;
@@ -181,10 +174,23 @@
 }
 
 .mapIcon {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--color-emerald);
-  margin-top: 4px;
+  margin-top: 3px;
   flex-shrink: 0;
+}
+
+.addressContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.companyName {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-deep-forest);
+  margin-bottom: 6px;
+  line-height: 1.3;
 }
 
 .addressBlock p {

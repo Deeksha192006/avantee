@@ -1,3 +1,175 @@
+/* Bulleted Yarn Hyperlink List Card */
+.bulletListContainerCard {
+  background: var(--color-white);
+  border: 2px solid rgba(245, 158, 11, 0.35);
+  border-radius: 24px;
+  padding: 48px 40px;
+  margin-bottom: 100px;
+  box-shadow: 0 20px 50px rgba(14, 59, 46, 0.08);
+  position: relative;
+  z-index: 3;
+}
+
+.bulletListGridContainer {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .bulletListGridContainer {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.bulletSectionHeading {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-deep-forest);
+  margin-bottom: 8px;
+}
+
+.bulletSectionSub {
+  font-size: 0.98rem;
+  color: var(--color-charcoal);
+  opacity: 0.8;
+  margin-bottom: 28px;
+}
+
+.bulletHyperlinkList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bulletListItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--color-offwhite);
+  border: 1px solid var(--color-border-light);
+  transition: all 0.25s ease;
+}
+
+.bulletListItem:hover,
+.bulletItemActive {
+  background: rgba(14, 59, 46, 0.06);
+  border-color: var(--color-emerald);
+  transform: translateX(6px);
+}
+
+.bulletDot {
+  color: var(--color-emerald);
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.yarnHyperlink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-decoration: none;
+  color: var(--color-deep-forest);
+  font-weight: 700;
+  font-size: 1.15rem;
+  transition: color 0.2s ease;
+}
+
+.bulletListItem:hover .yarnHyperlink {
+  color: var(--color-emerald);
+}
+
+.yarnTitleText {
+  text-decoration: underline;
+  text-decoration-color: rgba(14, 59, 46, 0.3);
+  text-underline-offset: 4px;
+  transition: all 0.2s ease;
+}
+
+.bulletListItem:hover .yarnTitleText {
+  text-decoration-color: var(--color-emerald);
+}
+
+.arrowIcon {
+  font-size: 0.95rem;
+  color: var(--gold-primary);
+  transition: transform 0.2s ease;
+}
+
+.bulletListItem:hover .arrowIcon {
+  transform: translateX(4px);
+}
+
+.bulletCtaBox {
+  margin-top: 10px;
+}
+
+/* Dynamic Preview Card */
+.previewCard {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 2px solid var(--gold-primary);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.previewImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.previewCard:hover .previewImg {
+  transform: scale(1.05);
+}
+
+.previewInfoBox {
+  position: absolute;
+  bottom: 0;
+  inset-x: 0;
+  padding: 24px;
+  background: linear-gradient(180deg, transparent 0%, rgba(14, 59, 46, 0.95) 100%);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.previewTitle {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.previewTag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.previewLinkBtn {
+  margin-top: 8px;
+  color: var(--color-mint);
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: underline;
+  display: inline-block;
+}
+
 .productsSectionWrapper {
   position: relative;
   background: var(--color-offwhite);
@@ -106,33 +278,83 @@
   margin-bottom: 28px;
 }
 
-/* Features List */
-.featuresGrid {
+.showcaseImageCardLink {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+}
+
+.imageOverlayHint {
+  position: absolute;
+  bottom: 0;
+  inset-x: 0;
+  padding: 16px;
+  background: linear-gradient(180deg, transparent 0%, rgba(14, 59, 46, 0.9) 100%);
+  color: var(--color-white);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.showcaseImageCard:hover .imageOverlayHint {
+  opacity: 1;
+}
+
+/* Bullet Points List */
+.bulletListTitle {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  margin-bottom: 12px;
+}
+
+.bulletListGrid {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px 20px;
-  margin-bottom: 28px;
 }
 
 @media (max-width: 600px) {
-  .featuresGrid {
+  .bulletListGrid {
     grid-template-columns: 1fr;
   }
 }
 
-.featureItem {
+.bulletItemLink {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-deep-forest);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: var(--radius-xs);
+  transition: all 0.2s ease;
+  background: rgba(14, 59, 46, 0.03);
+  border: 1px solid rgba(14, 59, 46, 0.08);
+}
+
+.bulletItemLink:hover {
+  background: rgba(14, 59, 46, 0.1);
+  color: var(--color-emerald);
+  transform: translateX(4px);
 }
 
 .checkIcon {
   color: var(--color-emerald);
   font-size: 1.1rem;
+  flex-shrink: 0;
 }
+
 
 /* Applications Chips */
 .appSectionTitle {

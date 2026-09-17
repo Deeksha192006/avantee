@@ -20,114 +20,61 @@ import styles from './ProductsShowcaseSection.module.css';
 export const ProductsShowcaseSection = () => {
   const [activeGalleryTab, setActiveGalleryTab] = useState('all');
   const [lightboxItem, setLightboxItem] = useState(null);
+  const [hoveredYarnId, setHoveredYarnId] = useState('prod-knit-yarn');
 
-  // 4 Full-Screen Showcase Products
-  const showcases = [
+  // Bulleted Hyperlink List of Yarn Types
+  const yarnList = [
     {
       id: 'prod-knit-yarn',
-      category: 'RECYCLED KNIT YARN',
       title: 'Recycled Knit Yarn',
-      description:
-        'Engineered for high elasticity, ultra-soft hand feel, and uniform loop stability. Spun from 100% GRS-certified recycled fibers with zero-water dyeing technology for sustainable circular knitwear.',
-      features: [
-        '100% GRS & RCS Certified',
-        'Zero Water Waste Dope-Dyeing Tech',
-        'Ultra-Soft Premium Hand Feel',
-        'High Elasticity & Loop Stability',
-        'Micro-Denier Staple Fiber Blend',
-      ],
-      applications: [
-        'Sustainable Hoodies & Sweatshirts',
-        'Knitwear & T-Shirts',
-        'Activewear & Athleisure',
-        'Circuits & Seamless Apparel',
-      ],
-      ctaPrimaryText: 'Explore Knit Yarns',
-      ctaPrimaryLink: '/products',
-      ctaSecondaryText: 'Enquire Now',
-      ctaSecondaryLink: '/contact',
+      category: 'RECYCLED KNIT YARN',
+      tag: '100% GRS Certified • High Elasticity',
+      link: '/products?item=prod-knit-yarn',
       image: '/images/recycled_knit_yarn.jpg',
-      layoutRight: true,
     },
     {
       id: 'prod-weaving-yarn',
-      category: 'RECYCLED WEAVING YARN',
       title: 'Recycled Weaving Yarn',
-      description:
-        'High-tenacity ring-spun and open-end recycled yarns crafted for high-speed weaving looms with minimal yarn breakage, superior warp tensile strength, and crisp fabric finish.',
-      features: [
-        'High Tensile & Tear Resistance',
-        'Optimal Warp & Weft Performance',
-        '100% Traceable Recycled Material',
-        'Consistent Uster Capacitive Testing',
-        'Zero Water Waste Masterbatch Dyeing',
-      ],
-      applications: [
-        'Woven Apparel & Shirting',
-        'Suitings & Trousers',
-        'Industrial Eco-Canvas',
-        'Sustainable Home Textiles',
-      ],
-      ctaPrimaryText: 'Explore Weaving Yarns',
-      ctaPrimaryLink: '/products',
-      ctaSecondaryText: 'Enquire Now',
-      ctaSecondaryLink: '/contact',
+      category: 'RECYCLED WEAVING YARN',
+      tag: 'High Tensile Strength • Ring-Spun',
+      link: '/products?item=prod-weaving-yarn',
       image: '/images/recycled_weaving_yarn.jpg',
-      layoutRight: true,
     },
     {
       id: 'prod-melange-yarn',
-      category: 'RECYCLED MELANGE YARN',
       title: 'Recycled Melange Yarn',
-      description:
-        'Richly textured multi-tonal recycled melange yarns created by precision blending pre-dyed eco-fibers. Delivers vibrant heather shades with zero additional chemical water processing.',
-      features: [
-        'Multi-Tonal Heather Color Palette',
-        'Pre-Dyed Fiber Blending Tech',
-        '100% Waterless Dyeing Process',
-        'GRS Certified Recycled Cotton',
-        'Soft Touch & Luxury Surface Finish',
-      ],
-      applications: [
-        'Heather Knitwear & Sweaters',
-        'Casualwear & Fleece',
-        'Fashion Garments',
-        'Decorative Textiles & Furnishings',
-      ],
-      ctaPrimaryText: 'Explore Melange Yarns',
-      ctaPrimaryLink: '/products',
-      ctaSecondaryText: 'Enquire Now',
-      ctaSecondaryLink: '/contact',
+      category: 'RECYCLED MELANGE YARN',
+      tag: 'Multi-Tonal Heather • Pre-Dyed Blends',
+      link: '/products?item=prod-melange-yarn',
       image: '/images/recycled_melange_yarn.jpg',
-      layoutRight: true,
     },
     {
       id: 'prod-denim-yarn',
-      category: 'RECYCLED DENIM YARN',
       title: 'Recycled Denim Yarn',
-      description:
-        'Upcycled indigo denim yarns produced from post-consumer denim fabric waste. Provides authentic slub textures and deep indigo hues while eliminating virgin cotton farming.',
-      features: [
-        'Upcycled Post-Consumer Denim Waste',
-        'Authentic Slub & Texture Profile',
-        'Deep Indigo Dope-Dyed Masterbatch',
-        'High Structural Durability',
-        '100% Circular Supply Chain',
-      ],
-      applications: [
-        'Eco Jeans & Denim Jackets',
-        'Upcycled Denim Apparel',
-        'Heavy Canvas Bags & Accessories',
-        'Workwear & Streetwear',
-      ],
-      ctaPrimaryText: 'Explore Denim Yarns',
-      ctaPrimaryLink: '/products',
-      ctaSecondaryText: 'Enquire Now',
-      ctaSecondaryLink: '/contact',
+      category: 'RECYCLED DENIM YARN',
+      tag: 'Upcycled Denim Waste • Vintage Slub',
+      link: '/products?item=prod-denim-yarn',
       image: '/images/recycled_denim_yarn.jpg',
-      layoutRight: true,
+    },
+    {
+      id: 'p-ocean',
+      title: 'Recycled Ocean PET & Cotton Yarn',
+      category: 'RECYCLED PET YARN',
+      tag: '18 Ocean Bottles Recycled / Garment',
+      link: '/products?item=p-ocean',
+      image: '/images/avantee_ocean_sweater_spool.jpg',
+    },
+    {
+      id: 'p-hoodie',
+      title: 'AVANTEE Signature Mint Eco Yarn',
+      category: 'SIGNATURE MINT YARN',
+      tag: 'Cellulosic Viscose & Recycled Cotton',
+      link: '/products?item=p-hoodie',
+      image: '/images/avantee_mint_hoodie_spool.jpg',
     },
   ];
+
+  const activeYarn = yarnList.find((y) => y.id === hoveredYarnId) || yarnList[0];
 
   // Why Choose Our Products - 6 Key Propositions
   const whyProps = [
@@ -176,7 +123,7 @@ export const ProductsShowcaseSection = () => {
       id: 'g0-ocean',
       category: 'yarns',
       catLabel: 'OCEAN RECYCLED',
-      title: 'AVANTEE Ocean Recycled PET Bottle Sweater & Yarn Spool',
+      title: 'AVANTEE Ocean Recycled PET Sweater & Yarn Spool',
       image: '/images/avantee_ocean_sweater_spool.jpg',
     },
     {
@@ -260,72 +207,71 @@ export const ProductsShowcaseSection = () => {
           label="OUR PRODUCTS"
           light={true}
           title="Recycled Sustainability Yarns"
+          subtitle="Click on any yarn variety below to view complete technical details on our Products page."
         />
 
-        {/* 3 FULL-SCREEN SHOWCASE PRODUCTS */}
-        {showcases.map((prod) => (
-          <motion.div
-            key={prod.id}
-            className={`${styles.showcaseBlock} ${prod.layoutRight ? styles.reverseLayout : ''
-              }`}
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: '-100px' }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          >
-            {/* Image Card */}
-            <div className={styles.showcaseImageCol}>
-              <div className={styles.showcaseImageCard}>
-                <span className={styles.categoryTagBadge}>{prod.category}</span>
-                <img
-                  src={prod.image}
-                  alt={prod.title}
-                  className={styles.showcaseImg}
-                  loading="lazy"
-                />
-              </div>
-            </div>
+        {/* BULLETED YARN HYPERLINK LIST SECTION */}
+        <motion.div
+          className={styles.bulletListContainerCard}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className={styles.bulletListGridContainer}>
+            {/* Left Column: Bulleted Hyperlinks */}
+            <div className={styles.bulletColumn}>
+              <h3 className={styles.bulletSectionHeading}>Available Yarn Varieties</h3>
+              <p className={styles.bulletSectionSub}>
+                Select a yarn type to navigate directly to its product specifications:
+              </p>
 
-            {/* Content Column */}
-            <div className={styles.showcaseContentCol}>
-              <h3 className={styles.prodTitle}>{prod.title}</h3>
-              <p className={styles.prodDesc}>{prod.description}</p>
-
-              {/* Features List */}
-              <div className={styles.featuresGrid}>
-                {prod.features.map((feat, i) => (
-                  <div key={i} className={styles.featureItem}>
-                    <FaCheckCircle className={styles.checkIcon} />
-                    <span>{feat}</span>
-                  </div>
+              <ul className={styles.bulletHyperlinkList}>
+                {yarnList.map((yarn) => (
+                  <li
+                    key={yarn.id}
+                    onMouseEnter={() => setHoveredYarnId(yarn.id)}
+                    className={`${styles.bulletListItem} ${hoveredYarnId === yarn.id ? styles.bulletItemActive : ''
+                      }`}
+                  >
+                    <span className={styles.bulletDot}>•</span>
+                    <Link to={yarn.link} className={styles.yarnHyperlink}>
+                      <span className={styles.yarnTitleText}>{yarn.title}</span>
+                      <FaArrowRight className={styles.arrowIcon} />
+                    </Link>
+                  </li>
                 ))}
-              </div>
+              </ul>
 
-              {/* Applications Chips */}
-              <div className={styles.appSectionTitle}>Key Applications:</div>
-              <div className={styles.chipGroup}>
-                {prod.applications.map((app, i) => (
-                  <span key={i} className={styles.appChip}>
-                    {app}
-                  </span>
-                ))}
-              </div>
-
-              {/* Buttons */}
-              <div className={styles.ctaRow}>
-                <Link to={prod.ctaPrimaryLink} className="btn-primary">
-                  <span>{prod.ctaPrimaryText}</span>
+              <div className={styles.bulletCtaBox}>
+                <Link to="/products" className="btn-primary">
+                  <span>View All Products in Catalog</span>
                   <FaArrowRight />
                 </Link>
-
-                <Link to={prod.ctaSecondaryLink} className="btn-secondary">
-                  <span>{prod.ctaSecondaryText}</span>
-                  {prod.ctaSecondaryText.includes('Brochure') && <FaDownload />}
-                </Link>
               </div>
             </div>
-          </motion.div>
-        ))}
+
+            {/* Right Column: Live Interactive Preview */}
+            <div className={styles.previewColumn}>
+              <div className={styles.previewCard}>
+                <span className={styles.categoryTagBadge}>{activeYarn.category}</span>
+                <img
+                  src={activeYarn.image}
+                  alt={activeYarn.title}
+                  className={styles.previewImg}
+                  loading="lazy"
+                />
+                <div className={styles.previewInfoBox}>
+                  <h4 className={styles.previewTitle}>{activeYarn.title}</h4>
+                  <span className={styles.previewTag}>{activeYarn.tag}</span>
+                  <Link to={activeYarn.link} className={styles.previewLinkBtn}>
+                    <span>View Specifications →</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
         {/* WHERE OUR FABRICS ARE USED - FEATURE BANNER (IMAGE 4) */}
         <motion.div

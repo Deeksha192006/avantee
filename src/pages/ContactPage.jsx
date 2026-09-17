@@ -155,15 +155,16 @@ export const ContactPage = () => {
                 </div>
               </div>
 
-              <h4 className={styles.companyName}>Avantee Industries Private Limited</h4>
-
               <div className={styles.addressBlock}>
                 <FaMapMarkerAlt className={styles.mapIcon} />
-                <p>
-                  Door No. 2/133, Senjudaiyampalayam, Irukkur,<br />
-                  Paramathi Velur, Namakkal – 637204,<br />
-                  Tamil Nadu, India.
-                </p>
+                <div className={styles.addressContent}>
+                  <h4 className={styles.companyName}>Avantee Industries Private Limited</h4>
+                  <p>
+                    Door No. 2/133, Senjudaiyampalayam, Irukkur,<br />
+                    Paramathi Velur, Namakkal – 637204,<br />
+                    Tamil Nadu, India.
+                  </p>
+                </div>
               </div>
 
               <div className={styles.gstinBadge}>
@@ -190,15 +191,16 @@ export const ContactPage = () => {
                 </div>
               </div>
 
-              <h4 className={styles.companyName}>Avantee Industries Private Limited</h4>
-
               <div className={styles.addressBlock}>
                 <FaMapMarkerAlt className={styles.mapIcon} />
-                <p>
-                  SF No. 269/2, Thandagoundenputhur, Kalipalayam,<br />
-                  Avinashi, Kalipalayam, Tiruppur – 641666,<br />
-                  Tamil Nadu, India.
-                </p>
+                <div className={styles.addressContent}>
+                  <h4 className={styles.companyName}>Avantee Industries Private Limited</h4>
+                  <p>
+                    SF No. 269/2, Thandagoundenputhur, Kalipalayam,<br />
+                    Avinashi, Kalipalayam, Tiruppur – 641666,<br />
+                    Tamil Nadu, India.
+                  </p>
+                </div>
               </div>
 
               <div className={styles.gstinBadge}>
