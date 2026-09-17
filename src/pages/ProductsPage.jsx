@@ -349,6 +349,8 @@ export const ProductsPage = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4 }}
                 whileHover={{ y: -6 }}
+                onClick={() => setSelectedProduct(prod)}
+                style={{ cursor: 'pointer' }}
               >
                 <div className={styles.cardImgBox}>
                   <img src={prod.image} alt={prod.name} className={styles.cardImg} />
@@ -358,36 +360,9 @@ export const ProductsPage = () => {
                 <div className={styles.cardBody}>
                   <span className={styles.catBadge}>{prod.category.toUpperCase()}</span>
                   <h3 className={styles.cardName}>{prod.name}</h3>
-                  <p className={styles.cardDesc}>{prod.desc}</p>
-
-                  {/* Bullet Points list if present */}
-                  {prod.bulletPoints && prod.bulletPoints.length > 0 && (
-                    <div style={{ marginBottom: '18px' }}>
-                      <strong style={{ fontSize: '0.85rem', color: 'var(--gold-primary)', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '8px' }}>
-                        Key Features & Specifications:
-                      </strong>
-                      <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                        {prod.bulletPoints.map((bp, idx) => (
-                          <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.88rem', fontWeight: 600, color: 'var(--color-deep-forest)' }}>
-                            <FaCheckCircle style={{ color: 'var(--color-emerald)', flexShrink: 0 }} />
-                            <span>{bp}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  <div className={styles.appRow}>
-                    <strong>Key Uses:</strong>
-                    <div className={styles.tagWrap}>
-                      {prod.applications.slice(0, 3).map((app, i) => (
-                        <span key={i} className={styles.appChip}>{app}</span>
-                      ))}
-                    </div>
-                  </div>
 
                   <div className={styles.cardFooter}>
-                    <button className="btn-primary" onClick={() => setSelectedProduct(prod)}>
+                    <button className="btn-primary" onClick={(e) => { e.stopPropagation(); setSelectedProduct(prod); }}>
                       <span>Full Specifications</span>
                       <FaArrowRight />
                     </button>
@@ -430,9 +405,9 @@ export const ProductsPage = () => {
                   <p className={styles.modalDesc}>{selectedProduct.desc}</p>
 
                   {/* Bullet Points in Modal */}
-                  {selectedProduct.bulletPoints && (
+                  {selectedProduct.bulletPoints && selectedProduct.bulletPoints.length > 0 && (
                     <div style={{ marginBottom: '24px' }}>
-                      <h4 className={styles.specSectionTitle}>Key Highlights</h4>
+                      <h4 className={styles.specSectionTitle}>Key Features & Specifications</h4>
                       <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px' }}>
                         {selectedProduct.bulletPoints.map((bp, i) => (
                           <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem', fontWeight: 600, color: 'var(--color-deep-forest)' }}>
@@ -441,6 +416,18 @@ export const ProductsPage = () => {
                           </li>
                         ))}
                       </ul>
+                    </div>
+                  )}
+
+                  {/* Applications / Key Uses in Modal */}
+                  {selectedProduct.applications && selectedProduct.applications.length > 0 && (
+                    <div style={{ marginBottom: '24px' }}>
+                      <h4 className={styles.specSectionTitle}>Key Applications</h4>
+                      <div className={styles.tagWrap}>
+                        {selectedProduct.applications.map((app, i) => (
+                          <span key={i} className={styles.appChip}>{app}</span>
+                        ))}
+                      </div>
                     </div>
                   )}
 
