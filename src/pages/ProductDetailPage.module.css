@@ -6,50 +6,20 @@
 }
 
 .topBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 28px;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
-  color: var(--color-charcoal);
-  opacity: 0.8;
-  font-weight: 500;
-}
-
-.breadcrumbLink {
-  color: var(--color-deep-forest);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-.breadcrumbLink:hover {
-  color: var(--color-emerald);
-}
-
-.breadcrumbSep {
-  opacity: 0.4;
+  margin-bottom: 32px;
 }
 
 .backBtn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background: var(--color-white);
   color: var(--color-deep-forest);
   border: 1px solid var(--color-border-light);
-  padding: 8px 20px;
+  padding: 10px 22px;
   border-radius: var(--radius-full);
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   transition: all 0.25s ease;
   box-shadow: var(--shadow-sm);
   text-decoration: none;
@@ -68,7 +38,7 @@
   border: 1px solid var(--color-border-light);
   padding: 48px;
   box-shadow: var(--shadow-md);
-  margin-bottom: 48px;
+  margin-bottom: 60px;
 }
 
 @media (max-width: 768px) {
@@ -79,7 +49,7 @@
 
 .detailGrid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: start;
 }
@@ -102,14 +72,14 @@
 
 .productImg {
   width: 100%;
-  height: 440px;
+  height: 480px;
   object-fit: cover;
   display: block;
 }
 
 @media (max-width: 768px) {
   .productImg {
-    height: 300px;
+    height: 320px;
   }
 }
 
@@ -128,7 +98,7 @@
 }
 
 .catBadge {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   font-weight: 800;
   color: var(--color-emerald);
@@ -152,116 +122,99 @@
   }
 }
 
-.productDescParagraph {
+.productDesc {
   font-size: 1.05rem;
   color: var(--color-charcoal);
   opacity: 0.9;
-  line-height: 1.7;
-  margin-bottom: 16px;
-  white-space: pre-line;
+  line-height: 1.65;
+  margin-bottom: 28px;
 }
 
-.sectionBlock {
-  margin-top: 32px;
-  padding-top: 28px;
-  border-top: 1px solid var(--color-border-light);
-}
-
-.sectionHeading {
-  font-size: 1.25rem;
+.specSectionTitle {
+  font-size: 1.1rem;
   font-weight: 800;
-  color: var(--color-deep-forest);
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  color: var(--color-emerald);
+  margin-bottom: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.sectionHeading::before {
-  content: '';
-  display: inline-block;
-  width: 6px;
-  height: 20px;
-  background: var(--color-emerald);
-  border-radius: 3px;
-}
-
-.applicationsList {
+.featureGrid {
   list-style: none;
   padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+  margin-bottom: 28px;
 }
 
-.appItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  background: var(--color-offwhite);
-  padding: 12px 18px;
-  border-radius: var(--radius-sm, 8px);
-  border: 1px solid var(--color-border-light);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--color-deep-forest);
-  transition: all 0.2s ease;
-}
-
-.appItem:hover {
-  border-color: var(--color-emerald);
-  background: rgba(27, 127, 91, 0.05);
-}
-
-.appBulletDot {
-  color: var(--color-emerald);
-  font-size: 1.2rem;
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.additionalInfoText {
-  font-size: 0.98rem;
-  color: var(--color-charcoal);
-  opacity: 0.9;
-  line-height: 1.7;
-  white-space: pre-line;
-}
-
-/* Enquire CTA Banner Card */
-.enquireCtaCard {
-  background: var(--gradient-emerald-forest);
-  color: var(--color-white);
-  border-radius: var(--radius-md, 12px);
-  padding: 32px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  margin-top: 36px;
-  box-shadow: 0 10px 30px rgba(14, 59, 46, 0.2);
-}
-
-@media (max-width: 768px) {
-  .enquireCtaCard {
-    flex-direction: column;
-    text-align: center;
-    padding: 24px;
+@media (max-width: 600px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
   }
 }
 
-.enquireCtaTitle {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--color-white);
-  margin-bottom: 4px;
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-deep-forest);
 }
 
-.enquireCtaSub {
-  font-size: 0.95rem;
-  color: var(--color-mint);
+.featureIcon {
+  color: var(--color-emerald);
+  flex-shrink: 0;
+}
+
+.tagWrap {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.appChip {
+  background: var(--color-offwhite);
+  padding: 6px 14px;
+  border-radius: var(--radius-xs, 6px);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  border: 1px solid var(--color-border-light);
+}
+
+.specGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 600px) {
+  .specGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.specBox {
+  background: var(--color-offwhite);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm, 8px);
+  font-size: 0.9rem;
+  border: 1px solid var(--color-border-light);
+}
+
+.specKey {
+  font-weight: 800;
+  color: var(--color-deep-forest);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.specVal {
+  color: var(--color-charcoal);
   opacity: 0.9;
 }
 
@@ -269,26 +222,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  background: var(--gold-primary);
-  color: var(--color-deep-forest);
+  gap: 12px;
+  background: var(--gradient-emerald-forest);
+  color: var(--color-white);
   border: none;
-  padding: 14px 32px;
+  padding: 16px 36px;
   border-radius: var(--radius-full);
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: 1.05rem;
+  font-weight: 700;
   cursor: pointer;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.25s ease;
-  white-space: nowrap;
-  flex-shrink: 0;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
 }
 
 .enquireCtaBtn:hover {
-  background: var(--color-white);
-  color: var(--color-deep-forest);
+  background: var(--color-deep-forest);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 /* Form Section */
@@ -377,7 +327,9 @@
   margin-left: 3px;
 }
 
-.input, .select, .textarea {
+.input,
+.select,
+.textarea {
   width: 100%;
   padding: 14px 18px;
   border-radius: var(--radius-sm, 8px);
@@ -390,7 +342,9 @@
   box-sizing: border-box;
 }
 
-.input:focus, .select:focus, .textarea:focus {
+.input:focus,
+.select:focus,
+.textarea:focus {
   outline: none;
   border-color: var(--color-emerald);
   box-shadow: 0 0 0 3px rgba(27, 127, 91, 0.15);

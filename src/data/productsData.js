@@ -7,155 +7,145 @@ export const productCategories = [
   {
     id: 'yarns',
     title: 'Recycled Sustainable Yarns',
-    subtitle: 'GRS-certified recycled yarns engineered for knitting, weaving, melange and denim applications.'
+    subtitle: 'GRS-certified recycled yarns engineered for knitting, wearing, melange and denim applications.'
   }
 ];
 
 export const productsData = [
+  // 1. RECYCLED SUSTAINABLE FABRICS
   {
     id: 'knit-fabrics',
-    slug: 'knit-fabrics',
     legacyId: 'prod-knit-fabrics',
+    slug: 'knit-fabrics',
+    category: 'fabrics',
+    categoryName: 'Recycled Sustainable Fabrics',
     name: 'Knit Fabrics',
-    category: 'Recycled Sustainable Fabrics',
-    categoryId: 'fabrics',
-    type: 'fabric',
-    tag: '100% Recycled • Soft & Elastic',
+    tag: '100% GRS Certified • Soft & Elastic',
+    denier: '180 to 320 GSM Circular Knit',
+    cut: 'Width 60 / 68 Inches Rolls',
     image: '/images/fabric_stack_dark.png',
-    description: `Our recycled knit fabrics bring together comfort, versatility and responsible material choices for modern textile applications. Developed using recycled yarns, these fabrics provide brands and manufacturers an opportunity to incorporate recycled materials into their collections. All while meeting the practical requirements of textile production.
-
-Knitted fabrics are valued for their flexibility, softness and comfort. That makes them suitable for a wide range of apparel and textile applications. Depending on the yarn and fabric construction, they can be developed in different weights, textures and finishes.`,
-    applications: [
-      'Apparel and fashion applications',
-      'Comfortable, flexible fabric constructions',
-      'Different fabric weights and textures',
-      'Product development and sampling',
-      'Integration of recycled materials into new collections'
+    desc: 'Recycled knit fabrics designed for comfortable, durable and sustainable textile applications.',
+    bulletPoints: [
+      '100% GRS & RCS Certified',
+      'High Elasticity & Superior Stretch Recovery',
+      'Zero Water Waste Dope-Dyeing Tech',
+      'Ultra-Soft Premium Hand Feel',
+      'Micro-Denier Recycled Cotton & Poly Blend'
     ],
-    additionalInformation: `We focus on consistent material quality and dependable fabric development, supporting customers from material selection through fabric development and sampling.
-
-By combining recycled yarn expertise with fabric manufacturing capabilities, we aim to make it easier for brands and manufacturers to explore more circular material choices and develop fabrics suited to their specific product requirements.`
+    applications: ['Sustainable Hoodies & Sweatshirts', 'Eco T-Shirts & Polos', 'Activewear & Athleisure', 'Seamless Apparel'],
+    specs: { Weight: '180 - 320 GSM', Elasticity: 'High Stretch Recovery', GRSStatus: '100% Certified', WaterSaved: '4,900 L / kg' }
   },
   {
     id: 'woven-fabrics',
-    slug: 'woven-fabrics',
     legacyId: 'prod-woven-fabrics',
+    slug: 'woven-fabrics',
+    category: 'fabrics',
+    categoryName: 'Recycled Sustainable Fabrics',
     name: 'Woven Fabrics',
-    category: 'Recycled Sustainable Fabrics',
-    categoryId: 'fabrics',
-    type: 'fabric',
-    tag: 'Structured & Stable • Eco Loom Weave',
+    tag: 'High Tensile • Precision Loom Weave',
+    denier: '200 to 450 GSM Heavy Weave',
+    cut: 'Width 58 / 60 Inches Rolls',
     image: '/images/eco_material_rolls.png',
-    description: `Our recycled woven fabrics combine the structure and versatility of woven construction with the benefits of recycled textile materials. Developed using recycled yarns, these fabrics provide brands and manufacturers with an alternative material solution for apparel, fashion and other textile applications.
-
-Woven fabrics are valued for their structure, stability and versatility. Depending on the yarn, weave and fabric construction, they can be developed to achieve different weights, textures and finishes for specific product requirements.`,
-    applications: [
-      'Apparel and fashion applications',
-      'Structured and stable fabric constructions',
-      'Different textures, weights and finishes',
-      'Fabric development and sampling',
-      'Products incorporating recycled textile materials'
+    desc: 'Recycled woven fabrics developed for durable and versatile textile applications with a focus on sustainability.',
+    bulletPoints: [
+      'High Tensile & Tear Resistance',
+      'Automated Precision Loom Weaving',
+      '100% Traceable Recycled Material',
+      'Crisp Executive & Tailored Finish',
+      'Minimal Shrinkage & High Martindale Rubs'
     ],
-    additionalInformation: `We focus on consistent quality and reliable fabric development, supporting customers through material selection, development and sampling. Our recycled yarn expertise also enables a more connected approach from raw material to finished fabric.
-
-By combining recycled materials with dependable fabric development, we help manufacturers explore recycled content while maintaining the functional characteristics required for their intended applications.`
+    applications: ['Woven Apparel & Shirting', 'Suitings & Trousers', 'Eco Jeans & Denim Jackets', 'Industrial Canvas'],
+    specs: { Weight: '200 - 450 GSM', TensileStrength: '1580 N Warp', GRSStatus: '100% Certified', Shrinkage: '< 1.8%' }
   },
+
+  // 2. RECYCLED SUSTAINABLE YARNS
   {
     id: 'recycled-knit-yarn',
-    slug: 'recycled-knit-yarn',
     legacyId: 'prod-knit-yarn',
+    slug: 'recycled-knit-yarn',
+    category: 'yarns',
+    categoryName: 'Recycled Sustainable Yarns',
     name: 'Recycled Knit Yarn',
-    category: 'Recycled Sustainable Yarns',
-    categoryId: 'yarns',
-    type: 'yarn',
-    tag: '100% Recycled • Premium Hand Feel',
+    tag: '100% GRS & RCS Certified',
+    denier: 'Count Ne 20s to Ne 40s Knit Spin',
+    cut: 'Branded Kraft Paper Band Spools',
     image: '/images/recycled_knit_yarn.jpg',
-    description: `Our recycled knit yarns are developed for manufacturers and brands looking to incorporate recycled materials into knitted textile products. By using recovered textile materials as part of the yarn-making process, these yarns provide an opportunity to bring recycled content into new textile applications.
-
-Designed with knitting applications in mind, the yarns can be used to develop a variety of knitted fabrics, depending on the yarn specification, construction and end-product requirements.`,
-    applications: [
-      'Knitted apparel and textile applications',
-      'Fabric development using recycled materials',
-      'Different product and fabric requirements',
-      'Sampling and new product development',
-      'More circular approaches to material sourcing'
+    desc: 'Recycled yarn designed for knitting applications, combining performance, consistency and sustainable production.',
+    bulletPoints: [
+      '100% GRS & RCS Certified',
+      'Zero Water Waste Dope-Dyeing Tech',
+      'Ultra-Soft Premium Hand Feel',
+      'High Elasticity & Loop Stability',
+      'Micro-Denier Staple Fiber Blend'
     ],
-    additionalInformation: `We focus on consistent yarn quality and dependable performance to support customers throughout the product development process. Our team can work with customers to understand their requirements and identify suitable yarn solutions for their intended application.
-
-By connecting recycled raw materials with yarn manufacturing expertise, we aim to provide practical yarn solutions that help customers explore recycled materials while maintaining focus on quality, consistency and the requirements of the final product.`
+    applications: ['Sustainable Hoodies & Sweatshirts', 'Knitwear & T-Shirts', 'Activewear & Athleisure', 'Seamless Apparel'],
+    specs: { Tenacity: '5.6 - 6.0 g/d', Elongation: '30% - 36%', GRSStatus: '100% Certified', WaterSaved: '4,800 L / kg' }
   },
   {
-    id: 'recycled-weaving-yarn',
-    slug: 'recycled-weaving-yarn',
-    aliasSlug: 'recycled-wearing-yarn',
+    id: 'recycled-wearing-yarn',
     legacyId: 'prod-weaving-yarn',
-    name: 'Recycled Weaving Yarn',
-    category: 'Recycled Sustainable Yarns',
-    categoryId: 'yarns',
-    type: 'yarn',
-    tag: 'High Tensile Strength • Durable Weave',
+    slug: 'recycled-wearing-yarn',
+    category: 'yarns',
+    categoryName: 'Recycled Sustainable Yarns',
+    name: 'Recycled Wearing Yarn',
+    tag: 'High Tensile & Wear Resistance',
+    denier: 'Count Ne 10s to Ne 36s Wear Spin',
+    cut: 'Ring-Spun & Open-End Spools',
     image: '/images/recycled_weaving_yarn.jpg',
-    description: `Our recycled weaving yarns are designed for textile manufacturers seeking yarn solutions for woven fabric production. Made using recycled materials, these yarns help bring recovered fibres back into the textile manufacturing cycle and provide an alternative material choice for new woven products.
-
-Yarn performance plays an important role in the weaving process, influencing fabric structure, appearance and overall characteristics. Our recycled weaving yarns are developed with these practical manufacturing requirements in mind, with a focus on consistency and suitability for the intended application.`,
-    applications: [
-      'Woven fabric production',
-      'Apparel and fashion applications',
-      'Development of fabrics using recycled materials',
-      'New product development and sampling',
-      'Material solutions aligned with circular textile goals'
+    desc: 'Recycled yarn suitable for wearing and apparel applications, offering reliable performance with a sustainable approach.',
+    bulletPoints: [
+      'High Tensile & Wear Resistance',
+      'Optimal Warp & Weft Performance',
+      '100% Traceable Recycled Material',
+      'Consistent Uster Capacitive Testing',
+      'Zero Water Waste Masterbatch Dyeing'
     ],
-    additionalInformation: `Depending on the yarn specification and fabric construction, these yarns can be evaluated for different woven textile applications.
-
-We work with customers to understand their requirements and support yarn selection, development and sampling. By combining recycled material expertise with yarn manufacturing capabilities, we aim to provide practical solutions for manufacturers looking to introduce recycled materials into their woven products.`
+    applications: ['Woven Apparel & Shirting', 'Suitings & Trousers', 'Industrial Eco-Canvas', 'Sustainable Home Textiles'],
+    specs: { TensileStrength: '1580 N Warp', TwistMultiplier: '3.9 - 4.3', GRSStatus: '100% Certified', WaterSaved: '5,100 L / kg' }
   },
   {
     id: 'recycled-melange-yarn',
-    slug: 'recycled-melange-yarn',
     legacyId: 'prod-melange-yarn',
+    slug: 'recycled-melange-yarn',
+    category: 'yarns',
+    categoryName: 'Recycled Sustainable Yarns',
     name: 'Recycled Melange Yarn',
-    category: 'Recycled Sustainable Yarns',
-    categoryId: 'yarns',
-    type: 'yarn',
-    tag: 'Multi-Tonal Heather • Pre-Dyed Blends',
+    tag: 'Multi-Tonal Heather Color Palette',
+    denier: 'Count Ne 16s to Ne 32s Heather Blend',
+    cut: 'Precision Pre-Dyed Fiber Spools',
     image: '/images/recycled_melange_yarn.jpg',
-    description: `Our recycled melange yarns combine the distinctive visual character of melange effects with the benefits of recycled textile materials. Developed for manufacturers and brands looking for more distinctive yarn options, these yarns can add depth and variation to the appearance of knitted and other textile products.
-
-The multi-tone character of melange yarn creates opportunities to develop fabrics with a textured and contemporary appearance. When produced using recycled fibres, the yarn also provides a way to incorporate recycled materials into products where colour and visual appeal are important considerations.`,
-    applications: [
-      'Apparel and fashion applications',
-      'Distinctive multi-tone fabric effects',
-      'Knitted fabric development',
-      'Product collections using recycled materials',
-      'Sampling and customised product development'
+    desc: 'Recycled melange yarn produced with blended colour effects for versatile and sustainable textile applications.',
+    bulletPoints: [
+      'Multi-Tonal Heather Color Palette',
+      'Pre-Dyed Fiber Blending Tech',
+      '100% Waterless Dyeing Process',
+      'GRS Certified Recycled Cotton',
+      'Soft Touch & Luxury Surface Finish'
     ],
-    additionalInformation: `The final appearance and characteristics can vary according to the yarn construction, fibre composition and intended application. We therefore focus on understanding customer requirements and supporting the selection and development of suitable yarn solutions.
-
-By combining recycled materials with the design possibilities of melange yarn, we aim to help brands create textile products that bring together visual appeal, practical requirements and more responsible material choices.`
+    applications: ['Heather Knitwear & Sweaters', 'Casualwear & Fleece', 'Fashion Garments', 'Decorative Textiles'],
+    specs: { ColorFastness: 'Grade 4.8+', BlendRatio: '80% Recycled Cotton / 20% Poly', GRSStatus: '100% Certified', WaterSaved: '5,000 L / kg' }
   },
   {
     id: 'recycled-denim-yarn',
-    slug: 'recycled-denim-yarn',
     legacyId: 'prod-denim-yarn',
+    slug: 'recycled-denim-yarn',
+    category: 'yarns',
+    categoryName: 'Recycled Sustainable Yarns',
     name: 'Recycled Denim Yarn',
-    category: 'Recycled Sustainable Yarns',
-    categoryId: 'yarns',
-    type: 'yarn',
     tag: 'Upcycled Post-Consumer Denim Waste',
+    denier: 'Count Ne 6s to Ne 20s Indigo Slub',
+    cut: 'Heavy Duty Ring Spun Cones',
     image: '/images/recycled_denim_yarn.jpg',
-    description: `Our recycled denim yarns provide an opportunity to give denim and textile materials a renewed purpose by incorporating recycled denim fibres into new yarn applications. Developed for manufacturers and brands exploring circular material solutions, these yarns connect textile recovery with the creation of new products.
-
-Recycled denim yarn can offer a distinctive material character and can be considered for suitable textile and apparel applications. Depending on the yarn specification, blend and intended end use, it can contribute to fabrics where the look and feel associated with recycled denim add value to the finished product.`,
-    applications: [
-      'Apparel and fashion products',
-      'Textile and fabric development',
-      'Products incorporating recycled denim materials',
-      'New collections focused on material reuse',
-      'Sampling and product development'
+    desc: 'Recycled yarn developed for denim applications, supporting sustainable textile production through the reuse of materials.',
+    bulletPoints: [
+      'Upcycled Post-Consumer Denim Waste',
+      'Authentic Slub & Texture Profile',
+      'Deep Indigo Dope-Dyed Masterbatch',
+      'High Structural Durability',
+      '100% Circular Supply Chain'
     ],
-    additionalInformation: `Yarn selection, fibre composition and construction can influence the characteristics of the resulting fabric. We work with customers to understand their requirements and evaluate suitable yarn solutions for their applications.
-
-By transforming recycled denim into a new yarn resource, we aim to support manufacturers and brands exploring more circular approaches to textile production while creating opportunities for recovered materials to re-enter the product lifecycle.`
+    applications: ['Eco Jeans & Denim Jackets', 'Upcycled Denim Apparel', 'Heavy Canvas Bags & Accessories', 'Workwear & Streetwear'],
+    specs: { SlubIndex: 'Authentic Vintage Slub', Tenacity: '5.2 g/d', IndigoFastness: 'Grade 4.5+', WaterSaved: '6,200 L / kg' }
   }
 ];
 
@@ -165,8 +155,7 @@ export const getProductBySlug = (slug) => {
   return productsData.find(
     (p) =>
       p.slug.toLowerCase() === cleanSlug ||
-      (p.aliasSlug && p.aliasSlug.toLowerCase() === cleanSlug) ||
       p.id.toLowerCase() === cleanSlug ||
-      (p.legacyId && p.legacyId.toLowerCase() === cleanSlug)
+      p.legacyId.toLowerCase() === cleanSlug
   );
 };
