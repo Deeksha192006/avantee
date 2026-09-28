@@ -5,6 +5,7 @@ import { MainLayout } from './layouts/MainLayout';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ProductsPage } from './pages/ProductsPage';
+import { ProductDetailPage } from './pages/ProductDetailPage';
 import { FacilitiesPage } from './pages/FacilitiesPage';
 import { SustainabilityPage } from './pages/SustainabilityPage';
 import { ContactPage } from './pages/ContactPage';
@@ -20,6 +21,7 @@ export function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/products" element={<ProductsPage />} />
+            <Route path="/products/:slug" element={<ProductDetailPage />} />
             <Route path="/facilities" element={<FacilitiesPage />} />
             <Route path="/sustainability" element={<SustainabilityPage />} />
             <Route path="/contact" element={<ContactPage />} />

@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   FaCheckCircle,
   FaArrowRight,
-  FaDownload,
+  FaChevronLeft,
+  FaChevronRight,
   FaRecycle,
   FaCogs,
   FaShieldAlt,
@@ -20,61 +21,85 @@ import styles from './ProductsShowcaseSection.module.css';
 export const ProductsShowcaseSection = () => {
   const [activeGalleryTab, setActiveGalleryTab] = useState('all');
   const [lightboxItem, setLightboxItem] = useState(null);
-  const [hoveredYarnId, setHoveredYarnId] = useState('prod-knit-yarn');
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  // Bulleted Hyperlink List of Yarn Types
-  const yarnList = [
+  // Exactly 6 products focused on Recycled Yarns & Sustainable Fabrics
+  const carouselProducts = [
     {
-      id: 'prod-knit-yarn',
-      title: 'Recycled Knit Yarn',
-      category: 'RECYCLED KNIT YARN',
-      tag: '100% GRS Certified • High Elasticity',
-      link: '/products?item=prod-knit-yarn',
+      id: 'recycled-knit-yarn',
+      name: 'Recycled Knit Yarn',
+      category: 'Recycled Sustainable Yarns',
+      slug: 'recycled-knit-yarn',
+      tag: '100% GRS Certified • Soft & Elastic',
       image: '/images/recycled_knit_yarn.jpg',
+      description: 'Recycled yarn designed for knitting applications, combining performance, consistency and sustainable production.',
     },
     {
-      id: 'prod-weaving-yarn',
-      title: 'Recycled Weaving Yarn',
-      category: 'RECYCLED WEAVING YARN',
-      tag: 'High Tensile Strength • Ring-Spun',
-      link: '/products?item=prod-weaving-yarn',
+      id: 'recycled-wearing-yarn',
+      name: 'Recycled Wearing Yarn',
+      category: 'Recycled Sustainable Yarns',
+      slug: 'recycled-wearing-yarn',
+      tag: 'High Tensile Strength • Apparel Spin',
       image: '/images/recycled_weaving_yarn.jpg',
+      description: 'Recycled yarn suitable for wearing and apparel applications, offering reliable performance with a sustainable approach.',
     },
     {
-      id: 'prod-melange-yarn',
-      title: 'Recycled Melange Yarn',
-      category: 'RECYCLED MELANGE YARN',
+      id: 'knit-fabrics',
+      name: 'Knit Fabrics',
+      category: 'Recycled Sustainable Fabrics',
+      slug: 'knit-fabrics',
+      tag: '100% GRS Certified • Stretch Recovery',
+      image: '/images/fabric_stack_dark.png',
+      description: 'Recycled knit fabrics designed for comfortable, durable and sustainable textile applications.',
+    },
+    {
+      id: 'woven-fabrics',
+      name: 'Woven Fabrics',
+      category: 'Recycled Sustainable Fabrics',
+      slug: 'woven-fabrics',
+      tag: 'High Tensile • Precision Loom Weave',
+      image: '/images/eco_material_rolls.png',
+      description: 'Recycled woven fabrics developed for durable and versatile textile applications with a focus on sustainability.',
+    },
+    {
+      id: 'recycled-melange-yarn',
+      name: 'Recycled Melange Yarn',
+      category: 'Recycled Sustainable Yarns',
+      slug: 'recycled-melange-yarn',
       tag: 'Multi-Tonal Heather • Pre-Dyed Blends',
-      link: '/products?item=prod-melange-yarn',
       image: '/images/recycled_melange_yarn.jpg',
+      description: 'Recycled melange yarn produced with blended colour effects for versatile and sustainable textile applications.',
     },
     {
-      id: 'prod-denim-yarn',
-      title: 'Recycled Denim Yarn',
-      category: 'RECYCLED DENIM YARN',
+      id: 'recycled-denim-yarn',
+      name: 'Recycled Denim Yarn',
+      category: 'Recycled Sustainable Yarns',
+      slug: 'recycled-denim-yarn',
       tag: 'Upcycled Denim Waste • Vintage Slub',
-      link: '/products?item=prod-denim-yarn',
       image: '/images/recycled_denim_yarn.jpg',
-    },
-    {
-      id: 'p-ocean',
-      title: 'Recycled Ocean PET & Cotton Yarn',
-      category: 'RECYCLED PET YARN',
-      tag: '18 Ocean Bottles Recycled / Garment',
-      link: '/products?item=p-ocean',
-      image: '/images/avantee_ocean_sweater_spool.jpg',
-    },
-    {
-      id: 'p-hoodie',
-      title: 'AVANTEE Signature Mint Eco Yarn',
-      category: 'SIGNATURE MINT YARN',
-      tag: 'Cellulosic Viscose & Recycled Cotton',
-      link: '/products?item=p-hoodie',
-      image: '/images/avantee_mint_hoodie_spool.jpg',
+      description: 'Recycled yarn developed for denim applications, supporting sustainable textile production through the reuse of materials.',
     },
   ];
 
-  const activeYarn = yarnList.find((y) => y.id === hoveredYarnId) || yarnList[0];
+  // Auto-slide effect every 4.5 seconds
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % carouselProducts.length);
+    }, 4500);
+    return () => clearInterval(interval);
+  }, [isPaused, carouselProducts.length]);
+
+  const activeProduct = carouselProducts[activeIndex];
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev + 1) % carouselProducts.length);
+  };
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev - 1 + carouselProducts.length) % carouselProducts.length);
+  };
 
   // Why Choose Our Products - 6 Key Propositions
   const whyProps = [
@@ -110,7 +135,7 @@ export const ProductsShowcaseSection = () => {
     },
   ];
 
-  // Gallery items with categories including uploaded fabric photos
+  // Gallery items
   const galleryItems = [
     {
       id: 'g0-hoodie',
@@ -206,74 +231,123 @@ export const ProductsShowcaseSection = () => {
         <SectionTitle
           label="OUR PRODUCTS"
           light={true}
-          title="Recycled Sustainability Yarns"
-          subtitle="Click on any yarn variety below to view complete technical details on our Products page."
+          title="Recycled Sustainable Yarns & Fabrics"
+          subtitle="Explore our GRS-certified product range engineered for high-tensile apparel and sustainable textile applications."
         />
 
-        {/* BULLETED YARN HYPERLINK LIST SECTION */}
+        {/* INTERACTIVE PRODUCT SLIDER / CAROUSEL CARD */}
         <motion.div
           className={styles.bulletListContainerCard}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.6 }}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
         >
           <div className={styles.bulletListGridContainer}>
-            {/* Left Column: Bulleted Hyperlinks */}
+            {/* Left Column: Product Selector List */}
             <div className={styles.bulletColumn}>
-              <h3 className={styles.bulletSectionHeading}>Available Yarn Varieties</h3>
+              <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--color-emerald)', textTransform: 'uppercase', letterSpacing: '0.15em', display: 'block', marginBottom: '4px' }}>
+                Available Yarn & Fabric Varieties
+              </span>
+              <h3 className={styles.bulletSectionHeading}>Explore Our Sustainable Products</h3>
               <p className={styles.bulletSectionSub}>
-                Select a yarn type to navigate directly to its product specifications:
+                Select a yarn or fabric type to explore its product specifications:
               </p>
 
               <ul className={styles.bulletHyperlinkList}>
-                {yarnList.map((yarn) => (
-                  <li
-                    key={yarn.id}
-                    onMouseEnter={() => setHoveredYarnId(yarn.id)}
-                    className={`${styles.bulletListItem} ${hoveredYarnId === yarn.id ? styles.bulletItemActive : ''
-                      }`}
-                  >
-                    <span className={styles.bulletDot}>•</span>
-                    <Link to={yarn.link} className={styles.yarnHyperlink}>
-                      <span className={styles.yarnTitleText}>{yarn.title}</span>
-                      <FaArrowRight className={styles.arrowIcon} />
-                    </Link>
-                  </li>
-                ))}
+                {carouselProducts.map((prod, idx) => {
+                  const isActive = idx === activeIndex;
+                  return (
+                    <li
+                      key={prod.id}
+                      onClick={() => setActiveIndex(idx)}
+                      className={`${styles.bulletListItem} ${isActive ? styles.bulletItemActive : ''}`}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      <span className={styles.bulletDot} style={{ color: isActive ? 'var(--color-emerald)' : 'rgba(14, 59, 46, 0.3)' }}>
+                        •
+                      </span>
+                      <div className={styles.yarnHyperlink}>
+                        <span
+                          className={styles.yarnTitleText}
+                          style={{
+                            color: isActive ? 'var(--color-emerald)' : 'var(--color-deep-forest)',
+                            fontWeight: isActive ? 800 : 700
+                          }}
+                        >
+                          {prod.name}
+                        </span>
+                        <FaArrowRight className={styles.arrowIcon} style={{ opacity: isActive ? 1 : 0.4 }} />
+                      </div>
+                    </li>
+                  );
+                })}
               </ul>
 
-              <div className={styles.bulletCtaBox}>
-                <Link to="/products" className="btn-primary">
-                  <span>View All Products in Catalog</span>
-                  <FaArrowRight />
-                </Link>
+              {/* Slider Controls */}
+              <div className={styles.sliderControlsRow}>
+                <div className={styles.sliderNavBtnGroup}>
+                  <button className={styles.sliderNavBtn} onClick={handlePrev} aria-label="Previous Product">
+                    <FaChevronLeft />
+                    <span>Previous</span>
+                  </button>
+                  <button className={styles.sliderNavBtn} onClick={handleNext} aria-label="Next Product">
+                    <span>Next</span>
+                    <FaChevronRight />
+                  </button>
+                </div>
+
+                {/* Pagination Dots */}
+                <div className={styles.dotsRow}>
+                  {carouselProducts.map((_, idx) => (
+                    <button
+                      key={idx}
+                      className={`${styles.dotItem} ${idx === activeIndex ? styles.dotActive : ''}`}
+                      onClick={() => setActiveIndex(idx)}
+                      aria-label={`Go to product ${idx + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Right Column: Live Interactive Preview */}
+            {/* Right Column: Hero Product Preview Box */}
             <div className={styles.previewColumn}>
-              <div className={styles.previewCard}>
-                <span className={styles.categoryTagBadge}>{activeYarn.category}</span>
-                <img
-                  src={activeYarn.image}
-                  alt={activeYarn.title}
-                  className={styles.previewImg}
-                  loading="lazy"
-                />
-                <div className={styles.previewInfoBox}>
-                  <h4 className={styles.previewTitle}>{activeYarn.title}</h4>
-                  <span className={styles.previewTag}>{activeYarn.tag}</span>
-                  <Link to={activeYarn.link} className={styles.previewLinkBtn}>
-                    <span>View Specifications →</span>
-                  </Link>
-                </div>
-              </div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeProduct.id}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.4 }}
+                  className={styles.previewCard}
+                >
+                  <img
+                    src={activeProduct.image}
+                    alt={activeProduct.name}
+                    className={styles.previewImg}
+                  />
+
+                  <div className={styles.previewInfoBox}>
+                    <span className={styles.previewTag}>{activeProduct.category}</span>
+                    <h4 className={styles.previewTitle}>{activeProduct.name}</h4>
+                    <p style={{ fontSize: '0.88rem', color: 'rgba(255, 255, 255, 0.85)', margin: '4px 0 10px', lineHeight: 1.4 }}>
+                      {activeProduct.description}
+                    </p>
+
+                    <Link to={`/products/${activeProduct.slug}`} className="btn-primary" style={{ alignSelf: 'flex-start', padding: '8px 20px', fontSize: '0.85rem' }}>
+                      <span>View Specifications →</span>
+                    </Link>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
         </motion.div>
 
-        {/* WHERE OUR FABRICS ARE USED - FEATURE BANNER (IMAGE 4) */}
+        {/* WHERE OUR FABRICS ARE USED BANNER */}
         <motion.div
           className={styles.fabricUsageBannerCard}
           initial={{ opacity: 0, y: 40 }}
@@ -283,7 +357,7 @@ export const ProductsShowcaseSection = () => {
         >
           <img
             src="/images/fabric_usage_banner.png"
-            alt="Where Our Fabrics Are Used - Knitting Garment, Winter Wear, Woven Apparel, Home Textile, Tote Bags, Other Accessories"
+            alt="Where Our Fabrics Are Used"
             className={styles.fabricUsageImg}
             loading="lazy"
           />
@@ -378,8 +452,7 @@ export const ProductsShowcaseSection = () => {
             {['all', 'fibres', 'yarns', 'fabrics', 'factory', 'quality'].map((cat) => (
               <button
                 key={cat}
-                className={`${styles.galleryTab} ${activeGalleryTab === cat ? styles.activeGalleryTab : ''
-                  }`}
+                className={`${styles.galleryTab} ${activeGalleryTab === cat ? styles.activeGalleryTab : ''}`}
                 onClick={() => setActiveGalleryTab(cat)}
               >
                 {cat.toUpperCase()}
