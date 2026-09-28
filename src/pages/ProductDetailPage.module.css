@@ -6,20 +6,50 @@
 }
 
 .topBar {
-  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--color-charcoal);
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.breadcrumbLink {
+  color: var(--color-deep-forest);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-emerald);
+}
+
+.breadcrumbSep {
+  opacity: 0.4;
 }
 
 .backBtn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   background: var(--color-white);
   color: var(--color-deep-forest);
   border: 1px solid var(--color-border-light);
-  padding: 10px 22px;
+  padding: 8px 20px;
   border-radius: var(--radius-full);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   transition: all 0.25s ease;
   box-shadow: var(--shadow-sm);
   text-decoration: none;
@@ -38,7 +68,7 @@
   border: 1px solid var(--color-border-light);
   padding: 48px;
   box-shadow: var(--shadow-md);
-  margin-bottom: 60px;
+  margin-bottom: 48px;
 }
 
 @media (max-width: 768px) {
@@ -49,7 +79,7 @@
 
 .detailGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 48px;
   align-items: start;
 }
@@ -72,14 +102,14 @@
 
 .productImg {
   width: 100%;
-  height: 480px;
+  height: 440px;
   object-fit: cover;
   display: block;
 }
 
 @media (max-width: 768px) {
   .productImg {
-    height: 320px;
+    height: 300px;
   }
 }
 
@@ -98,7 +128,7 @@
 }
 
 .catBadge {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   letter-spacing: 0.15em;
   font-weight: 800;
   color: var(--color-emerald);
@@ -122,99 +152,116 @@
   }
 }
 
-.productDesc {
+.productDescParagraph {
   font-size: 1.05rem;
   color: var(--color-charcoal);
   opacity: 0.9;
-  line-height: 1.65;
-  margin-bottom: 28px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  white-space: pre-line;
 }
 
-.specSectionTitle {
-  font-size: 1.1rem;
+.sectionBlock {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.sectionHeading {
+  font-size: 1.25rem;
   font-weight: 800;
-  color: var(--color-emerald);
-  margin-bottom: 14px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.featureGrid {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-bottom: 28px;
-}
-
-@media (max-width: 600px) {
-  .featureGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.featureItem {
+  color: var(--color-deep-forest);
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.92rem;
+}
+
+.sectionHeading::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 20px;
+  background: var(--color-emerald);
+  border-radius: 3px;
+}
+
+.applicationsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.appItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--color-offwhite);
+  padding: 12px 18px;
+  border-radius: var(--radius-sm, 8px);
+  border: 1px solid var(--color-border-light);
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-deep-forest);
+  transition: all 0.2s ease;
 }
 
-.featureIcon {
+.appItem:hover {
+  border-color: var(--color-emerald);
+  background: rgba(27, 127, 91, 0.05);
+}
+
+.appBulletDot {
   color: var(--color-emerald);
+  font-size: 1.2rem;
+  line-height: 1;
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
-.tagWrap {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 28px;
-}
-
-.appChip {
-  background: var(--color-offwhite);
-  padding: 6px 14px;
-  border-radius: var(--radius-xs, 6px);
-  font-size: 0.82rem;
-  font-weight: 600;
+.additionalInfoText {
+  font-size: 0.98rem;
   color: var(--color-charcoal);
-  border: 1px solid var(--color-border-light);
+  opacity: 0.9;
+  line-height: 1.7;
+  white-space: pre-line;
 }
 
-.specGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-bottom: 32px;
+/* Enquire CTA Banner Card */
+.enquireCtaCard {
+  background: var(--gradient-emerald-forest);
+  color: var(--color-white);
+  border-radius: var(--radius-md, 12px);
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 36px;
+  box-shadow: 0 10px 30px rgba(14, 59, 46, 0.2);
 }
 
-@media (max-width: 600px) {
-  .specGrid {
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  .enquireCtaCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
   }
 }
 
-.specBox {
-  background: var(--color-offwhite);
-  padding: 12px 16px;
-  border-radius: var(--radius-sm, 8px);
-  font-size: 0.9rem;
-  border: 1px solid var(--color-border-light);
-}
-
-.specKey {
+.enquireCtaTitle {
+  font-size: 1.4rem;
   font-weight: 800;
-  color: var(--color-deep-forest);
-  display: block;
-  margin-bottom: 2px;
+  color: var(--color-white);
+  margin-bottom: 4px;
 }
 
-.specVal {
-  color: var(--color-charcoal);
+.enquireCtaSub {
+  font-size: 0.95rem;
+  color: var(--color-mint);
   opacity: 0.9;
 }
 
@@ -222,23 +269,26 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  background: var(--gradient-emerald-forest);
-  color: var(--color-white);
+  gap: 10px;
+  background: var(--gold-primary);
+  color: var(--color-deep-forest);
   border: none;
-  padding: 16px 36px;
+  padding: 14px 32px;
   border-radius: var(--radius-full);
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 800;
   cursor: pointer;
-  box-shadow: var(--shadow-md);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .enquireCtaBtn:hover {
-  background: var(--color-deep-forest);
-  box-shadow: var(--shadow-lg);
+  background: var(--color-white);
+  color: var(--color-deep-forest);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 /* Form Section */

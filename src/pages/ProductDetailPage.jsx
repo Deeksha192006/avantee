@@ -4,11 +4,10 @@ import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import {
   FaArrowLeft,
-  FaCheckCircle,
   FaPaperPlane,
   FaSpinner,
   FaEnvelopeOpenText,
-  FaDownload
+  FaArrowRight
 } from 'react-icons/fa';
 import { getProductBySlug } from '../data/productsData';
 import { GridBackground } from '../components/Common/GridBackground';
@@ -110,7 +109,7 @@ export const ProductDetailPage = () => {
 
     setIsSubmitting(true);
 
-    // Simulate API form submission
+    // Simulate submission
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -134,14 +133,22 @@ export const ProductDetailPage = () => {
       <GridBackground variant="dots" dark={false} opacity={0.06} />
 
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-        {/* Navigation Top Bar */}
+        {/* Navigation Top Bar with Breadcrumb and Back Button */}
         <div className={styles.topBar}>
+          <nav className={styles.breadcrumb}>
+            <Link to="/" className={styles.breadcrumbLink}>Home</Link>
+            <span className={styles.breadcrumbSep}>→</span>
+            <Link to="/products" className={styles.breadcrumbLink}>Products</Link>
+            <span className={styles.breadcrumbSep}>→</span>
+            <span>{product.name}</span>
+          </nav>
+
           <Link to="/products" className={styles.backBtn}>
             <FaArrowLeft /> Back to Products
           </Link>
         </div>
 
-        {/* Product Details Section */}
+        {/* Product Details Section Card */}
         <motion.div
           className={styles.detailCard}
           initial={{ opacity: 0, y: 20 }}
@@ -155,59 +162,47 @@ export const ProductDetailPage = () => {
             </div>
 
             <div>
-              <span className={styles.catBadge}>{product.categoryName}</span>
+              <span className={styles.catBadge}>{product.category}</span>
               <h1 className={styles.productTitle}>{product.name}</h1>
-              <p className={styles.productDesc}>{product.desc}</p>
-
-              {/* Features */}
-              {product.bulletPoints && product.bulletPoints.length > 0 && (
-                <div style={{ marginBottom: '24px' }}>
-                  <h4 className={styles.specSectionTitle}>Key Features & Specifications</h4>
-                  <ul className={styles.featureGrid}>
-                    {product.bulletPoints.map((bp, i) => (
-                      <li key={i} className={styles.featureItem}>
-                        <FaCheckCircle className={styles.featureIcon} />
-                        <span>{bp}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Applications */}
-              {product.applications && product.applications.length > 0 && (
-                <div style={{ marginBottom: '24px' }}>
-                  <h4 className={styles.specSectionTitle}>Key Applications</h4>
-                  <div className={styles.tagWrap}>
-                    {product.applications.map((app, i) => (
-                      <span key={i} className={styles.appChip}>{app}</span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Specs */}
-              {product.specs && (
-                <div style={{ marginBottom: '28px' }}>
-                  <h4 className={styles.specSectionTitle}>Technical Data Sheet</h4>
-                  <div className={styles.specGrid}>
-                    {Object.entries(product.specs).map(([k, v]) => (
-                      <div key={k} className={styles.specBox}>
-                        <span className={styles.specKey}>{k}:</span>
-                        <span className={styles.specVal}>{v}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              <div>
-                <button className={styles.enquireCtaBtn} onClick={scrollToForm}>
-                  <span>Enquire Now</span>
-                  <FaPaperPlane />
-                </button>
-              </div>
+              <p className={styles.productDescParagraph}>{product.description}</p>
             </div>
+          </div>
+
+          {/* Applications / Capabilities Section */}
+          {product.applications && product.applications.length > 0 && (
+            <div className={styles.sectionBlock}>
+              <h3 className={styles.sectionHeading}>Applications / Capabilities</h3>
+              <ul className={styles.applicationsList}>
+                {product.applications.map((app, i) => (
+                  <li key={i} className={styles.appItem}>
+                    <span className={styles.appBulletDot}>●</span>
+                    <span>{app}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Additional Information Section */}
+          {product.additionalInformation && (
+            <div className={styles.sectionBlock}>
+              <h3 className={styles.sectionHeading}>Additional Information</h3>
+              <p className={styles.additionalInfoText}>{product.additionalInformation}</p>
+            </div>
+          )}
+
+          {/* Enquire Now Banner Card */}
+          <div className={styles.enquireCtaCard}>
+            <div>
+              <h4 className={styles.enquireCtaTitle}>Interested in this product?</h4>
+              <p className={styles.enquireCtaSub}>
+                Tell us about your requirements and our team will get in touch with you.
+              </p>
+            </div>
+            <button className={styles.enquireCtaBtn} onClick={scrollToForm}>
+              <span>Enquire Now</span>
+              <FaArrowRight />
+            </button>
           </div>
         </motion.div>
 
