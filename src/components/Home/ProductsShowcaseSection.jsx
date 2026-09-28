@@ -21,51 +21,53 @@ import styles from './ProductsShowcaseSection.module.css';
 export const ProductsShowcaseSection = () => {
   const [activeGalleryTab, setActiveGalleryTab] = useState('all');
   const [lightboxItem, setLightboxItem] = useState(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
 
-  // Exactly 6 products focused on Recycled Yarns & Sustainable Fabrics
-  const carouselProducts = [
+  // 1. RECYCLED SUSTAINABLE FABRICS (2 Products)
+  const fabricProducts = [
+    {
+      id: 'knit-fabrics',
+      num: '01',
+      name: 'Knit Fabrics',
+      slug: 'knit-fabrics',
+      tag: '100% GRS Certified • Soft & Elastic',
+      image: '/images/fabric_stack_dark.png',
+      description: 'Recycled knit fabrics designed for comfortable, durable and sustainable textile applications.',
+    },
+    {
+      id: 'woven-fabrics',
+      num: '02',
+      name: 'Woven Fabrics',
+      slug: 'woven-fabrics',
+      tag: 'High Tensile • Precision Loom Weave',
+      image: '/images/eco_material_rolls.png',
+      description: 'Recycled woven fabrics developed for durable and versatile textile applications with a focus on sustainability.',
+    },
+  ];
+
+  // 2. RECYCLED SUSTAINABLE YARNS (4 Products)
+  const yarnProducts = [
     {
       id: 'recycled-knit-yarn',
+      num: '01',
       name: 'Recycled Knit Yarn',
-      category: 'Recycled Sustainable Yarns',
       slug: 'recycled-knit-yarn',
-      tag: '100% GRS Certified • Soft & Elastic',
+      tag: '100% GRS & RCS Certified',
       image: '/images/recycled_knit_yarn.jpg',
       description: 'Recycled yarn designed for knitting applications, combining performance, consistency and sustainable production.',
     },
     {
       id: 'recycled-wearing-yarn',
+      num: '02',
       name: 'Recycled Wearing Yarn',
-      category: 'Recycled Sustainable Yarns',
       slug: 'recycled-wearing-yarn',
       tag: 'High Tensile Strength • Apparel Spin',
       image: '/images/recycled_weaving_yarn.jpg',
       description: 'Recycled yarn suitable for wearing and apparel applications, offering reliable performance with a sustainable approach.',
     },
     {
-      id: 'knit-fabrics',
-      name: 'Knit Fabrics',
-      category: 'Recycled Sustainable Fabrics',
-      slug: 'knit-fabrics',
-      tag: '100% GRS Certified • Stretch Recovery',
-      image: '/images/fabric_stack_dark.png',
-      description: 'Recycled knit fabrics designed for comfortable, durable and sustainable textile applications.',
-    },
-    {
-      id: 'woven-fabrics',
-      name: 'Woven Fabrics',
-      category: 'Recycled Sustainable Fabrics',
-      slug: 'woven-fabrics',
-      tag: 'High Tensile • Precision Loom Weave',
-      image: '/images/eco_material_rolls.png',
-      description: 'Recycled woven fabrics developed for durable and versatile textile applications with a focus on sustainability.',
-    },
-    {
       id: 'recycled-melange-yarn',
+      num: '03',
       name: 'Recycled Melange Yarn',
-      category: 'Recycled Sustainable Yarns',
       slug: 'recycled-melange-yarn',
       tag: 'Multi-Tonal Heather • Pre-Dyed Blends',
       image: '/images/recycled_melange_yarn.jpg',
@@ -73,8 +75,8 @@ export const ProductsShowcaseSection = () => {
     },
     {
       id: 'recycled-denim-yarn',
+      num: '04',
       name: 'Recycled Denim Yarn',
-      category: 'Recycled Sustainable Yarns',
       slug: 'recycled-denim-yarn',
       tag: 'Upcycled Denim Waste • Vintage Slub',
       image: '/images/recycled_denim_yarn.jpg',
@@ -82,24 +84,11 @@ export const ProductsShowcaseSection = () => {
     },
   ];
 
-  // Auto-slide effect every 4.5 seconds
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % carouselProducts.length);
-    }, 4500);
-    return () => clearInterval(interval);
-  }, [isPaused, carouselProducts.length]);
+  const [activeFabricIndex, setActiveFabricIndex] = useState(0);
+  const [activeYarnIndex, setActiveYarnIndex] = useState(0);
 
-  const activeProduct = carouselProducts[activeIndex];
-
-  const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % carouselProducts.length);
-  };
-
-  const handlePrev = () => {
-    setActiveIndex((prev) => (prev - 1 + carouselProducts.length) % carouselProducts.length);
-  };
+  const activeFabric = fabricProducts[activeFabricIndex];
+  const activeYarn = yarnProducts[activeYarnIndex];
 
   // Why Choose Our Products - 6 Key Propositions
   const whyProps = [
@@ -235,109 +224,215 @@ export const ProductsShowcaseSection = () => {
           subtitle="Explore our GRS-certified product range engineered for high-tensile apparel and sustainable textile applications."
         />
 
-        {/* INTERACTIVE PRODUCT SLIDER / CAROUSEL CARD */}
+        {/* ========================================================
+            CATEGORY 1: RECYCLED SUSTAINABLE FABRICS
+           ======================================================== */}
         <motion.div
           className={styles.bulletListContainerCard}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.6 }}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
         >
           <div className={styles.bulletListGridContainer}>
-            {/* Left Column: Product Selector List */}
+            {/* LEFT COLUMN: Product Content & Selector List */}
             <div className={styles.bulletColumn}>
-              <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--color-emerald)', textTransform: 'uppercase', letterSpacing: '0.15em', display: 'block', marginBottom: '4px' }}>
-                Available Yarn & Fabric Varieties
+              <span className={styles.categorySubhead}>
+                PRODUCT CATEGORY 01
               </span>
-              <h3 className={styles.bulletSectionHeading}>Explore Our Sustainable Products</h3>
+              <h3 className={styles.bulletSectionHeading}>Recycled Sustainable Fabrics</h3>
               <p className={styles.bulletSectionSub}>
-                Select a yarn or fabric type to explore its product specifications:
+                Select a fabric variety below to inspect product features and specifications:
               </p>
 
               <ul className={styles.bulletHyperlinkList}>
-                {carouselProducts.map((prod, idx) => {
-                  const isActive = idx === activeIndex;
+                {fabricProducts.map((prod, idx) => {
+                  const isActive = idx === activeFabricIndex;
                   return (
                     <li
                       key={prod.id}
-                      onClick={() => setActiveIndex(idx)}
+                      onClick={() => setActiveFabricIndex(idx)}
                       className={`${styles.bulletListItem} ${isActive ? styles.bulletItemActive : ''}`}
                       style={{ cursor: 'pointer' }}
                     >
-                      <span className={styles.bulletDot} style={{ color: isActive ? 'var(--color-emerald)' : 'rgba(14, 59, 46, 0.3)' }}>
-                        •
-                      </span>
-                      <div className={styles.yarnHyperlink}>
-                        <span
-                          className={styles.yarnTitleText}
-                          style={{
-                            color: isActive ? 'var(--color-emerald)' : 'var(--color-deep-forest)',
-                            fontWeight: isActive ? 800 : 700
-                          }}
-                        >
-                          {prod.name}
-                        </span>
-                        <FaArrowRight className={styles.arrowIcon} style={{ opacity: isActive ? 1 : 0.4 }} />
+                      <div className={styles.bulletItemHeaderRow}>
+                        <div className={styles.itemTitleGroup}>
+                          <span className={styles.bulletDot}>
+                            {prod.num}
+                          </span>
+                          <span
+                            className={styles.yarnTitleText}
+                            style={{
+                              color: isActive ? 'var(--color-emerald)' : 'var(--color-deep-forest)',
+                              fontWeight: isActive ? 800 : 700
+                            }}
+                          >
+                            {prod.name}
+                          </span>
+                        </div>
+                        <FaArrowRight className={styles.arrowIcon} style={{ color: isActive ? 'var(--color-emerald)' : 'rgba(14, 59, 46, 0.4)' }} />
                       </div>
+
+                      {/* Expanded Active Info */}
+                      {isActive && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className={styles.itemActiveContent}
+                        >
+                          <p className={styles.itemDesc}>{prod.description}</p>
+                          <Link to={`/products/${prod.slug}`} className={styles.specsInlineBtn}>
+                            <span>View Specifications</span>
+                            <FaArrowRight style={{ fontSize: '0.8rem' }} />
+                          </Link>
+                        </motion.div>
+                      )}
                     </li>
                   );
                 })}
               </ul>
-
-              {/* Slider Controls */}
-              <div className={styles.sliderControlsRow}>
-                <div className={styles.sliderNavBtnGroup}>
-                  <button className={styles.sliderNavBtn} onClick={handlePrev} aria-label="Previous Product">
-                    <FaChevronLeft />
-                    <span>Previous</span>
-                  </button>
-                  <button className={styles.sliderNavBtn} onClick={handleNext} aria-label="Next Product">
-                    <span>Next</span>
-                    <FaChevronRight />
-                  </button>
-                </div>
-
-                {/* Pagination Dots */}
-                <div className={styles.dotsRow}>
-                  {carouselProducts.map((_, idx) => (
-                    <button
-                      key={idx}
-                      className={`${styles.dotItem} ${idx === activeIndex ? styles.dotActive : ''}`}
-                      onClick={() => setActiveIndex(idx)}
-                      aria-label={`Go to product ${idx + 1}`}
-                    />
-                  ))}
-                </div>
-              </div>
             </div>
 
-            {/* Right Column: Hero Product Preview Box */}
+            {/* RIGHT COLUMN: Product Image */}
             <div className={styles.previewColumn}>
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={activeProduct.id}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  key={activeFabric.id}
+                  initial={{ opacity: 0, scale: 0.97 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.97 }}
                   transition={{ duration: 0.4 }}
                   className={styles.previewCard}
                 >
                   <img
-                    src={activeProduct.image}
-                    alt={activeProduct.name}
+                    src={activeFabric.image}
+                    alt={activeFabric.name}
                     className={styles.previewImg}
                   />
 
                   <div className={styles.previewInfoBox}>
-                    <span className={styles.previewTag}>{activeProduct.category}</span>
-                    <h4 className={styles.previewTitle}>{activeProduct.name}</h4>
-                    <p style={{ fontSize: '0.88rem', color: 'rgba(255, 255, 255, 0.85)', margin: '4px 0 10px', lineHeight: 1.4 }}>
-                      {activeProduct.description}
+                    <span className={styles.previewTag}>{activeFabric.tag}</span>
+                    <h4 className={styles.previewTitle}>{activeFabric.name}</h4>
+                    <p className={styles.previewShortText}>
+                      {activeFabric.description}
                     </p>
 
-                    <Link to={`/products/${activeProduct.slug}`} className="btn-primary" style={{ alignSelf: 'flex-start', padding: '8px 20px', fontSize: '0.85rem' }}>
+                    <Link
+                      to={`/products/${activeFabric.slug}`}
+                      className="btn-primary"
+                      style={{ alignSelf: 'flex-start', padding: '8px 20px', fontSize: '0.85rem' }}
+                    >
+                      <span>View Specifications →</span>
+                    </Link>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* ========================================================
+            CATEGORY 2: RECYCLED SUSTAINABLE YARNS
+           ======================================================== */}
+        <motion.div
+          className={styles.bulletListContainerCard}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className={styles.bulletListGridContainer}>
+            {/* LEFT COLUMN: Product Content & Selector List */}
+            <div className={styles.bulletColumn}>
+              <span className={styles.categorySubhead}>
+                PRODUCT CATEGORY 02
+              </span>
+              <h3 className={styles.bulletSectionHeading}>Recycled Sustainable Yarns</h3>
+              <p className={styles.bulletSectionSub}>
+                Select a yarn variety below to inspect product features and specifications:
+              </p>
+
+              <ul className={styles.bulletHyperlinkList}>
+                {yarnProducts.map((prod, idx) => {
+                  const isActive = idx === activeYarnIndex;
+                  return (
+                    <li
+                      key={prod.id}
+                      onClick={() => setActiveYarnIndex(idx)}
+                      className={`${styles.bulletListItem} ${isActive ? styles.bulletItemActive : ''}`}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      <div className={styles.bulletItemHeaderRow}>
+                        <div className={styles.itemTitleGroup}>
+                          <span className={styles.bulletDot}>
+                            {prod.num}
+                          </span>
+                          <span
+                            className={styles.yarnTitleText}
+                            style={{
+                              color: isActive ? 'var(--color-emerald)' : 'var(--color-deep-forest)',
+                              fontWeight: isActive ? 800 : 700
+                            }}
+                          >
+                            {prod.name}
+                          </span>
+                        </div>
+                        <FaArrowRight className={styles.arrowIcon} style={{ color: isActive ? 'var(--color-emerald)' : 'rgba(14, 59, 46, 0.4)' }} />
+                      </div>
+
+                      {/* Expanded Active Info */}
+                      {isActive && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className={styles.itemActiveContent}
+                        >
+                          <p className={styles.itemDesc}>{prod.description}</p>
+                          <Link to={`/products/${prod.slug}`} className={styles.specsInlineBtn}>
+                            <span>View Specifications</span>
+                            <FaArrowRight style={{ fontSize: '0.8rem' }} />
+                          </Link>
+                        </motion.div>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+
+            {/* RIGHT COLUMN: Product Image */}
+            <div className={styles.previewColumn}>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeYarn.id}
+                  initial={{ opacity: 0, scale: 0.97 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.97 }}
+                  transition={{ duration: 0.4 }}
+                  className={styles.previewCard}
+                >
+                  <img
+                    src={activeYarn.image}
+                    alt={activeYarn.name}
+                    className={styles.previewImg}
+                  />
+
+                  <div className={styles.previewInfoBox}>
+                    <span className={styles.previewTag}>{activeYarn.tag}</span>
+                    <h4 className={styles.previewTitle}>{activeYarn.name}</h4>
+                    <p className={styles.previewShortText}>
+                      {activeYarn.description}
+                    </p>
+
+                    <Link
+                      to={`/products/${activeYarn.slug}`}
+                      className="btn-primary"
+                      style={{ alignSelf: 'flex-start', padding: '8px 20px', fontSize: '0.85rem' }}
+                    >
                       <span>View Specifications →</span>
                     </Link>
                   </div>

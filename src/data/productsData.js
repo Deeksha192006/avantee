@@ -156,6 +156,8 @@ export const getProductBySlug = (slug) => {
     (p) =>
       p.slug.toLowerCase() === cleanSlug ||
       p.id.toLowerCase() === cleanSlug ||
-      p.legacyId.toLowerCase() === cleanSlug
+      p.legacyId.toLowerCase() === cleanSlug ||
+      (cleanSlug === 'recycled-weaving-yarn' && (p.id === 'recycled-wearing-yarn' || p.slug === 'recycled-wearing-yarn')) ||
+      (cleanSlug === 'recycled-wearing-yarn' && (p.id === 'recycled-wearing-yarn' || p.slug === 'recycled-wearing-yarn'))
   );
 };
