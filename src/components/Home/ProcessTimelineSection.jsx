@@ -13,8 +13,8 @@ export const ProcessTimelineSection = () => {
   const steps = [
     {
       num: '01',
-      title: 'Waste Collection & Sorting',
-      desc: 'Ethically recovering PET plastic bottles and pre-consumer industrial fabric scraps.',
+      title: 'Pre-Consumer Waste Sourcing',
+      desc: 'Ethically recovering 100% pre-consumer industrial fabric cuttings and spinning scraps.',
       icon: <FaDumpster />
     },
     {
@@ -25,13 +25,13 @@ export const ProcessTimelineSection = () => {
     },
     {
       num: '03',
-      title: 'Recycled Staple Fibres',
-      desc: 'Extruding clean polymer into micro-denier staple staple fibres.',
+      title: 'Recycled Staple Polymers',
+      desc: 'Extruding clean polymer into micro-denier staple materials.',
       icon: <FaMicrochip />
     },
     {
       num: '04',
-      title: 'Ring Spinning Yarns',
+      title: 'Open-End Spinning Yarns',
       desc: 'Spinning consistent, uniform yarns across diverse count ranges.',
       icon: <FaSyncAlt />
     },
@@ -57,7 +57,7 @@ export const ProcessTimelineSection = () => {
         <SectionTitle
           label={t('process.badge', 'Circular Workflow')}
           title={t('process.title', 'Our 6-Step Manufacturing Process')}
-          subtitle="From waste PET bottles to high-tenacity yarns, witness our closed-loop transformation."
+          subtitle="From 100% pre-consumer textile waste to high-tenacity yarns, witness our closed-loop transformation."
           dark={true}
         />
 

@@ -18,11 +18,10 @@ export const AboutPage = () => {
   ];
 
   const timelineMilestones = [
-    { year: '1999', title: 'Founding of Avantee Complex', desc: 'Started initial spinning unit in Tamil Nadu with 5,000 spindles.' },
-    { year: '2008', title: 'Closed-Loop PET Recycling Facility', desc: 'Commissioned first automated post-consumer plastic bottle recycling plant.' },
-    { year: '2015', title: 'GRS & RCS Certification', desc: 'Achieved full Global Recycled Standard accreditation for exported yarns.' },
-    { year: '2020', title: 'Zero Liquid Discharge (ZLD) Technology', desc: 'Eliminated water waste in yarn dyeing with 98% recycled water recycling.' },
+    { year: '2023', title: 'Founding of Avantee Complex', desc: 'Started initial spinning unit in Tamil Nadu with 5,000 spindles.' },
     { year: '2024', title: '4,000 MT Annual Capacity Benchmark', desc: 'Expanded into 5+ international markets across North America, Europe, and Asia.' },
+    { year: '2026', title: 'Zero Liquid Discharge (ZLD) Technology', desc: 'Eliminated water waste in yarn dyeing with 98% recycled water recycling.' },
+    { year: '2027', title: 'GRS & RCS Certification', desc: 'Achieved full Global Recycled Standard accreditation for exported yarns.' },
   ];
 
   const leadershipTeam = [
@@ -40,7 +39,7 @@ export const AboutPage = () => {
     },
     {
       name: 'Dr. Heinrich Webber',
-      role: 'Director of Fiber R&D',
+      role: 'Director of Material R&D',
       bio: 'Former European Textile Research Institute scholar specializing in micro-denier staple polymers.',
       image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop',
     }
@@ -65,7 +64,7 @@ export const AboutPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
           >
-            Pioneering <span className="text-gold-gradient">Circular Textiles</span> Since 1999
+            Pioneering <span className="text-gold-gradient">Circular Textiles</span> Since 2023
           </motion.h1>
 
           <motion.div
@@ -75,7 +74,7 @@ export const AboutPage = () => {
             transition={{ delay: 0.3 }}
           >
             <p>
-              Avantee Industries Private Limited is a global manufacturer of GRS-certified recycled yarns, eco-fibres, and high-performance technical fabrics.{' '}
+              Avantee Industries Private Limited is a global manufacturer of GRS-certified recycled yarns and high-performance technical fabrics.{' '}
               <span className={styles.typingSub}>
                 <TypingText phrases={aboutTypingPhrases} speed={60} delay={2200} />
               </span>

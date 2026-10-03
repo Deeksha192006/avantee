@@ -79,11 +79,12 @@ export const Footer = () => {
             <div className={styles.linkCol}>
               <h4 className={styles.colTitle}>{t('nav.products', 'Products')}</h4>
               <ul className={styles.linkList}>
-                <li><Link to="/products?category=fibres">{t('products.tabFibres', 'Recycled Fibres')}</Link></li>
-                <li><Link to="/products?category=yarns">{t('products.tabYarns', 'Recycled Yarns')}</Link></li>
-                <li><Link to="/products?category=fabrics">{t('products.tabFabrics', 'Eco Fabrics')}</Link></li>
-                <li><Link to="/products">Ring Spun Yarns</Link></li>
-                <li><Link to="/products">Micro-Denier Staple</Link></li>
+                <li><Link to="/products/recycled-knitting-yarn">Recycled Knitting Yarn</Link></li>
+                <li><Link to="/products/recycled-weaving-yarn">Recycled Weaving Yarn</Link></li>
+                <li><Link to="/products/recycled-cotton-melange-yarn">Recycled Cotton Melange</Link></li>
+                <li><Link to="/products/recycled-denim-yarn">Recycled Denim Yarn</Link></li>
+                <li><Link to="/products/recycled-speciality-blended-yarn">Speciality Blended Yarn</Link></li>
+                <li><Link to="/products/colored-yarn-shades">Colored Yarn Shades</Link></li>
               </ul>
             </div>
 

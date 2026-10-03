@@ -64,11 +64,15 @@ export const AboutPreviewSection = () => {
             </p>
 
             <p className={styles.desc}>
-              {t('about.desc2', 'We engineer GRS-certified recycled fibres, yarns, and technical textiles trusted by luxury fashion houses, automotive giants, and industrial leaders worldwide.')}
+              {t('about.desc2', 'We engineer GRS-certified recycled yarns, fabrics, and technical textiles trusted by luxury fashion houses, automotive giants, and industrial leaders worldwide.')}
             </p>
 
             {/* Core Values List */}
             <div className={styles.valuesGrid}>
+              <div className={styles.valueItem}>
+                <FaCheckCircle className={styles.checkIcon} />
+                <span>100% Pre-Consumer Waste Focus</span>
+              </div>
               <div className={styles.valueItem}>
                 <FaCheckCircle className={styles.checkIcon} />
                 <span>GRS & RCS Certified</span>
@@ -79,11 +83,7 @@ export const AboutPreviewSection = () => {
               </div>
               <div className={styles.valueItem}>
                 <FaCheckCircle className={styles.checkIcon} />
-                <span>Automated Rieter & Trützschler Lines</span>
-              </div>
-              <div className={styles.valueItem}>
-                <FaCheckCircle className={styles.checkIcon} />
-                <span>Full Supply Chain Traceability</span>
+                <span>100% Circular Sustainability</span>
               </div>
             </div>
 

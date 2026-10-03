@@ -12,6 +12,13 @@
   transition: transform 0.1s ease-out;
 }
 
+@media (max-width: 1024px) {
+  .sideLangBar {
+    display: none !important;
+  }
+}
+
+
 /* Scroll Arrow Navigation Buttons (Top & Bottom) */
 .scrollArrowBtn {
   background: #2D3237;

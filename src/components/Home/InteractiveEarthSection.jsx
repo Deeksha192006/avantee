@@ -101,9 +101,9 @@ export const InteractiveEarthSection = () => {
             >
               <div className={styles.iconWrapperGold}><FaRecycle /></div>
               <div className={styles.statVal}>
-                <AnimatedCounter value="5.2" suffix="B+" duration={2.8} />
+                <AnimatedCounter value="50" suffix="M+ Kg" duration={2.8} />
               </div>
-              <div className={styles.statName}>{t('sustainability.wasteRecycled', 'Billion Plastic Bottles Recycled')}</div>
+              <div className={styles.statName}>{t('sustainability.wasteRecycled', 'Pre-Consumer Waste Upcycled')}</div>
             </motion.div>
           </div>
         </div>

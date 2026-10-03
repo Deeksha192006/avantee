@@ -21,32 +21,32 @@ export const RecyclingStorytellingSection = () => {
   const storySteps = [
     {
       stepNum: '01',
-      title: t('process.step1', 'Collect Pre-Consumer Waste & Ocean Plastics'),
-      desc: t('process.step1Desc', 'Post-consumer ocean plastic bottles and high-quality garment cutting waste are collected from ethical sourcing partners.'),
-      badge: '100% Ethical Sourcing & Ocean Upcycling',
+      title: t('process.step1', '100% Pre-Consumer Waste Sourcing'),
+      desc: t('process.step1Desc', 'High-quality 100% pre-consumer garment cutting waste, yarn clips, and mill scraps are ethically collected from industrial partners.'),
+      badge: '100% Pre-Consumer Waste & Sustainability',
       icon: <FaRecycle />,
       image: '/images/avantee_ocean_sweater_spool.jpg',
     },
     {
       stepNum: '02',
       title: t('process.step2Title', 'Sorting & Quality Inspection'),
-      desc: t('process.step2Desc', 'Every batch is carefully sorted based on colour, fibre composition, and quality to ensure consistent recycling results.'),
+      desc: t('process.step2Desc', 'Every batch is carefully sorted based on colour, material composition, and quality to ensure consistent recycling results.'),
       badge: 'Shade & Composition Audit',
       icon: <FaFilter />,
       image: '/images/eco_material_rolls.png',
     },
     {
       stepNum: '03',
-      title: t('process.step3Title', 'Mechanical Fibre Recovery'),
-      desc: t('process.step3Desc', 'The textile waste is opened into reusable fibres using advanced mechanical recycling technology without unnecessary chemical processing.'),
+      title: t('process.step3Title', 'Mechanical Material Recovery'),
+      desc: t('process.step3Desc', 'The textile waste is opened into reusable materials using advanced mechanical recycling technology without unnecessary chemical processing.'),
       badge: 'Zero Chemical Solvents',
       icon: <FaCogs />,
       image: '/images/textile_weave_loom.png',
     },
     {
       stepNum: '04',
-      title: t('process.step4Title', 'Fibre Preparation & Alignment'),
-      desc: t('process.step4Desc', 'Recovered fibres are cleaned, aligned, and prepared for spinning to achieve uniform quality and reliable performance.'),
+      title: t('process.step4Title', 'Material Preparation & Alignment'),
+      desc: t('process.step4Desc', 'Recovered materials are cleaned, aligned, and prepared for spinning to achieve uniform quality and reliable performance.'),
       badge: 'Micro-Denier Precision',
       icon: <FaWind />,
       image: '/images/folded_cotton_fabrics.png',
@@ -54,7 +54,7 @@ export const RecyclingStorytellingSection = () => {
     {
       stepNum: '05',
       title: t('process.step5Title', 'Fabric Weaving & Loom Manufacturing'),
-      desc: t('process.step5Desc', 'Prepared eco-fibres are transformed into premium woven fabrics and suit materials using advanced automated loom technology.'),
+      desc: t('process.step5Desc', 'Prepared eco-materials are transformed into premium woven fabrics and suit materials using advanced automated loom technology.'),
       badge: 'Automated Loom Precision',
       icon: <FaSync />,
       image: '/images/suit_materials_showcase.png',
@@ -78,7 +78,7 @@ export const RecyclingStorytellingSection = () => {
     {
       stepNum: '08',
       title: t('process.step8Title', 'Delivered to Global Customers'),
-      desc: t('process.step8Desc', 'Premium recycled fibres, yarns, and fabrics are supplied to leading fashion brands and industrial partners across 5+ countries.'),
+      desc: t('process.step8Desc', 'Premium recycled yarns and fabrics are supplied to leading fashion brands and industrial partners across 5+ countries.'),
       badge: '5+ Global Export Markets',
       icon: <FaGlobeAmericas />,
       image: '/images/fabric_usage_banner.png',
@@ -98,7 +98,7 @@ export const RecyclingStorytellingSection = () => {
         <SectionTitle
           label="OUR PROCESS"
           title="From Textile Waste to Premium Recycled Products"
-          subtitle="Follow the complete transformation journey of pre-consumer textile waste into high-quality recycled fibres, yarns, and fabrics through our integrated manufacturing ecosystem."
+          subtitle="Follow the complete transformation journey of pre-consumer textile waste into high-quality recycled yarns and fabrics through our integrated manufacturing ecosystem."
         />
 
         {/* Interactive Vertical Timeline */}

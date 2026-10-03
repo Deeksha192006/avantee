@@ -8,7 +8,7 @@ export const MarqueeSection = () => {
     { name: 'AUTOMOTIVE FABRICS INC', code: 'AFI' },
     { name: 'LUXURY YARN LABS', code: 'LYL' },
     { name: 'NORDIC SUSTAINABLE WEAVE', code: 'NSW' },
-    { name: 'PACIFIC ECO FIBRES', code: 'PEF' },
+    { name: 'PACIFIC ECO TEXTILES', code: 'PET' },
     { name: 'INDIAN APPAREL LEADERS', code: 'IAL' },
     { name: 'MIDDLE EAST INDUSTRIAL', code: 'MEI' }
   ];

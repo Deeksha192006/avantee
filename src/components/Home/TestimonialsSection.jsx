@@ -19,7 +19,7 @@ export const TestimonialsSection = () => {
     },
     {
       id: 2,
-      quote: "Switching to Avantee's GRS-certified PET staple fibre enabled our automotive division to meet stringent European carbon reduction mandates 2 years ahead of schedule. Exceptional quality.",
+      quote: "Switching to Avantee's GRS-certified recycled PET yarn enabled our automotive division to meet stringent European carbon reduction mandates 2 years ahead of schedule. Exceptional quality.",
       author: "Elena Rostova",
       role: "Lead Materials Engineer",
       company: "Bavarian Industrial Textiles (Germany)",
@@ -48,7 +48,7 @@ export const TestimonialsSection = () => {
           <span className={styles.badge}>Client Testimonials</span>
           <h2 className={styles.title}>Trusted by Global Textile Visionaries</h2>
           <p className={styles.subtitle}>
-            Hear how our closed-loop recycled yarns and eco-fibres empower leading international brands.
+            Hear how our closed-loop recycled yarns and eco-fabrics empower leading international brands.
           </p>
         </motion.div>
 

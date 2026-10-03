@@ -12,7 +12,7 @@ export const FacilitiesPage = () => {
 
   const facilityTypingPhrases = [
     '500,000 Sq. Ft. Eco Industrial Complex.',
-    'Swiss Rieter Ring Spinning Technology.',
+    'Swiss Rieter Open-End Spinning Technology.',
     'Uster Quality Control & Spectrophotometry.',
   ];
 
@@ -26,7 +26,7 @@ export const FacilitiesPage = () => {
     {
       name: 'Trützschler High-Production Carding',
       specs: 'TC-19i Smart Carding Units',
-      desc: 'Automatic nep-control sensors and continuous web monitoring ensure micro-denier staple fibre alignment for suiting cloth.',
+      desc: 'Automatic nep-control sensors and continuous web monitoring ensure micro-denier staple alignment for suiting cloth.',
       image: '/images/suit_materials_showcase.png',
     },
     {

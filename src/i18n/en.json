@@ -12,21 +12,21 @@
   "hero": {
     "badge": "Pioneering Sustainable Textile Manufacturing",
     "titleLine1": "Crafting High-Performance",
-    "titleHighlight": "Recycled Yarns & Fibres",
+    "titleHighlight": "Recycled Yarns & Fabrics",
     "titleLine2": "For Global Industries",
-    "subtitle": "Avantee Industries Private Limited transforms post-consumer waste into luxury recycled yarns and high-tensile sustainable fabrics with zero-water compromise.",
+    "subtitle": "Avantee Industries Private Limited transforms pre-consumer waste into luxury recycled yarns and high-tensile sustainable fabrics with zero-water compromise.",
     "ctaPrimary": "Explore Products",
     "ctaSecondary": "Virtual Facility Tour",
     "statYears": "Years of Excellence",
     "statCapacity": "MT Annual Capacity",
     "statExport": "Countries Exported",
-    "statRecycled": "Tons Plastic Diverted"
+    "statRecycled": "Tons Pre-Consumer Waste Diverted"
   },
   "about": {
     "badge": "Heritage & Vision",
     "title": "Architecting the Future of Eco-Conscious Textiles",
     "desc1": "Established as a trailblazer in circular textile engineering, Avantee Industries Private Limited operates state-of-the-art closed-loop recycling facilities.",
-    "desc2": "We engineer GRS-certified recycled fibres, yarns, and technical textiles trusted by luxury fashion houses, automotive giants, and industrial leaders worldwide.",
+    "desc2": "We engineer GRS-certified recycled yarns, fabrics, and technical textiles trusted by luxury fashion houses, automotive giants, and industrial leaders worldwide.",
     "missionTitle": "Our Mission",
     "missionText": "To revolutionize textile production through 100% circular recycled materials while minimizing environmental footprint.",
     "visionTitle": "Our Vision",
@@ -36,10 +36,10 @@
   },
   "products": {
     "badge": "Engineered Performance",
-    "title": "Premium Recycled Yarns, Fibres & Fabrics",
+    "title": "Premium Recycled Yarns & Fabrics",
     "subtitle": "Discover our comprehensive portfolio of GRS and RCS certified sustainable textile solutions.",
     "tabAll": "All Products",
-    "tabFibres": "Recycled Fibres",
+    "tabFibres": "Recycled Materials",
     "tabYarns": "Recycled Yarns",
     "tabFabrics": "Eco Fabrics",
     "viewDetails": "Technical Specs",
@@ -51,13 +51,13 @@
   "process": {
     "badge": "Circular Workflow",
     "title": "Our 6-Step Manufacturing Process",
-    "step1": "Post-Consumer Waste Collection",
-    "step1Desc": "Ethically sourcing PET bottles and textile scraps globally.",
+    "step1": "Pre-Consumer Waste Sourcing",
+    "step1Desc": "Ethically procuring 100% pre-consumer fabric clips and industrial textile scraps.",
     "step2": "Eco-Friendly Shredding & Washing",
     "step2Desc": "Purifying polymer chips using non-toxic closed-loop water treatment.",
-    "step3": "Precision Fiber Extrusion",
-    "step3Desc": "Transforming clean polymer into micro-denier staple fibres.",
-    "step4": "High-Efficiency Ring Spinning",
+    "step3": "Precision Material Extrusion",
+    "step3Desc": "Transforming clean polymer into micro-denier staple materials.",
+    "step4": "High-Efficiency Open-End Spinning",
     "step4Desc": "Spinning consistent, uniform yarns across diverse count ranges.",
     "step5": "Technical Weaving & Dyeing",
     "step5Desc": "Creating soft, durable fabrics with waterless color technology.",
@@ -71,7 +71,7 @@
     "waterSaved": "Gallons Water Saved",
     "co2Reduced": "Kg CO2 Emissions Prevented",
     "energySaved": "kWh Clean Energy Utilized",
-    "wasteRecycled": "Billion Plastic Bottles Recycled"
+    "wasteRecycled": "Million Kg Pre-Consumer Waste Upcycled"
   },
   "facilities": {
     "badge": "Industrial Infrastructure",

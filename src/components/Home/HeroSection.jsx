@@ -20,8 +20,8 @@ export const HeroSection = () => {
     },
     {
       url: '/images/avantee_ocean_sweater_spool.jpg',
-      caption: 'AVANTEE Ocean — Recycled PET Bottle Sweater & Spool',
-      badge: 'Upcycled Ocean Plastics & Recycled Cotton Blend'
+      caption: 'AVANTEE Circular — 100% Pre-Consumer Recycled Knitwear',
+      badge: '100% Pre-Consumer Waste & Recycled Cotton Blend'
     },
     {
       url: '/images/avantee_hero_bale_spool.png',
@@ -30,8 +30,8 @@ export const HeroSection = () => {
     },
     {
       url: '/images/tailored_blazer_material.png',
-      caption: 'AVANTEE Circular Fiber — Recycled Cotton Bales & Spool',
-      badge: '100% Circular Eco Textile Fiber'
+      caption: 'AVANTEE Circular Textile — Recycled Cotton Bales & Spool',
+      badge: '100% Circular Eco Textile'
     },
     {
       url: '/images/luxury_cloth_emerald.png',
@@ -50,13 +50,14 @@ export const HeroSection = () => {
   }, [heroImages.length]);
 
   const titleText = t('hero.titleLine1', 'Crafting High-Performance');
-  const titleHighlight = t('hero.titleHighlight', 'Recycled Yarns & Fibres');
+  const titleHighlight = t('hero.titleHighlight', 'Recycled Yarns & Fabrics');
   const titleText2 = t('hero.titleLine2', 'For Global Industries');
 
   const typingPhrases = [
+    'Focus on 100% Pre-Consumer Waste.',
+    '100% Recycling & Circular Sustainability.',
     'Zero Water Dyeing Technology.',
     '100% GRS Certified Recycled Materials.',
-    'Circular Textile Engineering Excellence.',
   ];
 
   const containerVariants = {
@@ -149,7 +150,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className={styles.heroSubtitle}>
-              {t('hero.subtitle')}{' '}
+              {t('hero.subtitle', 'Avantee Industries Private Limited transforms pre-consumer waste into luxury recycled yarns and high-tensile sustainable fabrics with zero-water compromise.')}{' '}
               <span className={styles.typingSub}>
                 <TypingText phrases={typingPhrases} speed={65} delay={2000} />
               </span>

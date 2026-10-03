@@ -29,7 +29,7 @@ export const CTASection = () => {
           </h2>
 
           <p className={styles.ctaSubtitle}>
-            Join 500+ leading international fashion brands and industrial partners transitioning to GRS-certified zero-waste recycled yarns, fibres, and fabrics.
+            Join 500+ leading international fashion brands and industrial partners transitioning to GRS-certified zero-waste recycled yarns and sustainable fabrics.
           </p>
 
           <div className={styles.btnRow}>

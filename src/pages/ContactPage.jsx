@@ -305,7 +305,7 @@ export const ContactPage = () => {
                       onChange={(e) => setFormData({ ...formData, product: e.target.value })}
                       className={styles.select}
                     >
-                      <option value="Recycled Yarns">Recycled Ring-Spun Yarns (+91 9442455885)</option>
+                      <option value="Recycled Yarns">Recycled Open-End Yarns (+91 9442455885)</option>
                       <option value="Recycled Fabrics">Recycled Fabrics (+91 9345655885)</option>
                       <option value="Brand Sales / International">Brand Sales / International (+91 9840855885)</option>
                       <option value="Headquarters">Headquarters (+91 4268290885)</option>

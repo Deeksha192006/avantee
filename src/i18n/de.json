@@ -12,9 +12,9 @@
   "hero": {
     "badge": "Pionier für nachhaltige Textilherstellung",
     "titleLine1": "Herstellung von Hochleistungs-",
-    "titleHighlight": "Recyclinggarnen & Fasern",
+    "titleHighlight": "Recyclinggarnen & Stoffen",
     "titleLine2": "für globale Industrien",
-    "subtitle": "Avantee Industries verwandelt Plastikmüll in luxuriöse Recyclinggarne, Öko-Fasern und nachhaltige Stoffe.",
+    "subtitle": "Avantee Industries verwandelt Pre-Consumer-Textilabfälle in luxuriöse Recyclinggarne und nachhaltige Stoffe.",
     "ctaPrimary": "Produkte entdecken",
     "ctaSecondary": "Virtueller Fabrikrundgang",
     "statYears": "Jahre Exzellenz",
@@ -36,10 +36,10 @@
   },
   "products": {
     "badge": "Leistungsstarke Technik",
-    "title": "Premium Recyclinggarne & Fasern",
+    "title": "Premium Recyclinggarne & Stoffe",
     "subtitle": "Entdecken Sie unser GRS- und OEKO-TEX-zertifiziertes Textilportfolio.",
     "tabAll": "Alle Produkte",
-    "tabFibres": "Recyclingfasern",
+    "tabFibres": "Recycelte Materialien",
     "tabYarns": "Recyclinggarne",
     "tabFabrics": "Öko-Stoffe",
     "viewDetails": "Technische Daten",
@@ -51,13 +51,13 @@
   "process": {
     "badge": "Kreislaufprozess",
     "title": "Unser 6-stufiger Herstellungsprozess",
-    "step1": "Sammlung von Plastikmüll",
-    "step1Desc": "Ethizierte weltweite Beschaffung von PET-Flaschen.",
+    "step1": "Beschaffung von Pre-Consumer-Abfällen",
+    "step1Desc": "Ethische Beschaffung von 100% Pre-Consumer-Textilabfällen und Garnresten.",
     "step2": "Umweltfreundliches Waschen",
     "step2Desc": "Reinigung durch ungiftige Wasseraufbereitung.",
-    "step3": "Präzisions-Faserextrusion",
-    "step3Desc": "Umwandlung von Polymeren in Mikrofaser-Stapel.",
-    "step4": "Ring-Spinnverfahren",
+    "step3": "Präzisions-Materialextrusion",
+    "step3Desc": "Umwandlung von Polymeren in Mikro-Stapelmaterial.",
+    "step4": "Open-End-Spinnverfahren",
     "step4Desc": "Herstellung gleichmäßiger und starker Garne.",
     "step5": "Technisches Weben & Färben",
     "step5Desc": "Herstellung weicher Stoffe mit wassersparender Technologie.",
@@ -71,7 +71,7 @@
     "waterSaved": "Liter Wasser Gespart",
     "co2Reduced": "Eingesparte CO2-Emissionen",
     "energySaved": "Genutzte Saubere Energie",
-    "wasteRecycled": "Recycelte Plastikflaschen"
+    "wasteRecycled": "Pre-Consumer-Abfälle Wiederverwertet"
   },
   "facilities": {
     "badge": "Industrieinfrastruktur",

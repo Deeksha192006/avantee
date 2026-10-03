@@ -11,7 +11,7 @@
   },
   "hero": {
     "badge": "Pionnier de la Fabrication Textile Durable",
-    "titleLine1": "Création de Fils & Fibres",
+    "titleLine1": "Création de Fils & Tissus",
     "titleHighlight": "Recyclés Haute Performance",
     "titleLine2": "Pour l'Industrie Mondiale",
     "subtitle": "Avantee Industries transforme les déchets plastiques en fils recyclés luxueux et textiles écoresponsables de haute précision.",
@@ -26,7 +26,7 @@
     "badge": "Héritage & Vision",
     "title": "L'Architecture du Textile Éco-Responsable",
     "desc1": "Leader de l'ingénierie textile circulaire, Avantee Industries exploite des usines de recyclage de pointe en boucle fermée.",
-    "desc2": "Nous concevons des fibres et fils recyclés certifiés GRS prisés par les marques de luxe et les géants industriels.",
+    "desc2": "Nous concevons des fils et tissus recyclés certifiés GRS prisés par les marques de luxe et les géants industriels.",
     "missionTitle": "Notre Mission",
     "missionText": "Révolutionner la production textile avec 100% de matériaux recyclés en boucle fermée.",
     "visionTitle": "Notre Vision",
@@ -36,10 +36,10 @@
   },
   "products": {
     "badge": "Performance Ingénierie",
-    "title": "Fils & Fibres Recyclés de Luxe",
+    "title": "Fils & Tissus Recyclés de Luxe",
     "subtitle": "Explorez notre gamme complète certifiée GRS et OEKO-TEX.",
     "tabAll": "Tous les Produits",
-    "tabFibres": "Fibres Recyclées",
+    "tabFibres": "Matériaux Recyclés",
     "tabYarns": "Fils Recyclés",
     "tabFabrics": "Tissus Écologiques",
     "viewDetails": "Spécifications Techniques",
@@ -51,12 +51,12 @@
   "process": {
     "badge": "Flux Circulaire",
     "title": "Notre Processus de Fabrication en 6 Étapes",
-    "step1": "Collecte des Déchets Plastiques",
-    "step1Desc": "Approvisionnement éthique de bouteilles PET à l'échelle mondiale.",
+    "step1": "Collecte des Déchets Pré-Consommation",
+    "step1Desc": "Approvisionnement éthique de chutes textiles 100% pré-consommation.",
     "step2": "Lavage Éco-Responsable",
     "step2Desc": "Purification par traitement d'eau non toxique.",
     "step3": "Extrusion de Précision",
-    "step3Desc": "Transformation du polymère en micro-fibres.",
+    "step3Desc": "Transformation du polymère en micro-matériaux.",
     "step4": "Filature à Haute Efficacité",
     "step4Desc": "Production de fils uniformes et résistants.",
     "step5": "Tissage & Teinture Écologique",
@@ -71,7 +71,7 @@
     "waterSaved": "Litres d'Eau Économisés",
     "co2Reduced": "Émissions CO2 Évitées",
     "energySaved": "Énergie Propre Utilisée",
-    "wasteRecycled": "Bouteilles Plastiques Recyclées"
+    "wasteRecycled": "Déchets Pré-Consommation Recyclés"
   },
   "facilities": {
     "badge": "Infrastructure Industrielle",

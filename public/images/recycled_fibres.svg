@@ -19,7 +19,7 @@
     <path d="M50 250 Q200 50 400 250 T750 250" />
   </g>
 
-  <!-- Fibre Strands & Recycling Flakes -->
+  <!-- Material Strands & Recycling Flakes -->
   <g transform="translate(100, 150)">
     <circle cx="200" cy="150" r="100" fill="rgba(221, 245, 229, 0.15)" stroke="url(#goldGrad)" stroke-width="4" />
     <circle cx="400" cy="150" r="120" fill="rgba(217, 182, 93, 0.2)" stroke="url(#goldGrad)" stroke-width="4" />
@@ -33,5 +33,5 @@
   </g>
 
   <rect x="50" y="50" width="380" height="46" rx="23" fill="rgba(6, 26, 20, 0.85)" stroke="url(#goldGrad)" stroke-width="1.5" />
-  <text x="70" y="79" font-family="sans-serif" font-weight="bold" font-size="18" fill="#FFFFFF">ECO-STAPLE RECYCLED FIBRES</text>
+  <text x="70" y="79" font-family="sans-serif" font-weight="bold" font-size="18" fill="#FFFFFF">ECO-STAPLE RECYCLED MATERIALS</text>
 </svg>

@@ -16,7 +16,7 @@ export const ProductsPage = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const productTypingPhrases = [
-    '100% GRS Certified Recycled Fibres & Yarns.',
+    '100% GRS Certified Recycled Yarns & Textiles.',
     'Sustainable Recycled Knit & Woven Fabrics.',
     'Zero Water Dope-Dyed Filament Technology.',
   ];
@@ -119,8 +119,8 @@ export const ProductsPage = () => {
             <div className={styles.tabGroup}>
               {[
                 { id: 'all', label: 'ALL PRODUCTS' },
-                { id: 'fabrics', label: 'RECYCLED SUSTAINABLE FABRICS' },
-                { id: 'yarns', label: 'RECYCLED SUSTAINABLE YARNS' }
+                { id: 'yarns', label: 'RECYCLED SUSTAINABLE YARNS' },
+                { id: 'fabrics', label: 'RECYCLED SUSTAINABLE FABRICS' }
               ].map((tab) => (
                 <button
                   key={tab.id}

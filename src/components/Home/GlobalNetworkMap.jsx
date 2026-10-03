@@ -55,7 +55,7 @@ export const GlobalNetworkMap = () => {
     {
       id: 5,
       country: 'East Asia Quality & Sourcing Office',
-      city: 'Tokyo High-Tech Fiber Testing Office',
+      city: 'Tokyo High-Tech Quality Testing Office',
       capacity: 'Micro-Denier Quality Assurance & Testing',
       blends: 'Ultra-Soft Fine Recycled Micro Yarns',
       flag: '🇯🇵',

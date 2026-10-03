@@ -28,6 +28,8 @@ export const ProductDetailPage = () => {
     phone: '',
     country: '',
     productName: '',
+    blendDetails: '',
+    customBlend: '',
     quantity: '',
     message: '',
   });
@@ -40,7 +42,8 @@ export const ProductDetailPage = () => {
     if (product) {
       setFormData(prev => ({
         ...prev,
-        productName: product.name
+        productName: product.name,
+        blendDetails: prev.blendDetails || product.specs?.BlendRatio || '80% Recycled Cotton / 20% Poly'
       }));
     }
   }, [product]);
@@ -237,6 +240,9 @@ export const ProductDetailPage = () => {
                 <p><strong>Contact Name:</strong> {formData.fullName}</p>
                 <p><strong>Company:</strong> {formData.companyName}</p>
                 <p><strong>Email:</strong> {formData.email}</p>
+                {formData.blendDetails && (
+                  <p><strong>Blend Details:</strong> {formData.blendDetails === 'Custom Blend Specification' ? formData.customBlend : formData.blendDetails}</p>
+                )}
               </div>
 
               <button
@@ -250,6 +256,8 @@ export const ProductDetailPage = () => {
                     phone: '',
                     country: '',
                     productName: product.name,
+                    blendDetails: product.specs?.BlendRatio || '80% Recycled Cotton / 20% Poly',
+                    customBlend: '',
                     quantity: '',
                     message: '',
                   });
@@ -355,7 +363,40 @@ export const ProductDetailPage = () => {
                   />
                 </div>
 
-                {/* 7. Quantity / Requirement */}
+                {/* 7. Blend Details Option (Need blend details option) */}
+                <div className={styles.fieldGroup}>
+                  <label className={styles.label}>
+                    Blend Details <span className={styles.reqStar}>*</span>
+                  </label>
+                  <select
+                    name="blendDetails"
+                    value={formData.blendDetails}
+                    onChange={handleChange}
+                    className={`${styles.input} ${styles.select}`}
+                  >
+                    <option value="80% Recycled Cotton / 20% Poly">80% Recycled Cotton / 20% Poly</option>
+                    <option value="60% Recycled Cotton / 40% Recycled Poly">60% Recycled Cotton / 40% Recycled Poly</option>
+                    <option value="65% Recycled Poly / 35% Recycled Cotton">65% Recycled Poly / 35% Recycled Cotton</option>
+                    <option value="100% Recycled Cotton">100% Recycled Cotton</option>
+                    <option value="50% Recycled Cotton / 50% Recycled Poly">50% Recycled Cotton / 50% Recycled Poly</option>
+                    <option value="85% Upcycled Denim Cotton / 15% Poly">85% Upcycled Denim Cotton / 15% Poly</option>
+                    <option value="100% Recycled Polyester (rPET)">100% Recycled Polyester (rPET)</option>
+                    <option value="Custom Blend Specification">Custom Blend Specification</option>
+                  </select>
+                  {formData.blendDetails === 'Custom Blend Specification' && (
+                    <input
+                      type="text"
+                      name="customBlend"
+                      value={formData.customBlend}
+                      onChange={handleChange}
+                      placeholder="e.g. 70% Recycled Cotton / 30% Bamboo"
+                      className={styles.input}
+                      style={{ marginTop: '8px' }}
+                    />
+                  )}
+                </div>
+
+                {/* 8. Quantity / Requirement */}
                 <div className={`${styles.fieldGroup} ${styles.fieldFull}`}>
                   <label className={styles.label}>
                     Quantity / Requirement (Optional)

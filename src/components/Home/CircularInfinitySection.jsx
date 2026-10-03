@@ -51,7 +51,7 @@ export const CircularInfinitySection = () => {
     {
       id: 'n4',
       title: 'Recycled Material',
-      desc: 'Purified micro-denier staple fibres prepared for continuous zero-solvent spinning.',
+      desc: 'Purified micro-denier staple materials prepared for continuous zero-solvent spinning.',
       x: 80,
       y: 300,
       labelY: 345,
@@ -61,7 +61,7 @@ export const CircularInfinitySection = () => {
     {
       id: 'n5',
       title: 'Recycler',
-      desc: 'Mechanical fibre opening technology eliminating chemical water pollution.',
+      desc: 'Mechanical material opening technology eliminating chemical water pollution.',
       x: 190,
       y: 335,
       labelY: 368,
@@ -125,7 +125,7 @@ export const CircularInfinitySection = () => {
             </h2>
 
             <p className={styles.desc}>
-              Avantee Industries operates an integrated circular recycling ribbon. By converting pre-consumer textile waste into high-tenacity staple fibres, ring-spun yarns, and upcycled fabrics, we eliminate virgin resource dependency in a continuous closed loop.
+              Avantee Industries operates an integrated circular recycling ribbon. By converting pre-consumer textile waste into high-tenacity staple materials, open end spinning yarns, and upcycled fabrics, we eliminate virgin resource dependency in a continuous closed loop.
             </p>
 
             <div className={styles.featureChips}>

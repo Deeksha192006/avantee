@@ -13,15 +13,15 @@ export const SustainabilityPage = () => {
   const [tonnage, setTonnage] = useState(12000);
 
   const ecoTypingPhrases = [
-    'Diverting 5.2 Billion PET Bottles.',
-    '98% Closed-Loop Water Recycling.',
-    'Zero Landfill Manufacturing Framework.',
+    'Focus on 100% Pre-Consumer Waste.',
+    '100% Recycling & Circular Sustainability.',
+    'Zero Landfill Industrial Framework.',
   ];
 
   // Simple eco savings calculations based on yarn tonnage
   const waterSaved = Math.round(tonnage * 9600); // 9,600 liters per ton
   const co2Prevented = Math.round(tonnage * 1800); // 1,800 kg per ton
-  const bottlesRecycled = Math.round(tonnage * 55000); // 55,000 PET bottles per ton
+  const wasteUpcycledKg = Math.round(tonnage * 1050); // 1,050 kg pre-consumer waste diverted per ton
 
   return (
     <div className={styles.sustainabilityPageWrapper}>
@@ -66,20 +66,20 @@ export const SustainabilityPage = () => {
           <div className={styles.infographicGrid}>
             <motion.div className={styles.infoStepCard} whileHover={{ y: -6 }}>
               <div className={styles.stepNum}>01</div>
-              <h3 className={styles.stepTitle}>Post-Consumer Collection</h3>
-              <p className={styles.stepDesc}>Recovering PET bottles and garment cuttings before they reach landfills.</p>
+              <h3 className={styles.stepTitle}>Pre-Consumer Waste Sourcing</h3>
+              <p className={styles.stepDesc}>Procuring 100% pre-consumer garment cutting waste, fabric clips, and mill scraps directly from industrial textile units.</p>
             </motion.div>
 
             <motion.div className={styles.infoStepCard} whileHover={{ y: -6 }}>
               <div className={styles.stepNum}>02</div>
-              <h3 className={styles.stepTitle}>Waterless Depolymerization</h3>
-              <p className={styles.stepDesc}>Purifying synthetic and natural fibres with non-toxic closed-loop solvents.</p>
+              <h3 className={styles.stepTitle}>Waterless Sorting & Carding</h3>
+              <p className={styles.stepDesc}>Purifying, shredding, and shade-matching pre-consumer materials through zero-water mechanical processes.</p>
             </motion.div>
 
             <motion.div className={styles.infoStepCard} whileHover={{ y: -6 }}>
               <div className={styles.stepNum}>03</div>
-              <h3 className={styles.stepTitle}>High-Tenacity Re-Spinning</h3>
-              <p className={styles.stepDesc}>Transforming recycled micro-chips into ring-spun yarns indistinguishable from virgin cotton.</p>
+              <h3 className={styles.stepTitle}>High-Tenacity Open-End Spinning</h3>
+              <p className={styles.stepDesc}>Transforming recycled pre-consumer materials into high-tenacity open-end yarns with 100% recycling integrity.</p>
             </motion.div>
           </div>
         </div>
@@ -128,8 +128,8 @@ export const SustainabilityPage = () => {
 
               <div className={styles.resBox}>
                 <FaRecycle className={styles.resIcon} />
-                <span className={styles.resVal}>{bottlesRecycled.toLocaleString()}</span>
-                <span className={styles.resName}>PET Bottles Diverted</span>
+                <span className={styles.resVal}>{wasteUpcycledKg.toLocaleString()} Kg</span>
+                <span className={styles.resName}>Pre-Consumer Waste Diverted</span>
               </div>
             </div>
           </div>

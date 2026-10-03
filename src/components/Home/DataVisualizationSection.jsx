@@ -77,8 +77,8 @@ export const DataVisualizationSection = () => {
   const processSteps = [
     { num: '01', title: 'Pre-Consumer Waste', desc: 'Garment cutting waste collected ethically.', icon: <FaRecycle /> },
     { num: '02', title: 'Sorting Audit', desc: 'Precision shade & composition inspection.', icon: <FaFilter /> },
-    { num: '03', title: 'Fibre Recovery', desc: 'Mechanical opening without solvents.', icon: <FaCogs /> },
-    { num: '04', title: 'Fibre Alignment', desc: 'Micro-denier carding & drafting.', icon: <FaWind /> },
+    { num: '03', title: 'Material Recovery', desc: 'Mechanical opening without solvents.', icon: <FaCogs /> },
+    { num: '04', title: 'Carding & Alignment', desc: 'Micro-denier carding & drafting.', icon: <FaWind /> },
     { num: '05', title: 'Yarn Manufacturing', desc: 'Swiss Rieter ring-spinning lines.', icon: <FaSync /> },
     { num: '06', title: 'Fabric Production', desc: 'Waterless dope-dyed weaving.', icon: <FaProjectDiagram /> },
     { num: '07', title: 'Quality Inspection', desc: 'Uster spectrophotometric lab tests.', icon: <FaFlask /> },
@@ -87,16 +87,16 @@ export const DataVisualizationSection = () => {
 
   // SECTION 5: PRODUCT MIX DOUGHNUT DATA (Recharts)
   const productMixData = [
-    { name: 'Recycled Yarns', value: 40, color: '#1B7F5B' },
-    { name: 'Recycled Fibres', value: 35, color: '#D9B65D' },
-    { name: 'Recycled Fabrics', value: 25, color: '#DDF5E5' },
+    { name: 'Recycled Yarns', value: 55, color: '#1B7F5B' },
+    { name: 'Speciality Blends', value: 25, color: '#D9B65D' },
+    { name: 'Recycled Fabrics', value: 20, color: '#DDF5E5' },
   ];
 
   // SECTION 6: MANUFACTURING CAPACITY BAR CHART DATA (Recharts)
   const capacityData = [
-    { category: 'Fibres', tons: 20 },
-    { category: 'Yarns', tons: 18 },
-    { category: 'Fabrics', tons: 12 },
+    { category: 'Yarns', tons: 25 },
+    { category: 'Blends', tons: 15 },
+    { category: 'Fabrics', tons: 10 },
   ];
 
   // SECTION 7: WATER & ENVIRONMENTAL CONSERVATION RINGS
@@ -111,9 +111,9 @@ export const DataVisualizationSection = () => {
   const envBenefits = [
     { title: 'Reduced Water Usage', desc: 'Zero-water dope dyeing eliminates thousands of liters per batch.', icon: <FaTint /> },
     { title: 'Lower Carbon Footprint', desc: 'Closed-loop mechanical extrusion reduces GHG emissions by 68%.', icon: <FaCloudSun /> },
-    { title: 'Chemical Reduction', desc: 'Pure mechanical fibre opening avoids harsh chemical solvents.', icon: <FaFlask /> },
+    { title: 'Chemical Reduction', desc: 'Pure mechanical opening avoids harsh chemical solvents.', icon: <FaFlask /> },
     { title: 'Zero Virgin Cotton', desc: 'Directs 100% pre-consumer textile waste away from landfills.', icon: <FaTree /> },
-    { title: 'Circular Manufacturing', desc: 'Complete end-to-end recycling from staple fibre to fabric.', icon: <FaRecycle /> },
+    { title: 'Circular Manufacturing', desc: 'Complete end-to-end recycling from raw textile to fabric.', icon: <FaRecycle /> },
     { title: 'Reusable Resources', desc: 'Engineered for high tenacity across endless recycling loops.', icon: <FaCheckDouble /> },
   ];
 

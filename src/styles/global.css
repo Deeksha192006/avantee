@@ -12,6 +12,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Lenis Smooth Scroll Overrides */
@@ -40,6 +42,7 @@ body {
   background-color: var(--color-offwhite);
   color: var(--color-charcoal);
   overflow-x: hidden;
+  max-width: 100vw;
   line-height: 1.6;
   position: relative;
 }
@@ -232,6 +235,12 @@ img, video {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 .section-padding {

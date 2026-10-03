@@ -45,33 +45,34 @@ export const ProductsShowcaseSection = () => {
   ];
 
   // 2. RECYCLED SUSTAINABLE YARNS (4 Products)
+  // 2. RECYCLED SUSTAINABLE YARNS (7 Products)
   const yarnProducts = [
     {
-      id: 'recycled-knit-yarn',
+      id: 'recycled-knitting-yarn',
       num: '01',
-      name: 'Recycled Knit Yarn',
-      slug: 'recycled-knit-yarn',
+      name: 'Recycled Knitting Yarn',
+      slug: 'recycled-knitting-yarn',
       tag: '100% GRS & RCS Certified',
       image: '/images/recycled_knit_yarn.jpg',
-      description: 'Recycled yarn designed for knitting applications, combining performance, consistency and sustainable production.',
+      description: 'Recycled yarn designed for circular and flat knitting applications, combining loop stability and consistency.',
     },
     {
-      id: 'recycled-wearing-yarn',
+      id: 'recycled-weaving-yarn',
       num: '02',
-      name: 'Recycled Wearing Yarn',
-      slug: 'recycled-wearing-yarn',
-      tag: 'High Tensile Strength • Apparel Spin',
+      name: 'Recycled Weaving Yarn',
+      slug: 'recycled-weaving-yarn',
+      tag: 'High Tensile Strength • Weaving Spin',
       image: '/images/recycled_weaving_yarn.jpg',
-      description: 'Recycled yarn suitable for wearing and apparel applications, offering reliable performance with a sustainable approach.',
+      description: 'Recycled yarn engineered for high-speed weaving looms, delivering maximum warp and weft tensile strength.',
     },
     {
-      id: 'recycled-melange-yarn',
+      id: 'recycled-cotton-melange-yarn',
       num: '03',
-      name: 'Recycled Melange Yarn',
-      slug: 'recycled-melange-yarn',
+      name: 'Recycled Cotton Melange Yarn',
+      slug: 'recycled-cotton-melange-yarn',
       tag: 'Multi-Tonal Heather • Pre-Dyed Blends',
       image: '/images/recycled_melange_yarn.jpg',
-      description: 'Recycled melange yarn produced with blended colour effects for versatile and sustainable textile applications.',
+      description: 'Recycled cotton melange yarn produced with blended colour effects without wet-dyeing, creating rich heather textures.',
     },
     {
       id: 'recycled-denim-yarn',
@@ -80,7 +81,34 @@ export const ProductsShowcaseSection = () => {
       slug: 'recycled-denim-yarn',
       tag: 'Upcycled Denim Waste • Vintage Slub',
       image: '/images/recycled_denim_yarn.jpg',
-      description: 'Recycled yarn developed for denim applications, supporting sustainable textile production through the reuse of materials.',
+      description: 'Recycled yarn developed for denim applications, supporting sustainable textile production through upcycled denim.',
+    },
+    {
+      id: 'recycled-speciality-blended-yarn',
+      num: '05',
+      name: 'Recycled Speciality Blended Yarn',
+      slug: 'recycled-speciality-blended-yarn',
+      tag: 'Engineered Specialty Blends',
+      image: '/images/yarn_cones_emerald.png',
+      description: 'Custom-engineered specialty blended yarns combining recycled materials with organic cotton or high-tenacity filament.',
+    },
+    {
+      id: 'regenerated-blends-counts',
+      num: '06',
+      name: 'Regenerated Blends & Counts',
+      slug: 'regenerated-blends-counts',
+      tag: 'Precise Micron & Staple Alignment',
+      image: '/images/yarn_cones_spools.png',
+      description: 'Superior regenerated yarn blends processed through multi-stage opening and carding for uniform count and low hairiness.',
+    },
+    {
+      id: 'colored-yarn-shades',
+      num: '07',
+      name: 'Colored Yarn Shades',
+      slug: 'colored-yarn-shades',
+      tag: 'Waterless Dope-Dyed 150+ Shades',
+      image: '/images/yarn_balls_pastel.jpg',
+      description: 'Extensive portfolio of 150+ vibrant, consistent colored yarn shades created through waterless dope-dyeing.',
     },
   ];
 
@@ -157,8 +185,8 @@ export const ProductsShowcaseSection = () => {
     {
       id: 'g3',
       category: 'fabrics',
-      catLabel: 'RECYCLED FIBERS',
-      title: 'AVANTEE Recycled Fiber Bales & Branded Spool',
+      catLabel: 'RECYCLED TEXTILES',
+      title: 'AVANTEE Recycled Textile Bales & Branded Spool',
       image: '/images/tailored_blazer_material.png',
     },
     {
@@ -469,15 +497,15 @@ export const ProductsShowcaseSection = () => {
           <SectionTitle
             label="PRODUCT VALUE CHAIN"
             title="Integrated Circular Product Transformation"
-            subtitle="Explore how our manufacturing ecosystem seamlessly converts raw staple fibres into high-tensile yarns and finished eco-fabrics."
+            subtitle="Explore how our manufacturing ecosystem seamlessly converts raw recycled materials into high-tensile yarns and finished eco-fabrics."
           />
 
           <div className={styles.chainGrid}>
             <div className={styles.chainCard}>
               <span className={styles.chainStepNum}>STAGE 01</span>
-              <h4 className={styles.chainTitle}>Recycled Fibres</h4>
+              <h4 className={styles.chainTitle}>Recycled Materials</h4>
               <p className={styles.chainDesc}>
-                Purified micro-denier staple fibres mechanically recovered from pre-consumer textile waste.
+                Purified micro-denier staple materials mechanically recovered from pre-consumer textile waste.
               </p>
             </div>
 
@@ -489,7 +517,7 @@ export const ProductsShowcaseSection = () => {
               <span className={styles.chainStepNum}>STAGE 02</span>
               <h4 className={styles.chainTitle}>Recycled Yarns</h4>
               <p className={styles.chainDesc}>
-                High-strength ring-spun & dope-dyed yarns engineered across Ne 10s to 40s count ranges.
+                High-strength open-end & dope-dyed yarns engineered across Ne 10s to 40s count ranges.
               </p>
             </div>
 
@@ -544,7 +572,7 @@ export const ProductsShowcaseSection = () => {
 
           {/* Filter Tabs */}
           <div className={styles.galleryFilterRow}>
-            {['all', 'fibres', 'yarns', 'fabrics', 'factory', 'quality'].map((cat) => (
+            {['all', 'yarns', 'fabrics', 'factory', 'quality'].map((cat) => (
               <button
                 key={cat}
                 className={`${styles.galleryTab} ${activeGalleryTab === cat ? styles.activeGalleryTab : ''}`}
