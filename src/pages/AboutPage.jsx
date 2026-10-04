@@ -12,7 +12,7 @@ export const AboutPage = () => {
   const { t } = useTranslation();
 
   const aboutTypingPhrases = [
-    '10+ Years of Sustainable Textile Innovation.',
+    '11+ Years of Sustainable Textile Innovation.',
     'Pioneering Zero Waste Circularity.',
     'Exporting GRS Certified Yarns to 5+ Nations.',
   ];
@@ -26,22 +26,18 @@ export const AboutPage = () => {
 
   const leadershipTeam = [
     {
-      name: 'R. K. Avantee',
+      name: 'Senthilraja Ramasamy',
       role: 'Founder & Managing Director',
-      bio: 'Visionary industrialist with 30+ years in circular textile engineering and eco-fabric innovation.',
+      experience: '11+ years',
+      bio: 'Visionary industrialist with 11+ years of leadership in circular textile engineering, sustainable yarn spinning, and eco-fabric innovation.',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop',
     },
     {
-      name: 'Ananya Subraman',
-      role: 'Chief Sustainability Officer',
-      bio: 'Pioneered zero-water dyeing processes and global ESG compliance frameworks.',
+      name: 'Dhivya Nattrayan',
+      role: 'Director - Sustainability',
+      experience: 'Sustainability & ESG',
+      bio: 'Directing Avantee’s comprehensive environmental sustainability framework, zero liquid discharge innovations, and global circularity compliance.',
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop',
-    },
-    {
-      name: 'Dr. Heinrich Webber',
-      role: 'Director of Material R&D',
-      bio: 'Former European Textile Research Institute scholar specializing in micro-denier staple polymers.',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop',
     }
   ];
 
@@ -142,7 +138,7 @@ export const AboutPage = () => {
             label="JOURNEY & MILESTONES"
             title={
               <>
-                <AnimatedCounter value="10" suffix="+" duration={2} /> Years of Sustainable Engineering
+                <AnimatedCounter value="11" suffix="+" duration={2} /> Years of Sustainable Engineering
               </>
             }
           />
@@ -190,6 +186,9 @@ export const AboutPage = () => {
               >
                 <div className={styles.leaderImgBox}>
                   <img src={leader.image} alt={leader.name} className={styles.leaderImg} />
+                  {leader.experience && (
+                    <span className={styles.experienceBadge}>{leader.experience}</span>
+                  )}
                 </div>
                 <div className={styles.leaderInfo}>
                   <h3 className={styles.leaderName}>{leader.name}</h3>

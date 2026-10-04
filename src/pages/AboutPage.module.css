@@ -224,13 +224,16 @@
 
 .teamGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 36px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .teamGrid {
     grid-template-columns: 1fr;
+    max-width: 440px;
   }
 }
 
@@ -249,8 +252,25 @@
 }
 
 .leaderImgBox {
-  height: 280px;
+  height: 320px;
   overflow: hidden;
+  position: relative;
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(18, 48, 38, 0.92);
+  backdrop-filter: blur(8px);
+  color: var(--gold-primary);
+  border: 1px solid rgba(212, 163, 89, 0.4);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .leaderImg {

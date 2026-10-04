@@ -26,9 +26,14 @@ export const ContactPage = () => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
+    companyName: '',
     email: '',
     phone: '',
+    country: '',
     product: 'Recycled Yarns',
+    blendDetails: '80% Recycled Cotton / 20% Poly',
+    customBlend: '',
+    quantity: '',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
@@ -262,35 +267,50 @@ export const ContactPage = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className={styles.form}>
-                  <div className={styles.inputGroup}>
-                    <label>{t('contact.name', 'Full Name')}</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Alexander Vance"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className={styles.input}
-                    />
+                  <div className={styles.rowTwo}>
+                    <div className={styles.inputGroup}>
+                      <label>{t('contact.name', 'Full Name')} <span style={{ color: '#e53e3e' }}>*</span></label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="e.g. John Smith"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className={styles.input}
+                      />
+                    </div>
+
+                    <div className={styles.inputGroup}>
+                      <label>Company Name <span style={{ color: '#e53e3e' }}>*</span></label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="e.g. Avantee Apparel Ltd."
+                        value={formData.companyName}
+                        onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
+                        className={styles.input}
+                      />
+                    </div>
                   </div>
 
                   <div className={styles.rowTwo}>
                     <div className={styles.inputGroup}>
-                      <label>{t('contact.email', 'Business Email')}</label>
+                      <label>{t('contact.email', 'Email Address')} <span style={{ color: '#e53e3e' }}>*</span></label>
                       <input
                         type="email"
                         required
-                        placeholder="alexander@company.com"
+                        placeholder="john@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className={styles.input}
                       />
                     </div>
                     <div className={styles.inputGroup}>
-                      <label>{t('contact.phone', 'Phone Number')}</label>
+                      <label>{t('contact.phone', 'Phone Number')} <span style={{ color: '#e53e3e' }}>*</span></label>
                       <input
                         type="tel"
-                        placeholder="+91 98765 43210"
+                        required
+                        placeholder="+1 (555) 000-0000"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className={styles.input}
@@ -298,26 +318,88 @@ export const ContactPage = () => {
                     </div>
                   </div>
 
+                  <div className={styles.rowTwo}>
+                    <div className={styles.inputGroup}>
+                      <label>Country <span style={{ color: '#e53e3e' }}>*</span></label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="e.g. United States, India, Germany"
+                        value={formData.country}
+                        onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                        className={styles.input}
+                      />
+                    </div>
+
+                    <div className={styles.inputGroup}>
+                      <label>{t('contact.productInterest', 'Product')} <span style={{ color: '#e53e3e' }}>*</span></label>
+                      <select
+                        value={formData.product}
+                        onChange={(e) => setFormData({ ...formData, product: e.target.value })}
+                        className={styles.select}
+                      >
+                        <option value="Knit Fabrics">Knit Fabrics</option>
+                        <option value="Woven Fabrics">Woven Fabrics</option>
+                        <option value="Recycled Yarns">Recycled Open-End Yarns</option>
+                        <option value="Recycled Fabrics">Recycled Fabrics</option>
+                        <option value="Recycled Knitting Yarn">Recycled Knitting Yarn</option>
+                        <option value="Recycled Weaving Yarn">Recycled Weaving Yarn</option>
+                        <option value="Recycled Cotton Melange Yarn">Recycled Cotton Melange Yarn</option>
+                        <option value="Recycled Denim Yarn">Recycled Denim Yarn</option>
+                        <option value="Recycled Speciality Blended Yarn">Recycled Speciality Blended Yarn</option>
+                        <option value="Brand Sales / International">Brand Sales / International</option>
+                        <option value="Headquarters">Headquarters</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Blend Details Option */}
                   <div className={styles.inputGroup}>
-                    <label>{t('contact.productInterest', 'Product of Interest')}</label>
+                    <label>Blend Details <span style={{ color: '#e53e3e' }}>*</span></label>
                     <select
-                      value={formData.product}
-                      onChange={(e) => setFormData({ ...formData, product: e.target.value })}
+                      value={formData.blendDetails}
+                      onChange={(e) => setFormData({ ...formData, blendDetails: e.target.value })}
                       className={styles.select}
                     >
-                      <option value="Recycled Yarns">Recycled Open-End Yarns (+91 9442455885)</option>
-                      <option value="Recycled Fabrics">Recycled Fabrics (+91 9345655885)</option>
-                      <option value="Brand Sales / International">Brand Sales / International (+91 9840855885)</option>
-                      <option value="Headquarters">Headquarters (+91 4268290885)</option>
+                      <option value="80% Recycled Cotton / 20% Poly">80% Recycled Cotton / 20% Poly</option>
+                      <option value="60% Recycled Cotton / 40% Recycled Poly">60% Recycled Cotton / 40% Recycled Poly</option>
+                      <option value="65% Recycled Poly / 35% Recycled Cotton">65% Recycled Poly / 35% Recycled Cotton</option>
+                      <option value="100% Recycled Cotton">100% Recycled Cotton</option>
+                      <option value="50% Recycled Cotton / 50% Recycled Poly">50% Recycled Cotton / 50% Recycled Poly</option>
+                      <option value="85% Upcycled Denim Cotton / 15% Poly">85% Upcycled Denim Cotton / 15% Poly</option>
+                      <option value="100% Recycled Polyester (rPET)">100% Recycled Polyester (rPET)</option>
+                      <option value="Custom Blend Specification">Custom Blend Specification</option>
                     </select>
+                    {formData.blendDetails === 'Custom Blend Specification' && (
+                      <input
+                        type="text"
+                        placeholder="e.g. 70% Recycled Cotton / 30% Bamboo"
+                        value={formData.customBlend}
+                        onChange={(e) => setFormData({ ...formData, customBlend: e.target.value })}
+                        className={styles.input}
+                        style={{ marginTop: '8px' }}
+                      />
+                    )}
+                  </div>
+
+                  {/* Quantity / Requirement (Optional) */}
+                  <div className={styles.inputGroup}>
+                    <label>Quantity / Requirement (Optional)</label>
+                    <input
+                      type="text"
+                      placeholder="e.g. 5,000 kg / 10 metric tons / Roll sample request"
+                      value={formData.quantity}
+                      onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
+                      className={styles.input}
+                    />
                   </div>
 
                   <div className={styles.inputGroup}>
-                    <label>{t('contact.message', 'Message / Volume Requirement')}</label>
+                    <label>{t('contact.message', 'Message / Volume Requirement')} <span style={{ color: '#e53e3e' }}>*</span></label>
                     <textarea
-                      rows="5"
+                      rows="4"
                       required
-                      placeholder="Please specify count, denier requirements, or monthly volume in MT..."
+                      placeholder="Please specify count, denier requirements, or delivery schedule..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className={styles.textarea}

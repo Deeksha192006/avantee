@@ -33,7 +33,7 @@ export const productsData = [
       'Micro-Denier Recycled Cotton & Poly Blend'
     ],
     applications: ['Sustainable Hoodies & Sweatshirts', 'Eco T-Shirts & Polos', 'Activewear & Athleisure', 'Seamless Apparel'],
-    specs: { Weight: '180 - 320 GSM', Elasticity: 'High Stretch Recovery', GRSStatus: '100% Certified', WaterSaved: '4,900 L / kg' }
+    specs: { Weight: '180 - 320 GSM', Elasticity: 'High Stretch Recovery', BlendRatio: '60% Recycled Cotton / 40% Recycled Poly', GRSStatus: '100% Certified', WaterSaved: '4,900 L / kg' }
   },
   {
     id: 'woven-fabrics',
@@ -55,7 +55,7 @@ export const productsData = [
       'Minimal Shrinkage & High Martindale Rubs'
     ],
     applications: ['Woven Apparel & Shirting', 'Suitings & Trousers', 'Eco Jeans & Denim Jackets', 'Industrial Canvas'],
-    specs: { Weight: '200 - 450 GSM', TensileStrength: '1580 N Warp', GRSStatus: '100% Certified', Shrinkage: '< 1.8%' }
+    specs: { Weight: '200 - 450 GSM', TensileStrength: '1580 N Warp', BlendRatio: '65% Recycled Poly / 35% Recycled Cotton', GRSStatus: '100% Certified', Shrinkage: '< 1.8%' }
   },
 
   // 2. RECYCLED SUSTAINABLE YARNS

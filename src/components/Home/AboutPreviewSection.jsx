@@ -37,7 +37,7 @@ export const AboutPreviewSection = () => {
             </div>
 
             <div className={styles.badgeExperience}>
-              <span className={styles.badgeYears}>10+</span>
+              <span className={styles.badgeYears}>11+</span>
               <div className={styles.badgeTextGroup}>
                 <span className={styles.badgeTitle}>YEARS OF</span>
                 <span className={styles.badgeSub}>CIRCULAR INNOVATION</span>
